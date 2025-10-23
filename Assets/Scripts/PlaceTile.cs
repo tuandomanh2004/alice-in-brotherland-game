@@ -12,8 +12,6 @@ public class PlaceTile : MonoBehaviour
     private int row = 8;
     [SerializeField]
     private int col = 8;
-    // [SerializeField]
-    // private UnityEngine.Vector3 startPos = new UnityEngine.Vector3(1 , 0.05f ,1);
     [SerializeField]
     private float xOffset = 0.25f, zOffset = 0.25f;
     [SerializeField]
