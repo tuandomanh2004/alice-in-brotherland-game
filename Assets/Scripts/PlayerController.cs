@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            animator.SetTrigger("running");
+            animator.SetTrigger("walking");
         }
     }
 }
