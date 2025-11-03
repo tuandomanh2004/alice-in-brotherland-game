@@ -1,19 +1,30 @@
+using System.Numerics;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(CharacterController))]
+public class PlayerMove : MonoBehaviour
 {
-    Animator animator; 
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private Animator anim;
+    [SerializeField] private UnityEngine.Vector3 moveDir;
+    [SerializeField] private float playerSpeed = 2.0f , moveValue;
+
     void Start()
     {
-        animator = GetComponent<Animator>(); 
+        controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        moveValue = Input.GetAxis("Vertical");
+        moveDir = transform.forward * moveValue;
+        if (moveValue != 0)
         {
-            animator.SetTrigger("walking");
+            anim.SetBool("isMoving", true);
+            anim.SetFloat("moveValue", moveValue); 
+            controller.Move(moveDir * playerSpeed * Time.deltaTime);
         }
+        else anim.SetBool("isMoving", false); 
     }
 }
