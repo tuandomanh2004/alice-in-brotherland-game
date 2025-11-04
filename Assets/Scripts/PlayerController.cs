@@ -1,5 +1,7 @@
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
@@ -11,20 +13,32 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>(); 
+        InitializeComponent(); 
     }
 
     void Update()
+    {
+        Move();
+        UpdateAnimation(); 
+    }
+    private void Move()
     {
         moveValue = Input.GetAxis("Vertical");
         moveDir = transform.forward * moveValue;
         if (moveValue != 0)
         {
-            anim.SetBool("isMoving", true);
-            anim.SetFloat("moveValue", moveValue); 
             controller.Move(moveDir * playerSpeed * Time.deltaTime);
         }
-        else anim.SetBool("isMoving", false); 
+    }
+    private void UpdateAnimation()
+    {
+        bool isMoving = moveValue != 0; 
+        anim.SetBool("isMoving", isMoving);
+        anim.SetFloat("moveValue", moveValue);
+    }
+    private void InitializeComponent()
+    {
+        controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>(); 
     }
 }
