@@ -1,6 +1,11 @@
+using System;
+using System.IO.Compression;
 using System.Numerics;
+using NUnit.Framework.Internal;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(CharacterController))]
@@ -9,7 +14,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private Animator anim;
     [SerializeField] private UnityEngine.Vector3 moveDir;
-    [SerializeField] private float playerSpeed = 2.0f , moveValue;
+    [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
+    [SerializeField] private Transform cam; 
 
     void Start()
     {
@@ -19,26 +25,33 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Move();
-        UpdateAnimation(); 
+        UpdateAnimation();
     }
     private void Move()
     {
-        moveValue = Input.GetAxis("Vertical");
-        moveDir = transform.forward * moveValue;
-        if (moveValue != 0)
+        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
+        UnityEngine.Vector3 moveInput = (cam.forward * verticalInput) + (cam.right * horizontalInput); // Tạo vector di chuyển theo hướng cam và input
+        moveDir = moveInput.normalized;  
+        if(moveDir != UnityEngine.Vector3.zero)
         {
-            controller.Move(moveDir * playerSpeed * Time.deltaTime);
+            UnityEngine.Quaternion desiredRotation = UnityEngine.Quaternion.LookRotation(moveDir, UnityEngine.Vector3.up); // tạo góc quay
+            transform.rotation = UnityEngine.Quaternion.Lerp(transform.rotation, desiredRotation, rotateSpeed * Time.deltaTime);  // tạo chuyển động quay
         }
+        controller.Move(moveDir * playerSpeed * Time.deltaTime); // di chuyển theo vector
     }
     private void UpdateAnimation()
     {
-        bool isMoving = moveValue != 0; 
+        float moveAmount = Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput); // Check input di chuyển của player
+        bool isMoving = moveAmount > 0;  
         anim.SetBool("isMoving", isMoving);
-        anim.SetFloat("moveValue", moveValue);
+        anim.SetFloat("verticalMove", verticalInput);
+        anim.SetFloat("horizontalMove", horizontalInput);
     }
     private void InitializeComponent()
     {
         controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>(); 
+        anim = GetComponent<Animator>();
+        cam = Camera.main.transform; 
     }
 }

@@ -1,14 +1,22 @@
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ApplyForceExample : MonoBehaviour
 {
-    public Rigidbody rb;
-    public Vector3 forceDirection = new Vector3(0, 10, 0); // Upward force
-    public float forceMagnitude = 5f;
-
+    public UnityEngine.Vector3 mousePos;
     void Start()
     {
-        // Apply force in the specified direction
-        rb.AddForce(forceDirection.normalized * forceMagnitude, ForceMode.Impulse);
+        Cursor.visible = true;
+        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.Auto);
+        Cursor.lockState = CursorLockMode.None; 
+    }
+    void Update()
+    {
+        Debug.Log(Input.mousePosition);
+    }
+    public UnityEngine.Vector3 GetMousePosition()
+    {
+        return Input.mousePosition;
     }
 }
