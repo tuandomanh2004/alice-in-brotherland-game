@@ -5,6 +5,7 @@ using NUnit.Framework.Internal;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Scripting.APIUpdating;
 
@@ -19,7 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
-        InitializeComponent(); 
+        InitializeComponent();
+        SetUpCursor();  
     }
 
     void Update()
@@ -27,13 +29,20 @@ public class PlayerMove : MonoBehaviour
         Move();
         UpdateAnimation();
     }
+    private void SetUpCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked; 
+    }
     private void Move()
     {
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
         UnityEngine.Vector3 moveInput = (cam.forward * verticalInput) + (cam.right * horizontalInput); // Tạo vector di chuyển theo hướng cam và input
+        moveInput.y = 0f; 
+       // moveInput =   UnityEngine.Quaternion.Euler(0, cam.eulerAngles.y, 0) * moveInput ; 
         moveDir = moveInput.normalized;  
-        if(moveDir != UnityEngine.Vector3.zero)
+        if(moveDir != UnityEngine.Vector3.zero) // Nếu player chuyển động thì xoay theo vector di chuyển
         {
             UnityEngine.Quaternion desiredRotation = UnityEngine.Quaternion.LookRotation(moveDir, UnityEngine.Vector3.up); // tạo góc quay
             transform.rotation = UnityEngine.Quaternion.Lerp(transform.rotation, desiredRotation, rotateSpeed * Time.deltaTime);  // tạo chuyển động quay
