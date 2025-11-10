@@ -18,8 +18,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private UnityEngine.Vector3 moveDir;
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
     [SerializeField] private Transform cam;
-    [SerializeField] private LayerMask detectionLayer; 
+    [SerializeField] private LayerMask detectionLayer;
     public float distance = 10f;
+    
+    
 
     void Awake()
     {

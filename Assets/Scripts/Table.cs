@@ -22,6 +22,8 @@ public class Table : MonoBehaviour, IInteractable
         Debug.Log("Press [E] to interact with " + gameObject.name);
     }
 }
+// learn how to set up and switch multiple cameras with cinemachine 
+// Create crosshair
 // show UI voi interactprompt khi raycast quet den
-// outline object
-// implement interact()
+// outline object 
+// handle interact()

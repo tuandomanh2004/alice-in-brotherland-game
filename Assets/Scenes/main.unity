@@ -3591,7 +3591,7 @@ GameObject:
   - component: {fileID: 226534384}
   - component: {fileID: 226534383}
   m_Layer: 0
-  m_Name: '3rd Camera '
+  m_Name: CM 3rd Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9615,6 +9615,7 @@ GameObject:
   - component: {fileID: 656738082}
   - component: {fileID: 656738081}
   - component: {fileID: 656738080}
+  - component: {fileID: 656738083}
   m_Layer: 0
   m_Name: Card_club
   m_TagString: Untagged
@@ -9711,6 +9712,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656738078}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &656738083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656738078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.35472602, b: 0.3150943, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &661435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -21585,6 +21604,7 @@ GameObject:
   - component: {fileID: 1595051383}
   - component: {fileID: 1595051382}
   - component: {fileID: 1595051381}
+  - component: {fileID: 1595051384}
   m_Layer: 0
   m_Name: Card_diamond
   m_TagString: Untagged
@@ -21681,6 +21701,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595051379}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1595051384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595051379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.35472602, b: 0.3150943, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -27201,6 +27239,7 @@ GameObject:
   - component: {fileID: 1948826592}
   - component: {fileID: 1948826591}
   - component: {fileID: 1948826590}
+  - component: {fileID: 1948826593}
   m_Layer: 0
   m_Name: Card_heart
   m_TagString: Untagged
@@ -27297,6 +27336,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948826588}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1948826593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948826588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.35472602, b: 0.3150943, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -30225,6 +30282,7 @@ GameObject:
   - component: {fileID: 2125768792}
   - component: {fileID: 2125768791}
   - component: {fileID: 2125768790}
+  - component: {fileID: 2125768793}
   m_Layer: 0
   m_Name: Card_spade
   m_TagString: Untagged
@@ -30321,6 +30379,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125768788}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2125768793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125768788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.35472602, b: 0.3150943, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0
