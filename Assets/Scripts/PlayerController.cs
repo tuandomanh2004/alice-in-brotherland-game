@@ -2,6 +2,7 @@ using System;
 using System.IO.Compression;
 using System.Numerics;
 using NUnit.Framework.Internal;
+using TMPro;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,8 +17,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private UnityEngine.Vector3 moveDir;
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
-    [SerializeField] private Transform cam; 
+    [SerializeField] private Transform cam;
+    [SerializeField] private LayerMask detectionLayer; 
+    public float distance = 10f;
 
+    void Awake()
+    {
+        detectionLayer = LayerMask.GetMask("ray"); 
+    } 
     void Start()
     {
         InitializeComponent();
@@ -28,11 +35,13 @@ public class PlayerMove : MonoBehaviour
     {
         Move();
         UpdateAnimation();
+        DetectItem(); 
     }
     private void SetUpCursor()
     {
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);        
     }
     private void Move()
     {
@@ -40,8 +49,7 @@ public class PlayerMove : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         UnityEngine.Vector3 moveInput = (cam.forward * verticalInput) + (cam.right * horizontalInput); // Tạo vector di chuyển theo hướng cam và input
         moveInput.y = 0f; 
-       // moveInput =   UnityEngine.Quaternion.Euler(0, cam.eulerAngles.y, 0) * moveInput ; 
-        moveDir = moveInput.normalized;  
+        moveDir = moveInput.normalized; // Chuẩn hóa vector thành độ lớn = 1 để nhất quán tốc độ di chuyển  
         if(moveDir != UnityEngine.Vector3.zero) // Nếu player chuyển động thì xoay theo vector di chuyển
         {
             UnityEngine.Quaternion desiredRotation = UnityEngine.Quaternion.LookRotation(moveDir, UnityEngine.Vector3.up); // tạo góc quay
@@ -61,6 +69,18 @@ public class PlayerMove : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        cam = Camera.main.transform; 
+        cam = Camera.main.transform;
+    }
+    private void DetectItem()
+    {
+        Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
+        if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn có trúng obj nào không 
+        {
+            var target = hit.collider.gameObject; 
+            if(target.TryGetComponent(out IInteractable obj)) // lấy thông tin obj va chạm và thực hiện tương tác
+            {
+                obj.GetInteractPrompt(); 
+            } 
+        } 
     }
 }
