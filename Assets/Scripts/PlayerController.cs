@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
     [SerializeField] private Transform cam;
     [SerializeField] private LayerMask detectionLayer;
+    [SerializeField] private IInteractable item; 
     public float distance = 10f;
     
     
@@ -38,6 +39,7 @@ public class PlayerMove : MonoBehaviour
         Move();
         UpdateAnimation();
         DetectItem(); 
+        InteractWithItem() ; 
     }
     private void SetUpCursor()
     {
@@ -78,11 +80,22 @@ public class PlayerMove : MonoBehaviour
         Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
         if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn có trúng obj nào không 
         {
-            var target = hit.collider.gameObject; 
-            if(target.TryGetComponent(out IInteractable obj)) // lấy thông tin obj va chạm và thực hiện tương tác
+            if (hit.collider.TryGetComponent(out IInteractable obj))
             {
-                obj.GetInteractPrompt(); 
-            } 
-        } 
+                item = obj;
+                item.GetInteractPrompt();
+            }
+        }
+        else
+        {
+            item = null;
+        }
+    }
+    private void InteractWithItem()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && item != null)
+        {
+            item.Interact();
+        }
     }
 }

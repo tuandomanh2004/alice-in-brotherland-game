@@ -1,11 +1,15 @@
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Table : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private CameraSwitcher camSW;
+  //  [SerializeField] private UnityEvent onInteraction; 
+    private bool isFocused = false;
     void Start()
     {
-
+     //   onInteraction.Invoke();
     }
 
     // Update is called once per frame
@@ -15,7 +19,15 @@ public class Table : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        Debug.Log("Table Interacted : " + gameObject.name);
+       if (!isFocused)
+        {
+            camSW.SwitchCamera();
+        }
+        else
+        {
+            camSW.ResetCamera();
+        }
+        isFocused = !isFocused;
     }
     public void GetInteractPrompt()
     {
