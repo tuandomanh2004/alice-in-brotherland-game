@@ -6,7 +6,7 @@ public class Table : MonoBehaviour, IInteractable
 {
     [SerializeField] private CameraSwitcher camSW;
   //  [SerializeField] private UnityEvent onInteraction; 
-    private bool isFocused = false;
+    [SerializeField] private bool isFocused = false;
     void Start()
     {
      //   onInteraction.Invoke();
@@ -19,15 +19,15 @@ public class Table : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-       if (!isFocused)
+        isFocused = !isFocused; 
+        if (isFocused)
         {
             camSW.SwitchCamera();
         }
         else
         {
-            camSW.ResetCamera();
+            camSW.ResetCamera(); 
         }
-        isFocused = !isFocused;
     }
     public void GetInteractPrompt()
     {
