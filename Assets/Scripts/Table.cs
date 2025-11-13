@@ -1,15 +1,19 @@
+using NUnit.Framework;
 using Unity.Cinemachine;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Table : MonoBehaviour, IInteractable
 {
     [SerializeField] private CameraSwitcher camSW;
-  //  [SerializeField] private UnityEvent onInteraction; 
-    [SerializeField] private bool isFocused = false;
+    //  [SerializeField] private UnityEvent onInteraction; 
+    [SerializeField] private bool isFocused = false ;
+    [SerializeField] private Outline outlineItem; 
     void Start()
     {
-     //   onInteraction.Invoke();
+        //   onInteraction.Invoke();
+        outlineItem = GameObject.Find("Table").GetComponent<Outline>(); 
     }
 
     // Update is called once per frame
@@ -19,23 +23,31 @@ public class Table : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        isFocused = !isFocused; 
+        isFocused = !isFocused;
         if (isFocused)
         {
             camSW.SwitchCamera();
         }
         else
         {
-            camSW.ResetCamera(); 
+            camSW.ResetCamera();
         }
     }
     public void GetInteractPrompt()
     {
         Debug.Log("Press [E] to interact with " + gameObject.name);
     }
+    public void Outline(bool isDetected)
+    {
+        outlineItem.enabled = isDetected;
+    }
+    public void TurnOffOutline()
+    {
+        outlineItem.enabled = false; 
+    }
 }
-// learn how to set up and switch multiple cameras with cinemachine 
-// Create crosshair
+// display outline when  ray scan table
 // show UI voi interactprompt khi raycast quet den
-// outline object 
-// handle interact()
+// show mouse cursor in focus camera 
+// outline card player choose
+

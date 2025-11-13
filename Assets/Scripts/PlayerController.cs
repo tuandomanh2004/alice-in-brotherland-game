@@ -84,11 +84,17 @@ public class PlayerMove : MonoBehaviour
             {
                 item = obj;
                 item.GetInteractPrompt();
+                item.Outline(true);  
             }
         }
-        else
+        else // Không quét vào object nữa thì tắt outline của object hiện tại và trả null
         {
-            item = null;
+            if(item != null)
+            {
+                item.Outline(false); 
+                item = null;
+            }
+            
         }
     }
     private void InteractWithItem()
