@@ -63,13 +63,13 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("verticalMove", verticalInput);
         anim.SetFloat("horizontalMove", horizontalInput);
     }
-    private void InitializeComponent()
+    private void InitializeComponent() 
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
     }
-    private void SetUpCursor()
+    private void SetUpCursor() // Cấu hình con trỏ chuột
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked; 
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
                 item.Outline();  
             }
         }
-        else // Không quét vào object nữa thì tắt outline của object hiện tại và trả null
+        else // Không quét vào object nữa thì tắt outline,UI của object hiện tại và trả null
         {
             if(item != null)
             {
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
             
         }
     }
-    private void InteractWithItem()
+    private void InteractWithItem() // Xử lí input tương tác từ player
     {
         if (Input.GetKeyDown(KeyCode.E) && item != null)
         {

@@ -19,29 +19,26 @@ public class Table : MonoBehaviour, IInteractable
         interactionUI.text = "Press [E] to interact" ;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
-    public void Interact()
+    public void Interact() // Xử lí tương tác
     {
         isFocused = !isFocused;
         if (isFocused)
         {
             camSW.SwitchCamera();
-            interactionUI.enabled = !isDetected;
             camSW.SetUpCursor();
         }
         else
         {
             camSW.ResetCamera();
-            interactionUI.enabled = isDetected;
         }
     }
-    public void SetInteractPrompt()
+    public void SetInteractPrompt() // Bật-tắt UI
     {
-        if(!isFocused)
+        if(!isFocused) // Chỉ hiển thị UI ở góc nhìn thứ 3
         {
             interactionUI.enabled = isDetected;
         }
