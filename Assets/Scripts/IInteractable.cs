@@ -1,8 +1,10 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public interface IInteractable
 {
     void Interact();
-    void GetInteractPrompt();
-    void Outline(bool condition);
+    void SetInteractPrompt();
+    void Outline() ;
+    bool IsDetected(bool condition) ; 
 }

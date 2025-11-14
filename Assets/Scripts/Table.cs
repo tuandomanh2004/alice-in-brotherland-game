@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TMPro;
 using Unity.Cinemachine;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -8,12 +9,14 @@ public class Table : MonoBehaviour, IInteractable
 {
     [SerializeField] private CameraSwitcher camSW;
     //  [SerializeField] private UnityEvent onInteraction; 
-    [SerializeField] private bool isFocused = false ;
-    [SerializeField] private Outline outlineItem; 
+    [SerializeField] private bool isFocused = false, isDetected = false;
+    [SerializeField] private Outline outlineItem;
+    [SerializeField] private TextMeshProUGUI interactionUI;
     void Start()
     {
         //   onInteraction.Invoke();
-        outlineItem = GameObject.Find("Table").GetComponent<Outline>(); 
+        outlineItem = GameObject.Find("Table").GetComponent<Outline>();
+        interactionUI.text = "Press [E] to interact" ;
     }
 
     // Update is called once per frame
@@ -27,27 +30,35 @@ public class Table : MonoBehaviour, IInteractable
         if (isFocused)
         {
             camSW.SwitchCamera();
+            interactionUI.enabled = !isDetected;
+            camSW.SetUpCursor();
         }
         else
         {
             camSW.ResetCamera();
+            interactionUI.enabled = isDetected;
         }
     }
-    public void GetInteractPrompt()
+    public void SetInteractPrompt()
     {
-        Debug.Log("Press [E] to interact with " + gameObject.name);
+        if(!isFocused)
+        {
+            interactionUI.enabled = isDetected;
+        }
+        else
+        {
+            interactionUI.enabled = !isDetected;
+        }
     }
-    public void Outline(bool isDetected)
+    public void Outline()
     {
         outlineItem.enabled = isDetected;
     }
-    public void TurnOffOutline()
-    {
-        outlineItem.enabled = false; 
-    }
+    public bool IsDetected(bool isDetected) => this.isDetected = isDetected;
 }
-// display outline when  ray scan table
-// show UI voi interactprompt khi raycast quet den
-// show mouse cursor in focus camera 
+// display outline whenever ray scan table - DONE
+// show UI voi interactprompt khi raycast quet den - DONE 
+// show mouse cursor in focus camera - DONE 
+// make mouse controller class 
 // outline card player choose
 

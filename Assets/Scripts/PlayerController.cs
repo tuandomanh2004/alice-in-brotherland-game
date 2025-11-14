@@ -11,7 +11,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMove : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private Animator anim;
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         InitializeComponent();
-        SetUpCursor();  
+        SetUpCursor(); 
     }
 
     void Update()
@@ -40,12 +40,6 @@ public class PlayerMove : MonoBehaviour
         UpdateAnimation();
         DetectItem(); 
         InteractWithItem() ; 
-    }
-    private void SetUpCursor()
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);        
     }
     private void Move()
     {
@@ -75,6 +69,12 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
     }
+    private void SetUpCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);        
+    }
     private void DetectItem()
     {
         Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
@@ -83,15 +83,18 @@ public class PlayerMove : MonoBehaviour
             if (hit.collider.TryGetComponent(out IInteractable obj))
             {
                 item = obj;
-                item.GetInteractPrompt();
-                item.Outline(true);  
+                item.IsDetected(true) ; 
+                item.SetInteractPrompt();
+                item.Outline();  
             }
         }
         else // Không quét vào object nữa thì tắt outline của object hiện tại và trả null
         {
             if(item != null)
             {
-                item.Outline(false); 
+                item.IsDetected(false) ; 
+                item.Outline(); 
+                item.SetInteractPrompt();
                 item = null;
             }
             
