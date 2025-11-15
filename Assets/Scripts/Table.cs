@@ -5,12 +5,11 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Table : MonoBehaviour, IInteractable
+public class Table : InteractiveItem
 {
     [SerializeField] private CameraSwitcher camSW;
     //  [SerializeField] private UnityEvent onInteraction; 
-    [SerializeField] private bool isFocused = false, isDetected = false;
-    [SerializeField] private Outline outlineItem;
+    [SerializeField] private bool isFocused = false;
     [SerializeField] private TextMeshProUGUI interactionUI;
     void Start()
     {
@@ -23,7 +22,7 @@ public class Table : MonoBehaviour, IInteractable
     {
 
     }
-    public void Interact() // Xử lí tương tác
+    public override void Interact() // Xử lí tương tác
     {
         isFocused = !isFocused;
         if (isFocused)
@@ -36,7 +35,7 @@ public class Table : MonoBehaviour, IInteractable
             camSW.ResetCamera();
         }
     }
-    public void SetInteractPrompt() // Bật-tắt UI
+    public override void SetInteractPrompt() // Bật-tắt UI
     {
         if(!isFocused) // Chỉ hiển thị UI ở góc nhìn thứ 3
         {
@@ -47,11 +46,6 @@ public class Table : MonoBehaviour, IInteractable
             interactionUI.enabled = !isDetected;
         }
     }
-    public void Outline()
-    {
-        outlineItem.enabled = isDetected;
-    }
-    public bool IsDetected(bool isDetected) => this.isDetected = isDetected;
 }
 // display outline whenever ray scan table - DONE
 // show UI voi interactprompt khi raycast quet den - DONE 

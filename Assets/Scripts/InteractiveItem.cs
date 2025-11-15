@@ -5,24 +5,21 @@ public class InteractiveItem : MonoBehaviour
     public bool isDetected = false ;
     public Outline outlineItem ; 
 
-    public void Interact()
+    public virtual void Interact()
     {
-        throw new System.NotImplementedException();
+        
     }
 
-    public bool IsDetected(bool condition)
+    public virtual bool IsDetected(bool condition) => isDetected = condition ; 
+
+    public virtual void Outline()
     {
-        throw new System.NotImplementedException();
+        outlineItem.enabled = isDetected;
     }
 
-    public void Outline()
+    public virtual void SetInteractPrompt()
     {
-        throw new System.NotImplementedException();
-    }
-
-    public void SetInteractPrompt()
-    {
-        throw new System.NotImplementedException();
+       
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

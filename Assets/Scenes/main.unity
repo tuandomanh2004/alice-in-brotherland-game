@@ -4630,6 +4630,7 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 0
+  item: {fileID: 0}
   distance: 5
 --- !u!143 &273862157
 CharacterController:
@@ -9324,10 +9325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddc89d463932e547a99add952da421e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSW: {fileID: 1358152160}
-  isFocused: 0
   isDetected: 0
   outlineItem: {fileID: 0}
+  camSW: {fileID: 1358152160}
+  isFocused: 0
   interactionUI: {fileID: 2038959198}
 --- !u!1 &621706596
 GameObject:
