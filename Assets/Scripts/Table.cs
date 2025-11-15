@@ -55,7 +55,14 @@ public class Table : MonoBehaviour, IInteractable
 }
 // display outline whenever ray scan table - DONE
 // show UI voi interactprompt khi raycast quet den - DONE 
-// show mouse cursor in focus camera - DONE 
-// make mouse controller class 
-// outline card player choose
+// show mouse cursor in focus camera - DONE
+
+// MAKE MOUSE CONTROLLER - TODAY 
+// switch camera -> turn on mouse cursor
+// 
+// get input and mouse cursor position
+// outline card whenever cursor point in
+
+
+
 
