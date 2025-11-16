@@ -28,11 +28,12 @@ public class Table : InteractiveItem
         if (isFocused)
         {
             camSW.SwitchCamera();
-            camSW.SetUpCursor();
+            camSW.SetUpCursor(true);
         }
         else
         {
             camSW.ResetCamera();
+            camSW.SetUpCursor(false);
         }
     }
     public override void SetInteractPrompt() // Bật-tắt UI

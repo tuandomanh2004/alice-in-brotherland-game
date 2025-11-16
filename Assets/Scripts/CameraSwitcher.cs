@@ -18,16 +18,23 @@ public class CameraSwitcher : MonoBehaviour
         itemFocusCamera.Priority = 2;
         playerCamera.Priority = 1;
     }
-    public void SetUpCursor()
+    public void SetUpCursor(bool isVisible)
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None; 
-        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);        
+        if (isVisible)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked ; 
+        }
     }
     public void ResetCamera()
     {
-       itemFocusCamera.Priority = 1;
-        playerCamera.Priority = 2;   
+        itemFocusCamera.Priority = 1;
+        playerCamera.Priority = 2;
     }
     // 
 }
