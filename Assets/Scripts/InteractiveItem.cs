@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class InteractiveItem : MonoBehaviour
 {
-    public bool isDetected = false ;
-    public Outline outlineItem ; 
+    public bool isDetected = false;
+    public Outline outlineItem;
 
     public virtual void Interact()
     {
-        
+
     }
 
-    public virtual bool IsDetected(bool condition) => isDetected = condition ; 
+    public virtual void ItemDetected(bool condition)
+    {
+        isDetected = condition;
+    }
 
     public virtual void Outline()
     {
@@ -19,18 +22,18 @@ public class InteractiveItem : MonoBehaviour
 
     public virtual void SetInteractPrompt()
     {
-       
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void Start()
     {
-        
+        outlineItem = GetComponent<Outline>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -11,7 +11,7 @@ public class Table : InteractiveItem
     //  [SerializeField] private UnityEvent onInteraction; 
     [SerializeField] private bool isFocused = false;
     [SerializeField] private TextMeshProUGUI interactionUI;
-    void Start()
+    public override void Start()
     {
         //   onInteraction.Invoke();
         outlineItem = GameObject.Find("Table").GetComponent<Outline>();
@@ -52,9 +52,9 @@ public class Table : InteractiveItem
 // show mouse cursor in focus camera - DONE
 
 // MAKE MOUSE CONTROLLER - TODAY 
-// switch camera -> turn on mouse cursor
+// switch camera -> turn on mouse cursor - DONE
 // 
-// get input and mouse cursor position
+// get input and mouse cursor position - DONE
 // outline card whenever cursor point in
 
 

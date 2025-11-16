@@ -1,16 +1,26 @@
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card : InteractiveItem
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
+    public override void Start()
+    {
+        base.Start();
+    }
     void Update()
     {
         
+    }
+    public override void Interact()
+    {
+        base.Interact();
+    }
+    public override void Outline()
+    {
+        base.Outline();
+    }
+    public override void ItemDetected(bool condition)
+    {
+        base.ItemDetected(condition);
     }
 }

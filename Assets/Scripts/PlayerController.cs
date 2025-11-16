@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
             if (hit.collider.TryGetComponent(out InteractiveItem obj))
             {
                 item = obj;
-                item.IsDetected(true) ; 
+                item.ItemDetected(true) ; 
                 item.SetInteractPrompt();
                 item.Outline();  
             }
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
         {
             if(item != null)
             {
-                item.IsDetected(false) ; 
+                item.ItemDetected(false) ; 
                 item.Outline(); 
                 item.SetInteractPrompt();
                 item = null;
