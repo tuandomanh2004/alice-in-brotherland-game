@@ -30,8 +30,9 @@ public class MouseSelecting : MonoBehaviour
                 item = obj ; 
                 item.ItemDetected(true);
                 Debug.Log(item.isDetected) ; 
-                item.Outline();
                 Debug.Log(obj.name) ; 
+                item.Outline();
+                
             }
         }
         else

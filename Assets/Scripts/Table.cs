@@ -14,7 +14,7 @@ public class Table : InteractiveItem
     public override void Start()
     {
         //   onInteraction.Invoke();
-        outlineItem = GameObject.Find("Table").GetComponent<Outline>();
+        outlineItem = GameObject.Find("Table").GetComponent<OutlineController>();
         interactionUI.text = "Press [E] to interact" ;
     }
 

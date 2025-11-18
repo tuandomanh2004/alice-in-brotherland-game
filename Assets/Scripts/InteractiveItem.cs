@@ -3,7 +3,7 @@ using UnityEngine;
 public class InteractiveItem : MonoBehaviour
 {
     public bool isDetected = false;
-    public Outline outlineItem;
+    public OutlineController outlineItem;
 
     public virtual void Interact()
     {
@@ -17,7 +17,7 @@ public class InteractiveItem : MonoBehaviour
 
     public virtual void Outline()
     {
-        outlineItem.enabled = isDetected;
+        outlineItem.SetOutline(isDetected) ; 
     }
 
     public virtual void SetInteractPrompt()
@@ -28,7 +28,7 @@ public class InteractiveItem : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public virtual void Start()
     {
-        outlineItem = GetComponent<Outline>();
+        outlineItem = GetComponent<OutlineController>();
     }
 
     // Update is called once per frame
