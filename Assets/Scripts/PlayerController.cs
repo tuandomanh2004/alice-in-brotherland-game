@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
     private void DetectItem()
     {
         Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
-        if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn có trúng obj nào không 
+        if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn trúng obj 
         {
             if (hit.collider.TryGetComponent(out InteractiveItem obj))
             {

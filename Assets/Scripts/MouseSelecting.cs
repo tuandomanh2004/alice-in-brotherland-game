@@ -20,7 +20,7 @@ public class MouseSelecting : MonoBehaviour
     {
         MouseHover();
     }
-    public void MouseHover()
+    public void MouseHover() 
     {
         Ray ray = focusItemCamera.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray,out RaycastHit hit, distance, layer))
@@ -31,7 +31,7 @@ public class MouseSelecting : MonoBehaviour
                 item.ItemDetected(true);
                 Debug.Log(item.isDetected) ; 
                 Debug.Log(obj.name) ; 
-                item.Outline();
+             //   item.Outline();
                 
             }
         }
@@ -40,7 +40,7 @@ public class MouseSelecting : MonoBehaviour
             if(item != null)
             {
                 item.ItemDetected(false);
-                item.Outline();
+              //  item.Outline();
                 item = null ;  
             }
         }
