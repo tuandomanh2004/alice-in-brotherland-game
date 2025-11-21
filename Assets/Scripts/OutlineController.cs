@@ -42,6 +42,8 @@ public class OutlineController : MonoBehaviour
     {
         for (int i = 0; i < mats.Length; i++)
         {
+           // Debug.Log(i) ;
+            Debug.Log(gameObject.name + " " +  mats.Length) ; 
             mats[i][1].SetFloat("_OutlineScale", outlineIntensity);
         }
     }

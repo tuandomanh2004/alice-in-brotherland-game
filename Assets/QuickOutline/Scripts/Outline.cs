@@ -200,24 +200,17 @@ public class Outline : MonoBehaviour
   void LoadSmoothNormals()
   {
 
-    // Retrieve or generate smooth normals
+
     foreach (var meshFilter in GetComponentsInChildren<MeshFilter>())
     {
-
-      // Skip if smooth normals have already been adopted
       if (!registeredMeshes.Add(meshFilter.sharedMesh))
       {
         continue;
       }
-
-      // Retrieve or generate smooth normals
       var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
       var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
+       meshFilter.sharedMesh.SetUVs(3, smoothNormals);
 
-      // Store smooth normals in UV3
-      meshFilter.sharedMesh.SetUVs(3, smoothNormals);
-
-      // Combine submeshes
       var renderer = meshFilter.GetComponent<Renderer>();
 
       if (renderer != null)
