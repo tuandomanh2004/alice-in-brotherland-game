@@ -43,27 +43,14 @@ public class OutlineController : MonoBehaviour
     {
         for (int i = 0; i < rend.Length; i++)
         {
-            for(int j  = 0 ; j < mats.Length ; j++)
-            {           
-                if(mats[i][j].name.StartsWith(OutlineMat.name))
-                {
-                    mats[i][j].SetFloat("_OutlineScale", outlineIntensity);   
-                }
-            }
+            mats[i][1].SetFloat("_OutlineScale" , outlineIntensity) ; 
         }
     }
     private void TurnOffOutline() 
     {
         for (int i = 0; i < rend.Length; i++)
         {
-            for(int j  = 0 ; j < mats.Length ; j++)
-            {
-                if(mats[i][j].name.StartsWith(OutlineMat.name)) // check outline mat instance giong ten voi outline goc 
-                {
-                    mats[i][j].SetFloat("_OutlineScale",0f);   
-                }
-            }
+            mats[i][1].SetFloat("_OutlineScale" ,0f) ; 
         }
-    }
-}
-// 
+        }
+    } 

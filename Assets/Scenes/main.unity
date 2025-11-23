@@ -9904,6 +9904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!1 &661435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -11761,7 +11762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &824098375
 Transform:
   m_ObjectHideFlags: 0
@@ -11791,6 +11792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!114 &824098377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15578,7 +15580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1063972033
 Transform:
   m_ObjectHideFlags: 0
@@ -15608,6 +15610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!114 &1063972035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19596,7 +19599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1446019655
 Transform:
   m_ObjectHideFlags: 0
@@ -19626,6 +19629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!114 &1446019657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22002,7 +22006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1542829225
 Transform:
   m_ObjectHideFlags: 0
@@ -22032,6 +22036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.5
+  OutlineMat: {fileID: 0}
 --- !u!114 &1542829227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22692,6 +22697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28390,6 +28396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -30472,6 +30479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 0.0125
+  OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!1 &2083532146
 GameObject:
   m_ObjectHideFlags: 0
@@ -31597,6 +31605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: []
   outlineIntensity: 1.05
+  OutlineMat: {fileID: 0}
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,9 +29,9 @@ public class MouseSelecting : MonoBehaviour
             {
                 item = obj ; 
                 item.ItemDetected(true);
-              //  Debug.Log(item.isDetected) ; 
-              //  Debug.Log(obj.name) ; 
-              //  item.Outline();
+             //   Debug.Log(item.isDetected) ; 
+//Debug.Log(obj.name) ; 
+                item.Outline();
                 
             }
         }
@@ -40,7 +40,7 @@ public class MouseSelecting : MonoBehaviour
             if(item != null)
             {
                 item.ItemDetected(false);
-              //  item.Outline();
+                item.Outline();
                 item = null ;  
             }
         }
