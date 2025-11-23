@@ -7,6 +7,7 @@ public class OutlineController : MonoBehaviour
     [SerializeField]public Material[][] mats;
     [SerializeField] private Renderer[] rend;
     [SerializeField] private float outlineIntensity;
+    [SerializeField] private Material OutlineMat ; 
     //[SerializeField] private bool isOutline = false ; 
     void Start()
     {
@@ -40,18 +41,29 @@ public class OutlineController : MonoBehaviour
     }
     private void TurnOnOutline()
     {
-        for (int i = 0; i < mats.Length; i++)
+        for (int i = 0; i < rend.Length; i++)
         {
-           // Debug.Log(i) ;
-            Debug.Log(gameObject.name + " " +  mats.Length) ; 
-            mats[i][1].SetFloat("_OutlineScale", outlineIntensity);
+            for(int j  = 0 ; j < mats.Length ; j++)
+            {           
+                if(mats[i][j].name.StartsWith(OutlineMat.name))
+                {
+                    mats[i][j].SetFloat("_OutlineScale", outlineIntensity);   
+                }
+            }
         }
     }
-    private void TurnOffOutline()
+    private void TurnOffOutline() 
     {
-        for (int i = 0; i < mats.Length; i++)
+        for (int i = 0; i < rend.Length; i++)
         {
-            mats[i][1].SetFloat("_OutlineScale", 0f);
+            for(int j  = 0 ; j < mats.Length ; j++)
+            {
+                if(mats[i][j].name.StartsWith(OutlineMat.name)) // check outline mat instance giong ten voi outline goc 
+                {
+                    mats[i][j].SetFloat("_OutlineScale",0f);   
+                }
+            }
         }
     }
 }
+// 
