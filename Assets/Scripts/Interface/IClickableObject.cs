@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class IClickableObject
+public interface IClickableObject
 {
-    
+    void OnMouseDown() ; 
 }
