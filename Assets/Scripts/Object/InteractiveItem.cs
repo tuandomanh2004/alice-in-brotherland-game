@@ -30,7 +30,6 @@ public class InteractiveItem : MonoBehaviour
     {
         outlineItem = GetComponent<OutlineController>();
     }
-
     // Update is called once per frame
     void Update()
     {
