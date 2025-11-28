@@ -9,7 +9,7 @@ public class MouseSelecting : MonoBehaviour
     [SerializeField] private Camera focusItemCamera;
     [SerializeField] private float distance = 3.0f;
     [SerializeField] private LayerMask layer;
-    [SerializeField] private InteractiveItem item;
+    [SerializeField] private InteractionManager item;
     void Start()
     {
         focusItemCamera = Camera.main;
@@ -25,7 +25,7 @@ public class MouseSelecting : MonoBehaviour
         Ray ray = focusItemCamera.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray,out RaycastHit hit, distance, layer))
         {
-            if(hit.collider.TryGetComponent(out InteractiveItem obj))
+            if(hit.collider.TryGetComponent(out InteractionManager obj))
             {
                 item = obj ; 
                 item.ItemDetected(true);

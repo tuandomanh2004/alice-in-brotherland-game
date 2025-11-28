@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Card : InteractiveItem
+public class Card : InteractionManager  
 {
     public override void Start()
     {
@@ -10,21 +10,8 @@ public class Card : InteractiveItem
     {
         
     }
-    public override void Interact()
-    {
-        base.Interact();
-    }
-    public override void Outline()
-    {
-        base.Outline();
-    }
-    public override void ItemDetected(bool condition)
-    {
-        base.ItemDetected(condition);
-    }
-
     void OnMouseDown()
     {
-        Debug.Log(gameObject.name) ; 
+        Debug.Log("Selected :" + gameObject.name) ; 
     }
 }

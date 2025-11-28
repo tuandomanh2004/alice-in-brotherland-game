@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 
-public class OutlineController : MonoBehaviour
+public class OutlineBehavior : MonoBehaviour
 {
     [SerializeField]public Material[][] mats;
     [SerializeField] private Renderer[] rend;

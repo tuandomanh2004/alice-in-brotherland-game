@@ -5,7 +5,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Table : InteractiveItem
+public class Table : InteractionManager
 {
     [SerializeField] private CameraSwitcher camSW;
     //  [SerializeField] private UnityEvent onInteraction; 
@@ -14,7 +14,7 @@ public class Table : InteractiveItem
     public override void Start()
     {
         //   onInteraction.Invoke();
-        outlineItem = GameObject.Find("Table").GetComponent<OutlineController>();
+        outlineItem = GameObject.Find("Table").GetComponent<OutlineBehavior>();
         interactionUI.text = "Press [E] to interact" ;
     }
 

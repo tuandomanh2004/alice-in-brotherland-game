@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
     [SerializeField] private Transform cam;
     [SerializeField] private LayerMask detectionLayer;
-    [SerializeField] private InteractiveItem item; 
+    [SerializeField] private InteractionManager item; 
     public float distance = 10f;
     
     
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
         if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn trúng obj 
         {
-            if (hit.collider.TryGetComponent(out InteractiveItem obj))
+            if (hit.collider.TryGetComponent(out InteractionManager obj))
             {
                 item = obj;
                 item.ItemDetected(true) ; 
