@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(OutlineBehavior))]
 public class InteractionManager : InteractiveItem
 {
-    [SerializeField] protected OutlineBehavior outlineItem;
+    [SerializeField] protected OutlineBehavior outlineItem; 
     public virtual void Start()
     {
         outlineItem = GetComponent<OutlineBehavior>() ; 

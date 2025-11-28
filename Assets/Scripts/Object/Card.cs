@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class Card : InteractionManager  
 {
-    public override void Start()
-    {
-        base.Start();
-    }
     void Update()
     {
         

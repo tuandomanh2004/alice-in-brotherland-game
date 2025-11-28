@@ -47,4 +47,8 @@ public class MouseSelecting : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
       //  Debug.Log(ray);
     }
+    void OnMouseDown()
+    {
+        Debug.Log(gameObject.name) ; 
+    }
 }
