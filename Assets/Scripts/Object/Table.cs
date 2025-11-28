@@ -48,15 +48,7 @@ public class Table : InteractiveItem
         }
     }
 }
-// display outline whenever ray scan table - DONE
-// show UI voi interactprompt khi raycast quet den - DONE 
-// show mouse cursor in focus camera - DONE
 
-// MAKE MOUSE CONTROLLER - TODAY 
-// switch camera -> turn on mouse cursor - DONE
-// 
-// get input and mouse cursor position - DONE
-// outline card whenever cursor point in
 
 
 

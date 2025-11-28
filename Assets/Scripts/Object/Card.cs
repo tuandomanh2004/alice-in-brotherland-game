@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class Card : InteractiveItem,IClickableObject
+public class Card : InteractiveItem
 {
-    // Update is called once per frame
     public override void Start()
     {
         base.Start();
@@ -24,7 +23,7 @@ public class Card : InteractiveItem,IClickableObject
         base.ItemDetected(condition);
     }
 
-    public void OnMouseDown()
+    void OnMouseDown()
     {
         Debug.Log(gameObject.name) ; 
     }
