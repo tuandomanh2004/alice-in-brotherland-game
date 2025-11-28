@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Card : InteractionManager  
+public class Card : InteractionManager
 {
     void Update()
     {
@@ -9,5 +10,9 @@ public class Card : InteractionManager
     void OnMouseDown()
     {
         Debug.Log("Selected :" + gameObject.name) ; 
+    }
+    public override string GetItemDescription()
+    {
+        return "This is a : " + gameObject.name ;
     }
 }

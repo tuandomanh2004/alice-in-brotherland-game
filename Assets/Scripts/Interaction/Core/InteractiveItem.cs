@@ -3,6 +3,7 @@
     public class InteractiveItem : MonoBehaviour
     {
         public bool isDetected = false;
+       // public bool IsDetected() => isDetected;
         public virtual void Interact()
         {
 

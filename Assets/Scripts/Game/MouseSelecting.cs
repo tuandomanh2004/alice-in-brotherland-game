@@ -1,5 +1,6 @@
 using System.Numerics;
 using Unity.Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Video;
@@ -10,6 +11,7 @@ public class MouseSelecting : MonoBehaviour
     [SerializeField] private float distance = 3.0f;
     [SerializeField] private LayerMask layer;
     [SerializeField] private InteractionManager item;
+    //  [SerializeField] private bool isActive = false ; 
     void Start()
     {
         focusItemCamera = Camera.main;
@@ -18,37 +20,41 @@ public class MouseSelecting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         MouseHover();
+
+
     }
-    public void MouseHover() 
+    public void MouseHover()
     {
         Ray ray = focusItemCamera.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray,out RaycastHit hit, distance, layer))
+        if (Physics.Raycast(ray, out RaycastHit hit, distance, layer))
         {
-            if(hit.collider.TryGetComponent(out InteractionManager obj))
+            if (hit.collider.TryGetComponent(out InteractionManager obj))
             {
-                item = obj ; 
+                item = obj;
                 item.ItemDetected(true);
-             //   Debug.Log(item.isDetected) ; 
-//Debug.Log(obj.name) ; 
+                //   Debug.Log(item.isDetected) ; 
+                //Debug.Log(obj.name) ; 
                 item.Outline();
-                
+                item.Tooltip();
             }
+            Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
+            //  Debug.Log(ray);
         }
         else
         {
-            if(item != null)
+            if (item != null)
             {
                 item.ItemDetected(false);
                 item.Outline();
-                item = null ;  
+                item.Tooltip();
+                item = null;
             }
         }
-        Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
-      //  Debug.Log(ray);
     }
     void OnMouseDown()
     {
-        Debug.Log(gameObject.name) ; 
+        Debug.Log(gameObject.name);
     }
 }
