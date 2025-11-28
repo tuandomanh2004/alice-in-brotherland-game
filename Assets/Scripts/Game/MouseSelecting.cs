@@ -34,13 +34,10 @@ public class MouseSelecting : MonoBehaviour
             {
                 item = obj;
                 item.ItemDetected(true);
-                //   Debug.Log(item.isDetected) ; 
-                //Debug.Log(obj.name) ; 
                 item.Outline();
                 item.Tooltip();
             }
             Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
-            //  Debug.Log(ray);
         }
         else
         {

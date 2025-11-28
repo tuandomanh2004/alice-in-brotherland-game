@@ -1,0 +1,1385 @@
+fileFormatVersion: 2
+guid: 05e0567213a58c840a3ea79a4409bdfd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264706
+  packageName: Modern GDR - Free icons pack
+  packageVersion: 1.0
+  assetPath: Assets/Modern GDR - Free icons pack/00_Atlas/BrightBackground.png
+  uploadId: 623822
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 2
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrightBackground_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 842
+        width: 74
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee7139b9bf318f4cadea8f494a1fddf
+      internalID: 1526711516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 841
+        width: 74
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce95433c9380a9043a80db5ee8a86b69
+      internalID: 484878644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 853
+        width: 99
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890c2d3d4e900e54fa5735b696af05a8
+      internalID: 500295630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 853
+        width: 99
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b754052e22603244ab3ade917fb8c604
+      internalID: -6461808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 851
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35253d2fa7b456c4fb23aaab595f4777
+      internalID: 397166795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 850
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1e1ae851e6a384d88f30257cdcb1c8
+      internalID: 1166602604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_6
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 850
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0845989480484439d15d8a8b3b3ca2
+      internalID: -346146542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_7
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 851
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8cc05d5cbcf634993ad25754e19a13
+      internalID: -1623181109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_8
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 851
+        width: 82
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5121347b2bef55c48bb17a0385ba2a76
+      internalID: -1658965205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 706
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb316af0fe243e040b5343a62627545a
+      internalID: -1399192946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 706
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db47cdae98fe5d499393ad87bd3f385
+      internalID: 487993599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_11
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 705
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edacfee05d8b351478954f53dc2e06d3
+      internalID: 1772307325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_12
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 705
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea769afa69089e4bbd10a6ed50e7d80
+      internalID: 1314256081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_13
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 705
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bcdf445d7ce9a48a74745610f31e90
+      internalID: -466469139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_14
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 702
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f0e4e3d1daf9f4b9bfc84aa7e20f07
+      internalID: 605105999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_15
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 708
+        width: 74
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4041fd4c1e7024baa293241f9b0210
+      internalID: 1319865252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_16
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 708
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b0f017ae8b7e04385bdaeaaac28a66
+      internalID: -1796198666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_17
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 706
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21a5cd03dee8e7488e09fbaec4ac506
+      internalID: -1456439076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 550
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863a95ff82c33fb488efe8d459993add
+      internalID: -1457842467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_19
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 550
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8be11a6e7237d4ca4cacb46bb2d120
+      internalID: -561286250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_20
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 550
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62cd28fedd170b4388f4fb69ea814d2
+      internalID: -1542341876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_21
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 550
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80ca135f12015142a33a9f989888055
+      internalID: -1823975820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_22
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 550
+        width: 80
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d91f21200455d448aa3a4b76a5e41a
+      internalID: 266623098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_23
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 550
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112ad9c5d9f64724a86d81f7bd16be38
+      internalID: -1461929703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_24
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 550
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e0cc0312cb4dc48b925e756d4c5ac5
+      internalID: 364874209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_25
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 550
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514efa11d6a93fe4d8b83596a9d0edf0
+      internalID: 345588311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_26
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 552
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9369698434a8ee94da4f1a573fd977a5
+      internalID: -206459884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_27
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 399
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a21f7da716ec94469cfec40713ed2ea
+      internalID: -880373537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 401
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bae756d7aeb07547ad499e26cfe73b4
+      internalID: -1514333626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 401
+        width: 80
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd5e7e56008b8d4fa8b5219f58b7ba1
+      internalID: -658405503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_30
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 403
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4816fc8f9163c941964071cb04deb93
+      internalID: -660071037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_31
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 403
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bf3f280e607b04c9c9199126a46cff
+      internalID: -344917522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_32
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 406
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce7657a7a8278445a400cbdc2f25139
+      internalID: 2037936130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_33
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 407
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1da98fc9ae5bf489beca8019901d4e
+      internalID: 1618940815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_34
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 405
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9591fc0db0a2445aea3897673f628b
+      internalID: -154282048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_35
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 406
+        width: 74
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10644bf401974a4ca20f845b7064504
+      internalID: 692518639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 231
+        width: 99
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309b6fb5004740244a98393f4eb7f397
+      internalID: 1175824055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_37
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 249
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754638eef8e47c04abab40e2f436c3d7
+      internalID: -1306112615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_38
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 252
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21f7dfbc3d9ee4478709d82e68438d4
+      internalID: 1409218526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_39
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 251
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbcf4f2bd8371a439f44275be982f5d
+      internalID: -242871843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_40
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 251
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e13eeaae59c11740831c26907778ccf
+      internalID: -1420994853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_41
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 254
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fe8e542d1f29e429fcc35472e07f51
+      internalID: -851114900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_42
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 248
+        width: 74
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c48b6c1a7efbc048a4cbbf0b8abf91b
+      internalID: 1012787341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_43
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 252
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f42a639be4c5441a109cbe8ae680eb
+      internalID: -2135105652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_44
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 250
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486a823710e70804580faa45bbc9af26
+      internalID: -248250337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_45
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 90
+        width: 76
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2c5c02d80954f4a8c0ae1a22bd8dbe
+      internalID: 1935446676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_46
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 93
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f065f7a9b9a9c46a238a86dc587b1a
+      internalID: 1309736580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 93
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffccc022dfda0554fa431a7c784bcf49
+      internalID: -1514062910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_48
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 90
+        width: 88
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10f826edd736a147b7de1671173b53f
+      internalID: -444331693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_49
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 86
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3923acfef7137c54e9e209418ab6f4d8
+      internalID: -300831402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_50
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 94
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ab578e6daeb914a87d6e44841edcf3
+      internalID: 1437929066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrightBackground_51
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 95
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0342b0803b0d6d04eb2886c64c6024cc
+      internalID: -1460717503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 78c808ba1a9631f488c4606933b7822f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BrightBackground_0: 1526711516
+      BrightBackground_1: 484878644
+      BrightBackground_10: 487993599
+      BrightBackground_11: 1772307325
+      BrightBackground_12: 1314256081
+      BrightBackground_13: -466469139
+      BrightBackground_14: 605105999
+      BrightBackground_15: 1319865252
+      BrightBackground_16: -1796198666
+      BrightBackground_17: -1456439076
+      BrightBackground_18: -1457842467
+      BrightBackground_19: -561286250
+      BrightBackground_2: 500295630
+      BrightBackground_20: -1542341876
+      BrightBackground_21: -1823975820
+      BrightBackground_22: 266623098
+      BrightBackground_23: -1461929703
+      BrightBackground_24: 364874209
+      BrightBackground_25: 345588311
+      BrightBackground_26: -206459884
+      BrightBackground_27: -880373537
+      BrightBackground_28: -1514333626
+      BrightBackground_29: -658405503
+      BrightBackground_3: -6461808
+      BrightBackground_30: -660071037
+      BrightBackground_31: -344917522
+      BrightBackground_32: 2037936130
+      BrightBackground_33: 1618940815
+      BrightBackground_34: -154282048
+      BrightBackground_35: 692518639
+      BrightBackground_36: 1175824055
+      BrightBackground_37: -1306112615
+      BrightBackground_38: 1409218526
+      BrightBackground_39: -242871843
+      BrightBackground_4: 397166795
+      BrightBackground_40: -1420994853
+      BrightBackground_41: -851114900
+      BrightBackground_42: 1012787341
+      BrightBackground_43: -2135105652
+      BrightBackground_44: -248250337
+      BrightBackground_45: 1935446676
+      BrightBackground_46: 1309736580
+      BrightBackground_47: -1514062910
+      BrightBackground_48: -444331693
+      BrightBackground_49: -300831402
+      BrightBackground_5: 1166602604
+      BrightBackground_50: 1437929066
+      BrightBackground_51: -1460717503
+      BrightBackground_6: -346146542
+      BrightBackground_7: -1623181109
+      BrightBackground_8: -1658965205
+      BrightBackground_9: -1399192946
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

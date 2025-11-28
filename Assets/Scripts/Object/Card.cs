@@ -13,6 +13,6 @@ public class Card : InteractionManager
     }
     public override string GetItemDescription()
     {
-        return "This is a : " + gameObject.name ;
+        return "This is " + gameObject.name ;
     }
 }

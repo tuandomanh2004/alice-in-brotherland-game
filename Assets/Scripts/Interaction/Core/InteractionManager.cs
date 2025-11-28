@@ -31,6 +31,6 @@ public class InteractionManager : InteractiveItem
     } 
     public void Tooltip()
     {
-        tooltipItem.SetTooltip(this.isDetected, this.name ,this.GetItemDescription()) ; 
+        tooltipItem.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
     }
 }
