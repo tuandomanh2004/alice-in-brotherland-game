@@ -36,6 +36,7 @@ public class MouseSelecting : MonoBehaviour
                 item.ItemDetected(true);
                 item.Outline();
                 item.Tooltip();
+                item.Lift(true);
             }
             Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
         }
@@ -46,6 +47,7 @@ public class MouseSelecting : MonoBehaviour
                 item.ItemDetected(false);
                 item.Outline();
                 item.Tooltip();
+                item.Lift(false);
                 item = null;
             }
         }

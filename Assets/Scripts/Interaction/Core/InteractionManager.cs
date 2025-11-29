@@ -6,6 +6,7 @@ public class InteractionManager : InteractiveItem
 {
     [SerializeField] protected OutlineBehavior outlineItem; 
     [SerializeField] protected TooltipBehavior tooltipItem ; 
+    [SerializeField] protected LiftHoverBehavior liftHoverItem;
     public virtual void Start()
     {
         outlineItem = GetComponent<OutlineBehavior>() ; 
@@ -32,5 +33,9 @@ public class InteractionManager : InteractiveItem
     public void Tooltip()
     {
         tooltipItem.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
+    }
+    public void Lift(bool isHover)
+    {
+        liftHoverItem.SetHover(isHover);
     }
 }
