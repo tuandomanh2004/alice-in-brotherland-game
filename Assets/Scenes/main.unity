@@ -9347,6 +9347,7 @@ MonoBehaviour:
   isDetected: 0
   outlineItem: {fileID: 0}
   tooltipItem: {fileID: 0}
+  liftHoverItem: {fileID: 0}
   camSW: {fileID: 1358152160}
   isFocused: 0
   interactionUI: {fileID: 2038959198}
@@ -9812,6 +9813,7 @@ GameObject:
   - component: {fileID: 656738085}
   - component: {fileID: 656738087}
   - component: {fileID: 656738088}
+  - component: {fileID: 656738089}
   m_Layer: 9
   m_Name: Card_club
   m_TagString: Untagged
@@ -9957,6 +9959,24 @@ MonoBehaviour:
   isDetected: 0
   outlineItem: {fileID: 0}
   tooltipItem: {fileID: 863827940}
+  liftHoverItem: {fileID: 0}
+--- !u!114 &656738089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656738078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liftHeight: 0.1
+  originalPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 0.2
+  isHover: 0
 --- !u!1 &661435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -22427,6 +22447,7 @@ GameObject:
   - component: {fileID: 1595051386}
   - component: {fileID: 1595051388}
   - component: {fileID: 1595051389}
+  - component: {fileID: 1595051390}
   m_Layer: 9
   m_Name: Card_diamond
   m_TagString: Untagged
@@ -22572,6 +22593,24 @@ MonoBehaviour:
   isDetected: 0
   outlineItem: {fileID: 0}
   tooltipItem: {fileID: 863827940}
+  liftHoverItem: {fileID: 0}
+--- !u!114 &1595051390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595051379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liftHeight: 0.1
+  originalPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 0.2
+  isHover: 0
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28126,6 +28165,7 @@ GameObject:
   - component: {fileID: 1948826595}
   - component: {fileID: 1948826597}
   - component: {fileID: 1948826598}
+  - component: {fileID: 1948826599}
   m_Layer: 9
   m_Name: Card_heart
   m_TagString: Untagged
@@ -28271,6 +28311,24 @@ MonoBehaviour:
   isDetected: 0
   outlineItem: {fileID: 0}
   tooltipItem: {fileID: 863827940}
+  liftHoverItem: {fileID: 0}
+--- !u!114 &1948826599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948826588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liftHeight: 0.1
+  originalPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 0.2
+  isHover: 0
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -31354,6 +31412,7 @@ GameObject:
   - component: {fileID: 2125768795}
   - component: {fileID: 2125768797}
   - component: {fileID: 2125768798}
+  - component: {fileID: 2125768799}
   m_Layer: 9
   m_Name: Card_spade
   m_TagString: Untagged
@@ -31499,6 +31558,24 @@ MonoBehaviour:
   isDetected: 0
   outlineItem: {fileID: 0}
   tooltipItem: {fileID: 863827940}
+  liftHoverItem: {fileID: 0}
+--- !u!114 &2125768799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125768788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liftHeight: 0.1
+  originalPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 0.2
+  isHover: 0
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0
