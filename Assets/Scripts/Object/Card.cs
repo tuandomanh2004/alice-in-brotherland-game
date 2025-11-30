@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class Card : InteractionManager
 {
+    [SerializeField] private string cardDescription ; 
     public override void Start()
     {
         base.Start();
@@ -18,6 +19,6 @@ public class Card : InteractionManager
     }
     public override string GetItemDescription()
     {
-        return "This is " + gameObject.name;
+        return "Path Of " + cardDescription;
     }
 }

@@ -32,10 +32,10 @@ public class InteractionManager : InteractiveItem
     } 
     public void Tooltip()
     {
-        tooltipItem.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
+        tooltipItem?.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
     }
     public void Lift(bool isHover)
     {
-        liftHoverItem.SetHover(isHover);
+        liftHoverItem?.SetHover(isHover);
     }
 }

@@ -20,5 +20,6 @@ outline card whenever cursor point in - DONE
 
 30/11/2025
 - Beautify UI
-- Edit the outline effect
-- Add desciption for each card
+- Adjust the font and style - DONE
+- Edit the outline effect - DONE
+- Add desciption for each card - DONE
