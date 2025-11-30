@@ -9,6 +9,16 @@ outline card whenever cursor point in - DONE
 =====
 
 28/11/2025
-- Description UI panel for cards
-- Scriptable Object
-- Select button UI for cards
+- Description UI panel for cards - DONE
+
+=====
+
+29/11/2025
+- Add lift hover effect for cards - DONE
+
+=====
+
+30/11/2025
+- Beautify UI
+- Edit the outline effect
+- Add desciption for each card

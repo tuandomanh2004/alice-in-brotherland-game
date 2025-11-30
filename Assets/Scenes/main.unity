@@ -9924,7 +9924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: []
-  outlineIntensity: 0.0125
+  outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!114 &656738087
 MonoBehaviour:
@@ -9972,10 +9972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftHeight: 0.1
+  liftHeight: 0.02
   originalPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 0.2
+  speed: 10
   isHover: 0
 --- !u!1 &661435414
 GameObject:
@@ -22558,7 +22558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: []
-  outlineIntensity: 0.0125
+  outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!114 &1595051388
 MonoBehaviour:
@@ -22606,10 +22606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftHeight: 0.1
+  liftHeight: 0.02
   originalPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 0.2
+  speed: 10
   isHover: 0
 --- !u!1 &1596477408
 GameObject:
@@ -28276,7 +28276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: []
-  outlineIntensity: 0.0125
+  outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!114 &1948826597
 MonoBehaviour:
@@ -28324,10 +28324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftHeight: 0.1
+  liftHeight: 0.02
   originalPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 0.2
+  speed: 10
   isHover: 0
 --- !u!1 &1953864839
 GameObject:
@@ -30410,7 +30410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: []
-  outlineIntensity: 0.0165
+  outlineIntensity: 1.03
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!1 &2083532146
 GameObject:
@@ -31523,7 +31523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: []
-  outlineIntensity: 0.0125
+  outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!114 &2125768797
 MonoBehaviour:
@@ -31571,10 +31571,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3ed6e26f997e4d9c19fb8214d2df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftHeight: 0.1
+  liftHeight: 0.02
   originalPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 0.2
+  speed: 10
   isHover: 0
 --- !u!1 &2127034104
 GameObject:
