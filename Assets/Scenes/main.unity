@@ -4596,6 +4596,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 273862157}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 273862158}
   m_SourcePrefab: {fileID: 100100000, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
 --- !u!4 &273862153 stripped
 Transform:
@@ -4657,6 +4660,26 @@ CharacterController:
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.07, z: 0}
+--- !u!114 &273862158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273862154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755af66440a79da48be2373b01bd44bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusCam: {fileID: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  item: {fileID: 0}
+  camSw: {fileID: 1358152160}
+  cursorSU: {fileID: 1883907367}
+  distance: 10
 --- !u!1 &274563885
 GameObject:
   m_ObjectHideFlags: 0
@@ -18290,6 +18313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c2cf3837f97064e84228bf1d9a64a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSwitching: 0
   playerCamera: {fileID: 226534388}
   itemFocusCamera: {fileID: 94170592}
 --- !u!4 &1358152161
@@ -27374,6 +27398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883907366}
+  - component: {fileID: 1883907367}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -27396,6 +27421,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883907367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883907365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08785261cf36f32429f4937263f821a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVisible: 0
 --- !u!1 &1886660195
 GameObject:
   m_ObjectHideFlags: 0

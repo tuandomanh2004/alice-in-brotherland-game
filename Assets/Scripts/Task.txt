@@ -23,3 +23,8 @@ outline card whenever cursor point in - DONE
 - Adjust the font and style - DONE
 - Edit the outline effect - DONE
 - Add desciption for each card - DONE
+
+====
+
+1/12/2025
+- Do research game architecture and design pattern

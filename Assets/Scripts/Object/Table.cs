@@ -25,16 +25,6 @@ public class Table : InteractionManager
     public override void Interact() // Xử lí tương tác
     {
         isFocused = !isFocused;
-        if (isFocused)
-        {
-            camSW.SwitchCamera();
-            camSW.SetUpCursor(true);
-        }
-        else
-        {
-            camSW.ResetCamera();
-            camSW.SetUpCursor(false);
-        }
     }
     public override void SetInteractPrompt() // Bật-tắt UI
     {

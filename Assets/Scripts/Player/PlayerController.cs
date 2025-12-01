@@ -26,20 +26,20 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        detectionLayer = LayerMask.GetMask("ray"); 
+       // detectionLayer = LayerMask.GetMask("ray"); 
     } 
     void Start()
     {
         InitializeComponent();
-        SetUpCursor(); 
+        //SetUpCursor(); 
     }
 
     void Update()
     {
         Move();
         UpdateAnimation();
-        DetectItem(); 
-        InteractWithItem() ; 
+        // DetectItem(); 
+        // InteractWithItem() ; 
     }
     private void Move()
     {
@@ -68,43 +68,5 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
-    }
-    private void SetUpCursor() // Cấu hình con trỏ chuột
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked; 
-        Cursor.SetCursor(null, UnityEngine.Vector2.zero, CursorMode.ForceSoftware);        
-    }
-    private void DetectItem()
-    {
-        Ray ray = new Ray(cam.position, cam.forward); // tạo tia  
-        if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn trúng obj 
-        {
-            if (hit.collider.TryGetComponent(out InteractionManager obj))
-            {
-                item = obj;
-                item.ItemDetected(true) ; 
-                item.SetInteractPrompt();
-                item.Outline();  
-            }
-        }
-        else // Không quét vào object nữa thì tắt outline,UI của object hiện tại và trả null
-        {
-            if(item != null)
-            {
-                item.ItemDetected(false) ; 
-                item.Outline(); 
-                item.SetInteractPrompt();
-                item = null;
-            }
-            
-        }
-    }
-    private void InteractWithItem() // Xử lí input tương tác từ player
-    {
-        if (Input.GetKeyDown(KeyCode.E) && item != null)
-        {
-            item.Interact();
-        }
     }
 }
