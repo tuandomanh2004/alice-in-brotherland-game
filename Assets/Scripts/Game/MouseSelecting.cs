@@ -52,8 +52,4 @@ public class MouseSelecting : MonoBehaviour
             }
         }
     }
-    void OnMouseDown()
-    {
-        Debug.Log(gameObject.name);
-    }
 }

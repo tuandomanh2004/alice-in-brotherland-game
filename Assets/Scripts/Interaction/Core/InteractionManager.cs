@@ -4,12 +4,13 @@ using UnityEngine;
 [RequireComponent(typeof(OutlineBehavior))]
 public class InteractionManager : InteractiveItem
 {
-    [SerializeField] protected OutlineBehavior outlineItem; 
-    [SerializeField] protected TooltipBehavior tooltipItem ; 
-    [SerializeField] protected LiftHoverBehavior liftHoverItem;
+    [SerializeField] protected OutlineBehavior outline; 
+    [SerializeField] protected TooltipBehavior tooltip; 
+    [SerializeField] protected LiftHoverBehavior liftHover;
+    [SerializeField] protected HandleSelectionBehavior handleSelection ; 
     public virtual void Start()
     {
-        outlineItem = GetComponent<OutlineBehavior>() ; 
+        outline = GetComponent<OutlineBehavior>() ; 
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class InteractionManager : InteractiveItem
     }
     public void Outline()
     {
-        outlineItem?.SetOutline(isDetected);
+        outline?.SetOutline(isDetected);
     }
 
     public virtual void SetInteractPrompt()
@@ -32,10 +33,14 @@ public class InteractionManager : InteractiveItem
     } 
     public void Tooltip()
     {
-        tooltipItem?.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
+        tooltip?.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
     }
     public void Lift(bool isHover)
     {
-        liftHoverItem?.SetHover(isHover);
+        liftHover?.SetHover(isHover);
+    }
+    void OnMouseDown()
+    {
+        handleSelection?.HandleClick() ; 
     }
 }

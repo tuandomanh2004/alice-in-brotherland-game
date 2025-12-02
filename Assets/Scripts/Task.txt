@@ -19,7 +19,7 @@ outline card whenever cursor point in - DONE
 =====
 
 30/11/2025
-- Beautify UI
+- Beautify UI - DONE
 - Adjust the font and style - DONE
 - Edit the outline effect - DONE
 - Add desciption for each card - DONE
@@ -28,3 +28,10 @@ outline card whenever cursor point in - DONE
 
 1/12/2025
 - Do research game architecture and design pattern
+
+====
+
+2/12/2025
+- Set up new CM camera
+- Learn shader graph 
+- Camera switcher script for selected items

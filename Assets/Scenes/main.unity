@@ -1771,7 +1771,7 @@ Transform:
   m_Children:
   - {fileID: 226534389}
   - {fileID: 94170593}
-  - {fileID: 399033897}
+  - {fileID: 504637324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119015283
@@ -3960,7 +3960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 4
+    m_Value: 5
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -5827,135 +5827,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369067263}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &399033896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 399033897}
-  - component: {fileID: 399033898}
-  - component: {fileID: 399033900}
-  - component: {fileID: 399033899}
-  m_Layer: 0
-  m_Name: CM Path Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &399033897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399033896}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.019510595, y: 0.71387404, z: 0.01990528, w: 0.6997193}
-  m_LocalPosition: {x: -2.311, y: 3.085, z: 1.718}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 111436152}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &399033898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399033896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Priority:
-    Enabled: 1
-    m_Value: 5
-  OutputChannel: 1
-  StandbyUpdate: 2
-  m_StreamingVersion: 20241001
-  m_LegacyPriority: 0
-  Target:
-    TrackingTarget: {fileID: 723631030}
-    LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
-  Lens:
-    FieldOfView: 60
-    OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
-    Dutch: 0
-    ModeOverride: 0
-    PhysicalProperties:
-      GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
-      LensShift: {x: 0, y: 0}
-      FocusDistance: 10
-      Iso: 200
-      ShutterSpeed: 0.005
-      Aperture: 16
-      BladeCount: 5
-      Curvature: {x: 2, y: 11}
-      BarrelClipping: 0.25
-      Anamorphism: 0
-  BlendHint: 0
---- !u!114 &399033899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399033896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  IgnoreTag: 
-  TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  MinimumDistanceFromTarget: 0.3
-  AvoidObstacles:
-    Enabled: 1
-    DistanceLimit: 0
-    MinimumOcclusionTime: 0
-    CameraRadius: 0.4
-    UseFollowTarget:
-      Enabled: 0
-      YOffset: 0
-    Strategy: 0
-    MaximumEffort: 4
-    SmoothingTime: 0
-    Damping: 0.4
-    DampingWhenOccluded: 0.2
-  ShotQualityEvaluation:
-    Enabled: 0
-    OptimalDistance: 10
-    NearLimit: 5
-    FarLimit: 30
-    MaxQualityBoost: 0.2
---- !u!114 &399033900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399033896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LookAtOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &401704893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7930,6 +7801,111 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &504637323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504637324}
+  - component: {fileID: 504637327}
+  - component: {fileID: 504637328}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504637324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504637323}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000016933978, y: 6.273064e-10, z: -0.000000013756427, w: 1}
+  m_LocalPosition: {x: -1.212, y: 3.668, z: 1.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 111436152}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504637327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504637323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 1
+    m_Value: 5
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!114 &504637328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504637323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38bda98361e1de48a4ca2bd86ea3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 0.5, y: 0.5}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
 --- !u!1 &508891281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,9 +9507,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
-  outlineItem: {fileID: 0}
-  tooltipItem: {fileID: 0}
-  liftHoverItem: {fileID: 0}
+  outline: {fileID: 0}
+  tooltip: {fileID: 0}
+  liftHover: {fileID: 0}
+  handleSelection: {fileID: 0}
   camSW: {fileID: 1358152160}
   isFocused: 0
   interactionUI: {fileID: 2038959198}
@@ -9997,9 +9974,10 @@ GameObject:
   - component: {fileID: 656738081}
   - component: {fileID: 656738080}
   - component: {fileID: 656738085}
-  - component: {fileID: 656738087}
   - component: {fileID: 656738088}
   - component: {fileID: 656738089}
+  - component: {fileID: 656738090}
+  - component: {fileID: 656738091}
   m_Layer: 9
   m_Name: Card_club
   m_TagString: Untagged
@@ -10112,24 +10090,6 @@ MonoBehaviour:
   rend: []
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &656738087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656738078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad8461cc92f874f93124bf8c27f73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &656738088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10143,9 +10103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
-  outlineItem: {fileID: 0}
-  tooltipItem: {fileID: 863827940}
-  liftHoverItem: {fileID: 0}
+  outline: {fileID: 0}
+  tooltip: {fileID: 863827940}
+  liftHover: {fileID: 0}
+  handleSelection: {fileID: 656738091}
   cardDescription: Alliance
 --- !u!114 &656738089
 MonoBehaviour:
@@ -10164,6 +10125,41 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
+--- !u!114 &656738090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656738078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusItemCamera: {fileID: 0}
+  distance: 3
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  item: {fileID: 0}
+--- !u!114 &656738091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656738078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCamera: {fileID: 504637327}
+  wall:
+    TrackingTarget: {fileID: 723631030}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
 --- !u!1 &661435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -18479,6 +18475,7 @@ MonoBehaviour:
   isSwitching: 0
   playerCamera: {fileID: 226534388}
   itemFocusCamera: {fileID: 94170592}
+  wallFocusCamera: {fileID: 0}
 --- !u!4 &1358152161
 Transform:
   m_ObjectHideFlags: 0
@@ -22633,9 +22630,10 @@ GameObject:
   - component: {fileID: 1595051382}
   - component: {fileID: 1595051381}
   - component: {fileID: 1595051386}
-  - component: {fileID: 1595051388}
   - component: {fileID: 1595051389}
   - component: {fileID: 1595051390}
+  - component: {fileID: 1595051391}
+  - component: {fileID: 1595051392}
   m_Layer: 9
   m_Name: Card_diamond
   m_TagString: Untagged
@@ -22748,24 +22746,6 @@ MonoBehaviour:
   rend: []
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &1595051388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595051379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad8461cc92f874f93124bf8c27f73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &1595051389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22779,9 +22759,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
-  outlineItem: {fileID: 0}
-  tooltipItem: {fileID: 863827940}
-  liftHoverItem: {fileID: 0}
+  outline: {fileID: 0}
+  tooltip: {fileID: 863827940}
+  liftHover: {fileID: 0}
+  handleSelection: {fileID: 1595051392}
   cardDescription: Mind
 --- !u!114 &1595051390
 MonoBehaviour:
@@ -22800,6 +22781,41 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
+--- !u!114 &1595051391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595051379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusItemCamera: {fileID: 0}
+  distance: 3
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  item: {fileID: 0}
+--- !u!114 &1595051392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595051379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCamera: {fileID: 504637327}
+  wall:
+    TrackingTarget: {fileID: 872152360}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28366,9 +28382,10 @@ GameObject:
   - component: {fileID: 1948826591}
   - component: {fileID: 1948826590}
   - component: {fileID: 1948826595}
-  - component: {fileID: 1948826597}
   - component: {fileID: 1948826598}
   - component: {fileID: 1948826599}
+  - component: {fileID: 1948826600}
+  - component: {fileID: 1948826601}
   m_Layer: 9
   m_Name: Card_heart
   m_TagString: Untagged
@@ -28481,24 +28498,6 @@ MonoBehaviour:
   rend: []
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &1948826597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948826588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad8461cc92f874f93124bf8c27f73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &1948826598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28512,9 +28511,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
-  outlineItem: {fileID: 0}
-  tooltipItem: {fileID: 863827940}
-  liftHoverItem: {fileID: 0}
+  outline: {fileID: 0}
+  tooltip: {fileID: 863827940}
+  liftHover: {fileID: 0}
+  handleSelection: {fileID: 1948826601}
   cardDescription: Heart
 --- !u!114 &1948826599
 MonoBehaviour:
@@ -28533,6 +28533,41 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
+--- !u!114 &1948826600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948826588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusItemCamera: {fileID: 0}
+  distance: 3
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  item: {fileID: 0}
+--- !u!114 &1948826601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948826588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCamera: {fileID: 504637327}
+  wall:
+    TrackingTarget: {fileID: 333548656}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -29242,7 +29277,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -29268,8 +29303,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994280323}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.019510595, y: 0.71387404, z: 0.01990528, w: 0.6997193}
-  m_LocalPosition: {x: 1.5350797, y: 3.433855, z: -2.8006883}
+  m_LocalRotation: {x: -0.0026328585, y: 0.9915605, z: 0.1280037, w: 0.020395024}
+  m_LocalPosition: {x: 2.5895638, y: 0.95626634, z: 2.3494327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30849,7 +30884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &2090645676
 Light:
   m_ObjectHideFlags: 0
@@ -30924,7 +30959,7 @@ Transform:
   m_GameObject: {fileID: 2090645675}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6857659, y: -0.15457273, z: 0.18212947, w: 0.68750364}
-  m_LocalPosition: {x: 4, y: 10, z: -3}
+  m_LocalPosition: {x: 4, y: 13.17, z: -5.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31614,9 +31649,10 @@ GameObject:
   - component: {fileID: 2125768791}
   - component: {fileID: 2125768790}
   - component: {fileID: 2125768795}
-  - component: {fileID: 2125768797}
   - component: {fileID: 2125768798}
   - component: {fileID: 2125768799}
+  - component: {fileID: 2125768800}
+  - component: {fileID: 2125768801}
   m_Layer: 9
   m_Name: Card_spade
   m_TagString: Untagged
@@ -31729,24 +31765,6 @@ MonoBehaviour:
   rend: []
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &2125768797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125768788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad8461cc92f874f93124bf8c27f73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &2125768798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31760,9 +31778,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
-  outlineItem: {fileID: 0}
-  tooltipItem: {fileID: 863827940}
-  liftHoverItem: {fileID: 0}
+  outline: {fileID: 0}
+  tooltip: {fileID: 863827940}
+  liftHover: {fileID: 0}
+  handleSelection: {fileID: 2125768801}
   cardDescription: Strength
 --- !u!114 &2125768799
 MonoBehaviour:
@@ -31781,6 +31800,41 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
+--- !u!114 &2125768800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125768788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusItemCamera: {fileID: 0}
+  distance: 3
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  item: {fileID: 0}
+--- !u!114 &2125768801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125768788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCamera: {fileID: 504637327}
+  wall:
+    TrackingTarget: {fileID: 212196187}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0

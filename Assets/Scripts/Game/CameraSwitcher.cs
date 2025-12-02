@@ -7,6 +7,8 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private bool isSwitching = false;
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private CinemachineCamera itemFocusCamera;
+    [SerializeField] private CinemachineCamera wallFocusCamera;
+    [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 ;
     void Start()
     {
     }
