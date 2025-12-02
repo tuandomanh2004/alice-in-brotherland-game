@@ -5,6 +5,7 @@ public class HandleSelectionBehavior : MonoBehaviour
 {
     [SerializeField] CinemachineCamera wallCamera ;
     [SerializeField] CameraTarget wall ;
+    [SerializeField] Transform camPos ;
     void Start()
     {
         
@@ -19,5 +20,6 @@ public class HandleSelectionBehavior : MonoBehaviour
     {
         Debug.Log("Clicked") ; 
         wallCamera.LookAt = wall.TrackingTarget ;
+        wallCamera.transform.position = camPos.position ; 
     }
 }
