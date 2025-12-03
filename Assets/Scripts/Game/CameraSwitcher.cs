@@ -8,6 +8,7 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private CinemachineCamera itemFocusCamera;
     [SerializeField] private CinemachineCamera wallFocusCamera;
+    [SerializeField] private CinemachineCamera[] cameras;
     [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 , DEFAULT_VAL = 1 ;
     void Start()
     {
@@ -17,29 +18,50 @@ public class CameraSwitcher : MonoBehaviour
     {
         ChangeCamera() ; 
     }
-    public void SetUpCamera()
+    public CinemachineCamera GetItemCamera() => itemFocusCamera ; 
+    public CinemachineCamera GetPlayerCamera() => playerCamera ; 
+    public CinemachineCamera GetWallCamera() => wallFocusCamera ;  
+    public void SetUpCamera(CinemachineCamera cam)
     {
         isSwitching = !isSwitching;
         if (isSwitching)
         {
-            SwitchCamera() ; 
+            SwitchCamera(cam) ; 
         }
         else
         {
             ResetCamera() ;
         }
     }
-    public void SwitchCamera()
+    public void SwitchCamera(CinemachineCamera cam)
     {
-        itemFocusCamera.Priority = 2;
-        playerCamera.Priority = 1;
+       for(int index = 0 ; index < cameras.Length ; index++)
+        { 
+            if(cameras[index].name == cam.name)
+            {
+                cameras[index].Priority = HIGHEST_PRIORITY ;
+            }
+            else
+            {
+                cameras[index].Priority = index ;
+            }
+        }
     }
     public void ResetCamera()
     {
-        itemFocusCamera.Priority = 1;
-        playerCamera.Priority = 2;
+        for(int index = 0 ; index < cameras.Length ; index++)
+        {
+            if(cameras[index] == playerCamera)
+            {
+                cameras[index].Priority = HIGHEST_PRIORITY ;
+            }
+            else
+            {
+                cameras[index].Priority = index ;
+            }
+        }
     }
-    private void ChangeCamera()
+    private void ChangeCamera() // For test
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {

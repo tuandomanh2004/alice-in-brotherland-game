@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HandleSelectionBehavior : MonoBehaviour
 {
+    [SerializeField] CameraSwitcher camSW ; 
     [SerializeField] CinemachineCamera wallCamera ;
     [SerializeField] CameraTarget wall ;
     [SerializeField] Transform camPos ;
@@ -17,9 +18,9 @@ public class HandleSelectionBehavior : MonoBehaviour
         
     }
     public void HandleClick()
-    {
-        Debug.Log("Clicked") ; 
+    { 
         wallCamera.LookAt = wall.TrackingTarget ;
         wallCamera.transform.position = camPos.position ; 
+        camSW.SwitchCamera(wallCamera);
     }
 }

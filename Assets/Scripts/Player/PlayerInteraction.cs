@@ -53,7 +53,7 @@ public class PlayerInteraction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && item != null )
         {
             item.Interact();
-            camSw.SetUpCamera();
+            camSw.SetUpCamera(camSw.GetItemCamera());
             cursorSU.SetUpCursor() ; 
         }
     }

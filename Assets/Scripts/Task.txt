@@ -32,6 +32,12 @@ outline card whenever cursor point in - DONE
 ====
 
 2/12/2025
-- Set up new CM camera
+- Set up new CM camera - DONE
 - Learn shader graph 
-- Camera switcher script for selected items
+- Camera switcher script for selected items - DONE 
+
+=====
+
+3/12/2025
+- Rewrite the mouse selecting script
+- 

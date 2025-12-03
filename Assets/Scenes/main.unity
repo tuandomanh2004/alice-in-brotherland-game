@@ -7850,7 +7850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 5
+    m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -10157,6 +10157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camSW: {fileID: 1358152160}
   wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 723631030}
@@ -18574,6 +18575,10 @@ MonoBehaviour:
   playerCamera: {fileID: 226534388}
   itemFocusCamera: {fileID: 94170592}
   wallFocusCamera: {fileID: 504637327}
+  cameras:
+  - {fileID: 504637327}
+  - {fileID: 94170592}
+  - {fileID: 226534388}
 --- !u!4 &1358152161
 Transform:
   m_ObjectHideFlags: 0
@@ -22940,6 +22945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camSW: {fileID: 1358152160}
   wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 872152360}
@@ -28693,6 +28699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camSW: {fileID: 1358152160}
   wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 333548656}
@@ -29434,8 +29441,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994280323}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000016933978, y: 6.273064e-10, z: -0.000000013756427, w: 1}
-  m_LocalPosition: {x: 2.63408, y: 4.0168552, z: -2.6886883}
+  m_LocalRotation: {x: -0.0026328585, y: 0.9915605, z: 0.1280037, w: 0.020395024}
+  m_LocalPosition: {x: 2.5895638, y: 0.95626634, z: 2.3494327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31961,6 +31968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camSW: {fileID: 1358152160}
   wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 212196187}
