@@ -9978,7 +9978,6 @@ GameObject:
   - component: {fileID: 656738085}
   - component: {fileID: 656738088}
   - component: {fileID: 656738089}
-  - component: {fileID: 656738090}
   - component: {fileID: 656738091}
   m_Layer: 9
   m_Name: Card_club
@@ -10127,24 +10126,6 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
---- !u!114 &656738090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656738078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &656738091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22766,7 +22747,6 @@ GameObject:
   - component: {fileID: 1595051386}
   - component: {fileID: 1595051389}
   - component: {fileID: 1595051390}
-  - component: {fileID: 1595051391}
   - component: {fileID: 1595051392}
   m_Layer: 9
   m_Name: Card_diamond
@@ -22915,24 +22895,6 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
---- !u!114 &1595051391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595051379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &1595051392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27714,6 +27676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1883907366}
   - component: {fileID: 1883907367}
+  - component: {fileID: 1883907368}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -27749,6 +27712,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVisible: 0
+--- !u!114 &1883907368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883907365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusItemCamera: {fileID: 0}
+  distance: 0.5
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  item: {fileID: 0}
 --- !u!1 &1886660195
 GameObject:
   m_ObjectHideFlags: 0
@@ -28520,7 +28501,6 @@ GameObject:
   - component: {fileID: 1948826595}
   - component: {fileID: 1948826598}
   - component: {fileID: 1948826599}
-  - component: {fileID: 1948826600}
   - component: {fileID: 1948826601}
   m_Layer: 9
   m_Name: Card_heart
@@ -28669,24 +28649,6 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
---- !u!114 &1948826600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948826588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &1948826601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31789,7 +31751,6 @@ GameObject:
   - component: {fileID: 2125768795}
   - component: {fileID: 2125768798}
   - component: {fileID: 2125768799}
-  - component: {fileID: 2125768800}
   - component: {fileID: 2125768801}
   m_Layer: 9
   m_Name: Card_spade
@@ -31938,24 +31899,6 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 10
   isHover: 0
---- !u!114 &2125768800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125768788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031ce36bde00de242bcf1b60574a09cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusItemCamera: {fileID: 0}
-  distance: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
-  item: {fileID: 0}
 --- !u!114 &2125768801
 MonoBehaviour:
   m_ObjectHideFlags: 0
