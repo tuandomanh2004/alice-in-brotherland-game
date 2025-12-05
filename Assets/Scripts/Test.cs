@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine.ProBuilder;
 public class Test : MonoBehaviour
 {
-    [SerializeField] private Vector3 flip ; 
+    [SerializeField] private Vector3 original , flip ;
     [SerializeField] private bool isFlipped = false ;  
     [SerializeField] private float duration = 3f;
     void Start()
@@ -15,9 +15,8 @@ public class Test : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            isFlipped = !isFlipped ; 
-           // flip
-           // transform.DORotate(fli , 3f) ; 
+            isFlipped = !isFlipped ;   
+            transform.DORotate(isFlipped ? original : flip , duration) ; 
         }
     }
 }
