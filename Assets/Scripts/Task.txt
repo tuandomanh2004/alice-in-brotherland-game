@@ -39,5 +39,17 @@ outline card whenever cursor point in - DONE
 =====
 
 3/12/2025
-- Rewrite the mouse selecting script
-- 
+- Rewrite the mouse selecting script - DONE
+
+=====
+
+5/12/2025
+- Set up wall pivot - DONE
+- Import DOTween and write flipping script for wallS - DONE
+
+=====
+
+6/12/2025
+- Complete flipping script
+- Refactor the code
+- Add coroutine for switching camera 
