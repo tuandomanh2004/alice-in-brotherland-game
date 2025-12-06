@@ -20,8 +20,6 @@ public class PlaceTile : MonoBehaviour
     {
         GenerateFloor();
     }
-
-    // Update is called once per frame
     void Update()
     {
     }

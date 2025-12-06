@@ -13,7 +13,6 @@ public class TooltipBehavior : MonoBehaviour
     {
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -25,7 +24,6 @@ public class TooltipBehavior : MonoBehaviour
             itemNameText.text = itemName;
             itemDescriptionText.text = itemDescription;
             SetPanelPosition(itemPosition);
-            Debug.Log((Vector2)itemPosition) ; 
         }
         tooltipPanel.SetActive(isShow);
     }
@@ -33,13 +31,7 @@ public class TooltipBehavior : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(itemPosition) + offset;
-            // RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            //     tooltipPanel.transform.parent as RectTransform,
-            //     screenPanelPosition,
-            //     null,
-            //     out Vector2 localPoint
-            // );
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(itemPosition) + offset ;
             tooltipPanel.transform.position = screenPos;
         }
 

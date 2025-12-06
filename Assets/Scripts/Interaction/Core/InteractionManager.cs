@@ -13,7 +13,6 @@ public class InteractionManager : InteractiveItem
         outline = GetComponent<OutlineBehavior>() ; 
     }
 
-    // Update is called once per frame
     void Update()
     {
 

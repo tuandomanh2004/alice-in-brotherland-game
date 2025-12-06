@@ -8,14 +8,12 @@ using UnityEngine.Events;
 public class Table : InteractionManager
 {
     [SerializeField] private CameraSwitcher camSW;
-    //  [SerializeField] private UnityEvent onInteraction; 
     [SerializeField] private bool isFocused = false;
     [SerializeField] private TextMeshProUGUI interactionUI;
     public override void Start()
     {
-        //   onInteraction.Invoke();
         outline = GameObject.Find("Table").GetComponent<OutlineBehavior>();
-        interactionUI.text = "Press [E] to interact" ;
+        interactionUI.text = "Press [E] to interact";
     }
 
     void Update()
@@ -28,7 +26,7 @@ public class Table : InteractionManager
     }
     public override void SetInteractPrompt() // Bật-tắt UI
     {
-        if(!isFocused) // Chỉ hiển thị UI ở góc nhìn thứ 3
+        if (!isFocused) // Chỉ hiển thị UI ở góc nhìn thứ 3
         {
             interactionUI.enabled = isDetected;
         }

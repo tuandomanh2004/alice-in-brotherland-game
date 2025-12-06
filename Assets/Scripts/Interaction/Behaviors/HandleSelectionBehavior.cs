@@ -15,8 +15,6 @@ public class HandleSelectionBehavior : MonoBehaviour
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -32,10 +30,6 @@ public class HandleSelectionBehavior : MonoBehaviour
         wallCamera.transform.position = camPos.position;
         camSW.SwitchCamera(wallCamera);
     }
-    // private void MakeRotation()
-    // {
-    //     wallPivot.DownTheWall() ;
-    // }
     IEnumerator MakeRotation(float duration)
     {
         yield return new WaitForSeconds(duration);
