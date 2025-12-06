@@ -18,28 +18,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private UnityEngine.Vector3 moveDir;
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
     [SerializeField] private Transform cam;
-    [SerializeField] private LayerMask detectionLayer;
-    [SerializeField] private InteractionManager item; 
-    public float distance = 10f;
     
-    
-
     void Awake()
     {
-       // detectionLayer = LayerMask.GetMask("ray"); 
     } 
     void Start()
     {
         InitializeComponent();
-        //SetUpCursor(); 
     }
 
     void Update()
     {
         Move();
         UpdateAnimation();
-        // DetectItem(); 
-        // InteractWithItem() ; 
     }
     private void Move()
     {
