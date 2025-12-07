@@ -4,18 +4,27 @@ using UnityEngine;
 [RequireComponent(typeof(OutlineBehavior))]
 public class InteractionManager : InteractiveItem
 {
-    [SerializeField] protected OutlineBehavior outline; 
-    [SerializeField] protected TooltipBehavior tooltip; 
+    [SerializeField] protected OutlineBehavior outline;
+    [SerializeField] protected TooltipBehavior tooltip;
     [SerializeField] protected LiftHoverBehavior liftHover;
-    [SerializeField] protected HandleSelectionBehavior handleSelection ; 
+    [SerializeField] protected HandleSelectionBehavior handleSelection;
     public virtual void Start()
     {
-        outline = GetComponent<OutlineBehavior>() ; 
+        outline = GetComponent<OutlineBehavior>();
     }
 
     void Update()
     {
 
+    }
+    public virtual void Interact()
+    {
+
+    }
+
+    public void ItemDetected(bool condition)
+    {
+        isDetected = condition;
     }
     public void Outline()
     {
@@ -28,11 +37,11 @@ public class InteractionManager : InteractiveItem
     }
     public virtual string GetItemDescription()
     {
-        return "" ; 
-    } 
+        return "";
+    }
     public void Tooltip()
     {
-        tooltip?.SetTooltip(this.isDetected, this.name ,this.GetItemDescription(),this.transform.position) ; 
+        tooltip?.SetTooltip(this.isDetected, this.name, this.GetItemDescription(), this.transform.position);
     }
     public void Lift(bool isHover)
     {
@@ -40,6 +49,6 @@ public class InteractionManager : InteractiveItem
     }
     void OnMouseDown()
     {
-        handleSelection?.HandleClick() ; 
+        handleSelection?.HandleClick();
     }
 }
