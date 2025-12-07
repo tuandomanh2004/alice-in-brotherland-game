@@ -51,5 +51,10 @@ outline card whenever cursor point in - DONE
 
 6/12/2025
 - Complete flipping script - DONE
-- Refactor the code 
-- Add coroutine for switching camera - DONE  
+- Refactor the code - DONE
+- Add coroutine for switching camera - DONE
+
+=====
+
+7->8/12/2025 
+- Learn clean code and game architecture
