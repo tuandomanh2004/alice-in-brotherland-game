@@ -58,3 +58,11 @@ outline card whenever cursor point in - DONE
 
 7->8/12/2025 
 - Learn clean code and game architecture
+
+=====
+
+13/12/2025
+- Learn about portal view Unity
+- Load Additive scene 
+- Turn card selections to Enum
+
