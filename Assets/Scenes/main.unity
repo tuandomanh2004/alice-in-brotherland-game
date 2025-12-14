@@ -10205,7 +10205,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1195459605}
-  wallPivot: {fileID: 1054199039}
+  wallPivot: {fileID: 1054199040}
   delayAfterTransition: 1
 --- !u!1 &661435414
 GameObject:
@@ -11758,6 +11758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797994792}
   - component: {fileID: 797994794}
+  - component: {fileID: 797994795}
   m_Layer: 0
   m_Name: Spade_Pivot
   m_TagString: Untagged
@@ -11797,6 +11798,23 @@ MonoBehaviour:
   flip: {x: 0, y: 0, z: 90}
   isFlipped: 0
   duration: 3
+--- !u!114 &797994795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797994791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 17f0c48c6f1b57b4f8c6b3ac84e41a3e, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  startValue: 0
+  endValue: 1
 --- !u!1 &803729123
 GameObject:
   m_ObjectHideFlags: 0
@@ -15828,6 +15846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054199037}
   - component: {fileID: 1054199039}
+  - component: {fileID: 1054199040}
   m_Layer: 0
   m_Name: Club_Pivot
   m_TagString: Untagged
@@ -15867,6 +15886,23 @@ MonoBehaviour:
   flip: {x: 0, y: 0, z: -90}
   isFlipped: 0
   duration: 3
+--- !u!114 &1054199040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054199036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 6e01c31aca8d5054ba4045d501e18f41, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  startValue: 0
+  endValue: 1
 --- !u!1 &1056459060
 GameObject:
   m_ObjectHideFlags: 0
@@ -16556,6 +16592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148522647}
   - component: {fileID: 1148522649}
+  - component: {fileID: 1148522650}
   m_Layer: 0
   m_Name: Heart_Pivot
   m_TagString: Untagged
@@ -16595,6 +16632,23 @@ MonoBehaviour:
   flip: {x: 90, y: 0, z: 0}
   isFlipped: 0
   duration: 3
+--- !u!114 &1148522650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148522646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 658d622b81d884447870446a843d75fa, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  startValue: 0
+  endValue: 1
 --- !u!1 &1163711342
 GameObject:
   m_ObjectHideFlags: 0
@@ -23153,7 +23207,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1304401596}
-  wallPivot: {fileID: 557305810}
+  wallPivot: {fileID: 557305811}
   delayAfterTransition: 1
 --- !u!1 &1596477408
 GameObject:
@@ -28908,7 +28962,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1528729098}
-  wallPivot: {fileID: 1148522649}
+  wallPivot: {fileID: 1148522650}
   delayAfterTransition: 1
 --- !u!1 &1953864839
 GameObject:
@@ -32159,7 +32213,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1138583096}
-  wallPivot: {fileID: 797994794}
+  wallPivot: {fileID: 797994795}
   delayAfterTransition: 1
 --- !u!1 &2127034104
 GameObject:

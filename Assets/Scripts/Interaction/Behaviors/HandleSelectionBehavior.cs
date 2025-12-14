@@ -8,7 +8,7 @@ public class HandleSelectionBehavior : MonoBehaviour
     [SerializeField] private CinemachineCamera wallCamera;
    [SerializeField] private CameraTarget wall;
     [SerializeField] private Transform camPos;
-    [SerializeField] private OpenTheWall wallPivot;
+    [SerializeField] private SetDissolveBehavior wallPivot;
     [SerializeField] private float delayAfterTransition;
 
     void Start()
@@ -33,6 +33,6 @@ public class HandleSelectionBehavior : MonoBehaviour
     IEnumerator MakeRotation(float duration)
     {
         yield return new WaitForSeconds(duration);
-        wallPivot.DownTheWall() ;
+        wallPivot.Dissolve() ;
     }
 }

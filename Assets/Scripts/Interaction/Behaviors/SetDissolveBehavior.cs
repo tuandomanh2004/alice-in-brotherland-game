@@ -10,7 +10,6 @@ public class SetDissolveBehavior : MonoBehaviour
     [SerializeField] private float duration , startValue = 0f , endValue = 1f ;
     void Start()
     {
-        Test() ; 
     }
 
     // Update is called once per frame
@@ -18,7 +17,7 @@ public class SetDissolveBehavior : MonoBehaviour
     {
          
     }
-    public void Test()
+    public void Dissolve()
     {
         StartCoroutine(Lerp()) ;
     }
