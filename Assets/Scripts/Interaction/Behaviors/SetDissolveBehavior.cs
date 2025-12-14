@@ -15,7 +15,7 @@ public class SetDissolveBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+        Reset() ;     
     }
     public void Dissolve()
     {
@@ -34,5 +34,12 @@ public class SetDissolveBehavior : MonoBehaviour
         }
         dissolveStrength = endValue ;
         dissolveMaterial.SetFloat("_DissolveStrength",dissolveStrength) ; 
+    }
+    void Reset()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            dissolveMaterial.SetFloat("_DissolveStrength",startValue) ; 
+        }
     }
 }
