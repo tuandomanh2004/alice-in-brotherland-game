@@ -3365,7 +3365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2dbbbfe666b931f46854d281d1f17bf3, type: 2}
+  - {fileID: 2100000, guid: 17f0c48c6f1b57b4f8c6b3ac84e41a3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5362,7 +5362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c4ac62d54980414cbacfc0401b2126b, type: 2}
+  - {fileID: 2100000, guid: 658d622b81d884447870446a843d75fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10836,7 +10836,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20596d4e34d2ae740b9b0e8c4316ef8c, type: 2}
+  - {fileID: 2100000, guid: 6e01c31aca8d5054ba4045d501e18f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12755,7 +12755,6 @@ GameObject:
   - component: {fileID: 872152363}
   - component: {fileID: 872152362}
   - component: {fileID: 872152361}
-  - component: {fileID: 872152364}
   m_Layer: 7
   m_Name: Diamond_Wall
   m_TagString: Untagged
@@ -12823,7 +12822,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d5fbf8ffdd11794f827a81807d33df8, type: 2}
+  - {fileID: 2100000, guid: 0f39b60d22f02024dbccdbf9e9ff9eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12853,18 +12852,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872152359}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &872152364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872152359}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74608d7567ee31849ba886e3e2fbb581, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &878620920
 GameObject:
   m_ObjectHideFlags: 0
