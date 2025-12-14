@@ -332,7 +332,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "0ab7a1f3268f413cb9e0e3ded11caaa3",
     "m_Id": 0,
-    "m_DisplayName": "Dissolve Strength",
+    "m_DisplayName": "DissolveStrength",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1535,10 +1535,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3513ab70-b2e6-4534-b45f-0d5c5b9ac5fa"
     },
-    "m_Name": "Dissolve Strength",
+    "m_Name": "DissolveStrength",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Dissolve Strength",
-    "m_DefaultReferenceName": "_Dissolve_Strength",
+    "m_RefNameGeneratedByDisplayName": "DissolveStrength",
+    "m_DefaultReferenceName": "_DissolveStrength",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
