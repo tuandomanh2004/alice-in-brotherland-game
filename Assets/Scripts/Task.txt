@@ -62,7 +62,19 @@ outline card whenever cursor point in - DONE
 =====
 
 13/12/2025
-- Learn about portal view Unity
 - Load Additive scene 
+
+=====
+
+14/12/2025
+- Learn dissolve effect - DONE 
+
+=====
+
+15/12/2025
+- Load scene
+- Fix interact prompt when selecting card
+- Learn about portal view Unity
 - Turn card selections to Enum
+- Trigger zone for teleport
 
