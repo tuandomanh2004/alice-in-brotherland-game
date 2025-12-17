@@ -21,6 +21,7 @@ public class HandleSelectionBehavior : MonoBehaviour
     }
     public void HandleClick()
     {
+        GameManager.Instance.state = GameManager.GameState.Loading ; 
         SetUpCameraFocus();
         StartCoroutine(MakeRotation(delayAfterTransition)) ; 
     }

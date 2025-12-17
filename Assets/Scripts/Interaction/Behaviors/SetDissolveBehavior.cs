@@ -29,7 +29,7 @@ public class SetDissolveBehavior : MonoBehaviour
             dissolveStrength = Mathf.Lerp(startValue,endValue,timeElapse/duration) ;
             timeElapse += Time.deltaTime ;
             dissolveMaterial.SetFloat("_DissolveStrength",dissolveStrength) ; 
-            Debug.Log(dissolveStrength) ; 
+           // Debug.Log(dissolveStrength) ; 
             yield return null ; // Đảm bảo mỗi vòng lặp chạy trong 1 frame
         }
         dissolveStrength = endValue ;

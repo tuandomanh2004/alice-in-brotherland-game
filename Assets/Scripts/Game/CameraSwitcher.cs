@@ -10,6 +10,10 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private CinemachineCamera wallFocusCamera;
     [SerializeField] private CinemachineCamera[] cameras;
     [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 , DEFAULT_VAL = 1 ;
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject) ; 
+    }
     void Start()
     {
     }

@@ -2,7 +2,7 @@
 
     public class InteractiveItem : MonoBehaviour
     {
-        protected bool isDetected = false;
+        [SerializeField]protected bool isDetected = false;
         void Start()
         {
             

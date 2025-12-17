@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
     [SerializeField] private Transform cam;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject) ; 
+    }
     void Start()
     {
         InitializeComponent();
