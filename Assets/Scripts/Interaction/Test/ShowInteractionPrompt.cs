@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(InteractiveItem))] 
 public class ShowInteractionPrompt : MonoBehaviour , IInteractable
 {
     [SerializeField] private InteractiveItem item ;
@@ -12,7 +13,14 @@ public class ShowInteractionPrompt : MonoBehaviour , IInteractable
     }
     public void HoverEnter()
     {
-        ShowInteractionText() ;
+        if (!item.IsFocus())
+        {
+            ShowInteractionText() ;
+        }
+        else
+        {
+            HideInteractionText() ; 
+        }   
     }
 
     public void HoverExit()

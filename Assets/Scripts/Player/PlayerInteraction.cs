@@ -55,11 +55,12 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void InteractWithItem() // Xử lí input tương tác từ player
     {
-        if (Input.GetKeyDown(KeyCode.E) && item != null )
+        if (Input.GetKeyDown(KeyCode.E) && it != null )
         {
-            item.Interact();
-            camSw.SetUpCamera(camSw.GetItemCamera());
-            cursorSU.SetUpCursor() ; 
+            // item.Interact();
+            // camSw.SetUpCamera(camSw.GetItemCamera());
+            // cursorSU.SetUpCursor() ; 
+            it.Interact() ; 
         }
     }
 }
