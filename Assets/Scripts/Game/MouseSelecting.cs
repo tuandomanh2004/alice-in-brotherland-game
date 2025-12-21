@@ -20,8 +20,7 @@ public class MouseSelecting : MonoBehaviour
     {
 
         MouseHover();
-
-
+        MouseClick(); 
     }
     public void MouseHover()
     {
@@ -50,6 +49,14 @@ public class MouseSelecting : MonoBehaviour
                 item.HoverExit() ; 
                 item = null;
             }
+        }
+    }
+    public void MouseClick()
+    {
+        if(Input.GetMouseButtonDown(0) && item != null)
+        {
+            Debug.Log("Click!") ; 
+            item.Interact();
         }
     }
 }

@@ -2,38 +2,21 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class HandleSelectionBehavior : MonoBehaviour
+public class HandleSelectionBehavior : MonoBehaviour 
 {
-    [SerializeField] private CameraSwitcher camSW;
-    [SerializeField] private CinemachineCamera wallCamera;
-   [SerializeField] private CameraTarget wall;
+    [SerializeField] private CameraTarget wall;
     [SerializeField] private Transform camPos;
-    [SerializeField] private SetDissolveBehavior wallPivot;
-    [SerializeField] private float delayAfterTransition;
-
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
+ //   [SerializeField] private SetDissolveBehavior wallDissolve ;  
     public void HandleClick()
     {
-        //GameManager.Instance.state = GameManager.GameState.Loading ; 
+        Debug.Log("Handle OK") ; 
         SetUpCameraFocus();
-        StartCoroutine(MakeRotation(delayAfterTransition)) ; 
+     //   wallDissolve.ApplyDissolve() ; 
     }
     private void SetUpCameraFocus()
     {
-        wallCamera.LookAt = wall.TrackingTarget;
-        wallCamera.transform.position = camPos.position;
-        camSW.SwitchCamera(wallCamera);
-    }
-    IEnumerator MakeRotation(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        wallPivot.Dissolve() ;
+        CameraSwitcher.Instance.wallFocusCamera.LookAt = wall.TrackingTarget ; 
+        CameraSwitcher.Instance.wallFocusCamera.transform.position = camPos.position ; 
+        CameraSwitcher.Instance.SwitchCamera(CameraSwitcher.Instance.GetWallCamera());
     }
 }

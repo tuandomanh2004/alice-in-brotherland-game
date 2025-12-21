@@ -3298,6 +3298,7 @@ GameObject:
   - component: {fileID: 212196190}
   - component: {fileID: 212196189}
   - component: {fileID: 212196188}
+  - component: {fileID: 212196191}
   m_Layer: 7
   m_Name: Spade_Wall
   m_TagString: Untagged
@@ -3395,6 +3396,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212196186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &212196191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212196186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 17f0c48c6f1b57b4f8c6b3ac84e41a3e, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  delay: 1
+  startValue: 0
+  endValue: 1
 --- !u!1 &217259714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,6 +5315,7 @@ GameObject:
   - component: {fileID: 333548659}
   - component: {fileID: 333548658}
   - component: {fileID: 333548657}
+  - component: {fileID: 333548660}
   m_Layer: 7
   m_Name: Heart_Wall
   m_TagString: Untagged
@@ -5393,6 +5413,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333548655}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &333548660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333548655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 658d622b81d884447870446a843d75fa, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  delay: 1
+  startValue: 0
+  endValue: 1
 --- !u!1 &340593634
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,8 +8275,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 557305808}
-  - component: {fileID: 557305810}
-  - component: {fileID: 557305811}
   m_Layer: 0
   m_Name: Diamond_Pivot
   m_TagString: Untagged
@@ -8262,39 +8298,6 @@ Transform:
   - {fileID: 872152360}
   m_Father: {fileID: 2132756978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &557305810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557305807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9f42dedd88d0143b5d5adbda8b5bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  original: {x: 0, y: 0, z: 0}
-  flip: {x: -90, y: 0, z: 0}
-  isFlipped: 0
-  duration: 3
---- !u!114 &557305811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557305807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveMaterial: {fileID: 2100000, guid: 0f39b60d22f02024dbccdbf9e9ff9eeb, type: 2}
-  dissolveStrength: 0
-  duration: 3
-  startValue: 0
-  endValue: 1
 --- !u!1 &566150778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10091,7 +10094,6 @@ GameObject:
   - component: {fileID: 656738089}
   - component: {fileID: 656738091}
   - component: {fileID: 656738093}
-  - component: {fileID: 656738088}
   - component: {fileID: 656738092}
   m_Layer: 9
   m_Name: Card_club
@@ -10206,26 +10208,6 @@ MonoBehaviour:
   - {fileID: 656738081}
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &656738088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656738078}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  isDetected: 0
-  isFocus: 0
-  outline: {fileID: 0}
-  tooltip: {fileID: 863827940}
-  liftHover: {fileID: 0}
-  handleSelection: {fileID: 656738091}
-  cardDescription: Alliance
 --- !u!114 &656738089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10250,20 +10232,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656738078}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSW: {fileID: 1358152160}
-  wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 723631030}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1195459605}
-  wallPivot: {fileID: 1054199040}
-  delayAfterTransition: 1
 --- !u!114 &656738092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10278,7 +10256,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 656738091}
+        m_TargetAssemblyTypeName: HandleSelectionBehavior, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 723631034}
+        m_TargetAssemblyTypeName: SetDissolveBehavior, Assembly-CSharp
+        m_MethodName: ApplyDissolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &656738093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10874,6 +10876,7 @@ GameObject:
   - component: {fileID: 723631033}
   - component: {fileID: 723631032}
   - component: {fileID: 723631031}
+  - component: {fileID: 723631034}
   m_Layer: 7
   m_Name: Club_Wall
   m_TagString: Untagged
@@ -10971,6 +10974,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723631029}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &723631034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723631029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 6e01c31aca8d5054ba4045d501e18f41, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  delay: 1
+  startValue: 0
+  endValue: 1
 --- !u!1 &736845220
 GameObject:
   m_ObjectHideFlags: 0
@@ -11844,8 +11865,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 797994792}
-  - component: {fileID: 797994794}
-  - component: {fileID: 797994795}
   m_Layer: 0
   m_Name: Spade_Pivot
   m_TagString: Untagged
@@ -11869,39 +11888,6 @@ Transform:
   - {fileID: 212196187}
   m_Father: {fileID: 2132756978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &797994794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797994791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9f42dedd88d0143b5d5adbda8b5bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  original: {x: 0, y: 0, z: 0}
-  flip: {x: 0, y: 0, z: 90}
-  isFlipped: 0
-  duration: 3
---- !u!114 &797994795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797994791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveMaterial: {fileID: 2100000, guid: 17f0c48c6f1b57b4f8c6b3ac84e41a3e, type: 2}
-  dissolveStrength: 0
-  duration: 3
-  startValue: 0
-  endValue: 1
 --- !u!1 &803729123
 GameObject:
   m_ObjectHideFlags: 0
@@ -12878,6 +12864,7 @@ GameObject:
   - component: {fileID: 872152363}
   - component: {fileID: 872152362}
   - component: {fileID: 872152361}
+  - component: {fileID: 872152364}
   m_Layer: 7
   m_Name: Diamond_Wall
   m_TagString: Untagged
@@ -12975,6 +12962,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872152359}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &872152364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872152359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 0f39b60d22f02024dbccdbf9e9ff9eeb, type: 2}
+  dissolveStrength: 0
+  duration: 3
+  delay: 1
+  startValue: 0
+  endValue: 1
 --- !u!1 &878620920
 GameObject:
   m_ObjectHideFlags: 0
@@ -15932,8 +15937,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054199037}
-  - component: {fileID: 1054199039}
-  - component: {fileID: 1054199040}
   m_Layer: 0
   m_Name: Club_Pivot
   m_TagString: Untagged
@@ -15957,39 +15960,6 @@ Transform:
   - {fileID: 723631030}
   m_Father: {fileID: 2132756978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1054199039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054199036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9f42dedd88d0143b5d5adbda8b5bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  original: {x: 0, y: 0, z: 0}
-  flip: {x: 0, y: 0, z: -90}
-  isFlipped: 0
-  duration: 3
---- !u!114 &1054199040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054199036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveMaterial: {fileID: 2100000, guid: 6e01c31aca8d5054ba4045d501e18f41, type: 2}
-  dissolveStrength: 0
-  duration: 3
-  startValue: 0
-  endValue: 1
 --- !u!1 &1056459060
 GameObject:
   m_ObjectHideFlags: 0
@@ -16678,8 +16648,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148522647}
-  - component: {fileID: 1148522649}
-  - component: {fileID: 1148522650}
   m_Layer: 0
   m_Name: Heart_Pivot
   m_TagString: Untagged
@@ -16703,39 +16671,6 @@ Transform:
   - {fileID: 333548656}
   m_Father: {fileID: 2132756978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1148522649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148522646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9f42dedd88d0143b5d5adbda8b5bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  original: {x: 0, y: 0, z: 0}
-  flip: {x: 90, y: 0, z: 0}
-  isFlipped: 0
-  duration: 3
---- !u!114 &1148522650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148522646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a9066084568a044bac74a92eb7ddb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveMaterial: {fileID: 2100000, guid: 658d622b81d884447870446a843d75fa, type: 2}
-  dissolveStrength: 0
-  duration: 3
-  startValue: 0
-  endValue: 1
 --- !u!1 &1163711342
 GameObject:
   m_ObjectHideFlags: 0
@@ -23125,12 +23060,11 @@ GameObject:
   - component: {fileID: 1595051383}
   - component: {fileID: 1595051382}
   - component: {fileID: 1595051381}
+  - component: {fileID: 1595051394}
   - component: {fileID: 1595051386}
   - component: {fileID: 1595051390}
   - component: {fileID: 1595051392}
-  - component: {fileID: 1595051394}
   - component: {fileID: 1595051393}
-  - component: {fileID: 1595051389}
   m_Layer: 9
   m_Name: Card_diamond
   m_TagString: Untagged
@@ -23244,26 +23178,6 @@ MonoBehaviour:
   - {fileID: 1595051382}
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &1595051389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595051379}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  isDetected: 0
-  isFocus: 0
-  outline: {fileID: 0}
-  tooltip: {fileID: 863827940}
-  liftHover: {fileID: 0}
-  handleSelection: {fileID: 1595051392}
-  cardDescription: Mind
 --- !u!114 &1595051390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23288,20 +23202,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595051379}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSW: {fileID: 1358152160}
-  wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 872152360}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1304401596}
-  wallPivot: {fileID: 557305811}
-  delayAfterTransition: 1
 --- !u!114 &1595051393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23331,7 +23241,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1595051392}
+        m_TargetAssemblyTypeName: HandleSelectionBehavior, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 872152364}
+        m_TargetAssemblyTypeName: SetDissolveBehavior, Assembly-CSharp
+        m_MethodName: ApplyDissolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28921,7 +28855,6 @@ GameObject:
   - component: {fileID: 1948826601}
   - component: {fileID: 1948826603}
   - component: {fileID: 1948826602}
-  - component: {fileID: 1948826598}
   m_Layer: 9
   m_Name: Card_heart
   m_TagString: Untagged
@@ -29035,26 +28968,6 @@ MonoBehaviour:
   - {fileID: 1948826591}
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &1948826598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948826588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  isDetected: 0
-  isFocus: 0
-  outline: {fileID: 0}
-  tooltip: {fileID: 863827940}
-  liftHover: {fileID: 0}
-  handleSelection: {fileID: 1948826601}
-  cardDescription: Heart
 --- !u!114 &1948826599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29079,20 +28992,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948826588}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSW: {fileID: 1358152160}
-  wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 333548656}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1528729098}
-  wallPivot: {fileID: 1148522650}
-  delayAfterTransition: 1
 --- !u!114 &1948826602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29122,7 +29031,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1948826601}
+        m_TargetAssemblyTypeName: HandleSelectionBehavior, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 333548660}
+        m_TargetAssemblyTypeName: SetDissolveBehavior, Assembly-CSharp
+        m_MethodName: ApplyDissolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -32382,20 +32315,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125768788}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bec8b9b1f16d937429c3e5a019016f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSW: {fileID: 1358152160}
-  wallCamera: {fileID: 504637327}
   wall:
     TrackingTarget: {fileID: 212196187}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1138583096}
-  wallPivot: {fileID: 797994795}
-  delayAfterTransition: 1
 --- !u!114 &2125768802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32425,7 +32354,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2125768801}
+        m_TargetAssemblyTypeName: HandleSelectionBehavior, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 212196191}
+        m_TargetAssemblyTypeName: SetDissolveBehavior, Assembly-CSharp
+        m_MethodName: ApplyDissolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0

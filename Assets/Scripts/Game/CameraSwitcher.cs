@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    public static CameraSwitcher Instance { get; private set;}
     [SerializeField] private bool isSwitching = false;
-    [SerializeField] private CinemachineCamera playerCamera;
-    [SerializeField] private CinemachineCamera itemFocusCamera;
-    [SerializeField] private CinemachineCamera wallFocusCamera;
+    [SerializeField] public CinemachineCamera playerCamera;
+    [SerializeField] public CinemachineCamera itemFocusCamera;
+    [SerializeField] public CinemachineCamera wallFocusCamera;
     [SerializeField] private CinemachineCamera[] cameras;
     [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 , DEFAULT_VAL = 1 ;
     void Awake()
     {
-        DontDestroyOnLoad(gameObject) ; 
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject) ; 
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject) ; 
+        }   
     }
     void Start()
     {
