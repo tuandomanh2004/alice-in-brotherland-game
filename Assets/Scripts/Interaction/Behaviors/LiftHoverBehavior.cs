@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LiftHoverBehavior : MonoBehaviour
+public class LiftHoverBehavior : MonoBehaviour , IInteractable
 {
     [SerializeField] private float liftHeight;
     [SerializeField] private Vector3 originalPos ; 
@@ -34,5 +34,15 @@ public class LiftHoverBehavior : MonoBehaviour
     public void SetHover(bool isHover)
     {
         this.isHover = isHover;
+    }
+
+    public void HoverEnter()
+    {
+        SetHover(true) ; 
+    }
+
+    public void HoverExit()
+    {
+        SetHover(false) ; 
     }
 }
