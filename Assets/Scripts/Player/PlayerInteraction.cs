@@ -5,6 +5,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Transform focusCam;
     [SerializeField] private LayerMask detectionLayer;
     [SerializeField] private InteractionManager item;
+    [SerializeField] private Interactions it;
     [SerializeField] private CameraSwitcher camSw ;
     [SerializeField] private CursorSetUp cursorSU ; 
     [SerializeField] private float distance;
@@ -28,22 +29,26 @@ public class PlayerInteraction : MonoBehaviour
         Ray ray = new Ray(focusCam.position, focusCam.forward); // tạo tia  
         if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn trúng obj 
         {
-            if (hit.collider.TryGetComponent(out InteractionManager obj))
+            if (hit.collider.TryGetComponent(out Interactions obj))
             {
-                item = obj;
-                item.ItemDetected(true) ; 
-                item.SetInteractPrompt();
-                item.Outline();  
+                // item = obj;
+                // item.ItemDetected(true) ; 
+                // item.SetInteractPrompt();
+                // item.Outline();  
+                it = obj ; 
+                it.HoverEnter() ; 
             }
         }
         else // Không quét vào object nữa thì tắt outline,UI của object hiện tại và trả null
         {
-            if(item != null)
+            if(it != null)
             {
-                item.ItemDetected(false) ; 
-                item.Outline(); 
-                item.SetInteractPrompt();
-                item = null;
+                // item.ItemDetected(false) ; 
+                // item.Outline(); 
+                // item.SetInteractPrompt();
+                // item = null;
+                it.HoverExit() ; 
+                it = null ;
             }
             
         }

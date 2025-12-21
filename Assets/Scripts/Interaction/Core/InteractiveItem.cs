@@ -1,14 +1,16 @@
-    using UnityEngine;
+using UnityEngine;
 
-    public class InteractiveItem : MonoBehaviour
+public class InteractiveItem : MonoBehaviour
+{
+    [SerializeField]private string interactionPrompt;
+    [SerializeField] protected bool isDetected = false;
+    void Start()
     {
-        [SerializeField]protected bool isDetected = false;
-        void Start()
-        {
-            
-        }
-        void Update()
-        {
-
-        }
+        
     }
+    void Update()
+    {
+
+    }
+    public string GetInteractionPrompt() => interactionPrompt;
+}

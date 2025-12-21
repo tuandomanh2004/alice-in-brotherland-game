@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 
-public class OutlineBehavior : MonoBehaviour
+public class OutlineBehavior : MonoBehaviour , IInteractable
 {
     [SerializeField]public Material[][] mats;
     [SerializeField] private Renderer[] rend;
@@ -11,7 +11,7 @@ public class OutlineBehavior : MonoBehaviour
     //[SerializeField] private bool isOutline = false ; 
     void Start()
     {
-        rend = GetComponentsInChildren<Renderer>();
+      //  rend = GetComponentsInChildren<Renderer>();
         mats = new Material[rend.Length][] ; 
         InitializeMats();
     }
@@ -53,4 +53,14 @@ public class OutlineBehavior : MonoBehaviour
             mats[i][1].SetFloat("_OutlineScale" ,0f) ; 
         }
         }
-    } 
+
+    public void HoverEnter()
+    {
+        TurnOnOutline() ; 
+    }
+
+    public void HoverExit()
+    {
+        TurnOffOutline() ; 
+    }
+} 

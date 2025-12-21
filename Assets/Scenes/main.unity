@@ -4707,6 +4707,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   item: {fileID: 0}
+  it: {fileID: 0}
   camSw: {fileID: 1358152160}
   cursorSU: {fileID: 1883907367}
   distance: 10
@@ -7709,7 +7710,7 @@ GameObject:
   - component: {fileID: 481915892}
   - component: {fileID: 481915891}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InteractionPrompt Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8415,7 +8416,6 @@ GameObject:
   - component: {fileID: 571401457}
   - component: {fileID: 571401456}
   - component: {fileID: 571401460}
-  - component: {fileID: 571401461}
   m_Layer: 8
   m_Name: Table_leg
   m_TagString: Untagged
@@ -8540,21 +8540,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &571401461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571401455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f55637063923f4386d776447305847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: []
-  outlineIntensity: 0
-  OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
 --- !u!1 &579566423
 GameObject:
   m_ObjectHideFlags: 0
@@ -9432,8 +9417,10 @@ GameObject:
   - component: {fileID: 615926009}
   - component: {fileID: 615926008}
   - component: {fileID: 615926007}
-  - component: {fileID: 615926012}
   - component: {fileID: 615926013}
+  - component: {fileID: 615926014}
+  - component: {fileID: 615926016}
+  - component: {fileID: 615926015}
   m_Layer: 8
   m_Name: Table_top
   m_TagString: Untagged
@@ -9558,25 +9545,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080959911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &615926012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615926006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fddc89d463932e547a99add952da421e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outline: {fileID: 0}
-  tooltip: {fileID: 0}
-  liftHover: {fileID: 0}
-  handleSelection: {fileID: 0}
-  camSW: {fileID: 1358152160}
-  isFocused: 0
-  interactionUI: {fileID: 2038959198}
 --- !u!114 &615926013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9589,9 +9557,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f55637063923f4386d776447305847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: []
-  outlineIntensity: 0
+  rend:
+  - {fileID: 615926009}
+  - {fileID: 571401457}
+  outlineIntensity: 1.03
   OutlineMat: {fileID: 0}
+--- !u!114 &615926014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615926006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf2a242b269da24a88812f47f69f454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &615926015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615926006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eccdeff38c45a46b851054c93ccae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  interactionText: {fileID: 2038959198}
+--- !u!114 &615926016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615926006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPrompt: 'Interact with table [E]'
+  isDetected: 0
 --- !u!1 &621706596
 GameObject:
   m_ObjectHideFlags: 0
@@ -10164,6 +10174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPrompt: 
+  isDetected: 0
   outline: {fileID: 0}
   tooltip: {fileID: 863827940}
   liftHover: {fileID: 0}
@@ -23166,6 +23178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPrompt: 
+  isDetected: 0
   outline: {fileID: 0}
   tooltip: {fileID: 863827940}
   liftHover: {fileID: 0}
@@ -28921,6 +28935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPrompt: 
+  isDetected: 0
   outline: {fileID: 0}
   tooltip: {fileID: 863827940}
   liftHover: {fileID: 0}
@@ -30379,7 +30395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press E to interact
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31008,6 +31024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2080959911}
   - component: {fileID: 2080959913}
+  - component: {fileID: 2080959914}
   m_Layer: 8
   m_Name: Table
   m_TagString: Untagged
@@ -31047,6 +31064,18 @@ MonoBehaviour:
   rend: []
   outlineIntensity: 1.03
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
+--- !u!114 &2080959914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080959910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf2a242b269da24a88812f47f69f454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2083532146
 GameObject:
   m_ObjectHideFlags: 0
@@ -32172,6 +32201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPrompt: 
+  isDetected: 0
   outline: {fileID: 0}
   tooltip: {fileID: 863827940}
   liftHover: {fileID: 0}
