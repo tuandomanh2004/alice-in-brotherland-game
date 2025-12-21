@@ -78,3 +78,7 @@ outline card whenever cursor point in - DONE
 - Turn card selections to Enum
 - Trigger zone for teleport
 
+22/12/2025
+- Tooltip for hovered card
+- Clean Scripts
+

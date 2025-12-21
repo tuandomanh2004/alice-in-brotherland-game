@@ -6,12 +6,10 @@ public class HandleSelectionBehavior : MonoBehaviour
 {
     [SerializeField] private CameraTarget wall;
     [SerializeField] private Transform camPos;
- //   [SerializeField] private SetDissolveBehavior wallDissolve ;  
     public void HandleClick()
     {
         Debug.Log("Handle OK") ; 
         SetUpCameraFocus();
-     //   wallDissolve.ApplyDissolve() ; 
     }
     private void SetUpCameraFocus()
     {
