@@ -6,16 +6,6 @@ public class TooltipUIController : MonoBehaviour
     [SerializeField] private GameObject panelUI;
     [SerializeField] private TextMeshProUGUI titleUI;
     [SerializeField] private TextMeshProUGUI descriptionUI;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void Show()
     {
         panelUI.SetActive(true);

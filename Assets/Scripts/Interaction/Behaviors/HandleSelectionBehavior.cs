@@ -8,7 +8,6 @@ public class HandleSelectionBehavior : MonoBehaviour
     [SerializeField] private Transform camPos;
     public void HandleClick()
     {
-        Debug.Log("Handle OK") ; 
         SetUpCameraFocus();
     }
     private void SetUpCameraFocus()

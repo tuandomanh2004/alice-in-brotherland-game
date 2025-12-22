@@ -14,8 +14,6 @@ public class SetDissolveBehavior : MonoBehaviour
     void Start()
     {
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -23,7 +21,6 @@ public class SetDissolveBehavior : MonoBehaviour
     }
     public void ApplyDissolve()
     {
-        Debug.Log("OK");
         StartCoroutine(Lerp(delay));
     }
     IEnumerator Lerp(float delay)
@@ -34,8 +31,7 @@ public class SetDissolveBehavior : MonoBehaviour
         {
             dissolveStrength = Mathf.Lerp(startValue, endValue, timeElapse / duration);
             timeElapse += Time.deltaTime;
-            dissolveMaterial.SetFloat("_DissolveStrength", dissolveStrength);
-            // Debug.Log(dissolveStrength) ; 
+            dissolveMaterial.SetFloat("_DissolveStrength", dissolveStrength); 
             yield return null; // Đảm bảo mỗi vòng lặp chạy trong 1 frame
         }
         dissolveStrength = endValue;

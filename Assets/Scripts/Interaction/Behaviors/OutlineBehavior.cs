@@ -8,15 +8,12 @@ public class OutlineBehavior : MonoBehaviour , IInteractable
     [SerializeField] private Renderer[] rend;
     [SerializeField] private float outlineIntensity;
     [SerializeField] private Material OutlineMat ; 
-    //[SerializeField] private bool isOutline = false ; 
     void Start()
     {
-      //  rend = GetComponentsInChildren<Renderer>();
         mats = new Material[rend.Length][] ; 
         InitializeMats();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

@@ -31,10 +31,6 @@ public class MouseSelecting : MonoBehaviour
             {
                 item = obj;
                 item.HoverEnter(); 
-                // item.ItemDetected(true);
-                // item.Outline();
-                // item.Tooltip();
-                // item.Lift(true);
             }
             Debug.DrawRay(ray.origin, ray.direction * 1.0f, Color.red);
         }
@@ -42,10 +38,6 @@ public class MouseSelecting : MonoBehaviour
         {
             if (item != null)
             {
-                // item.ItemDetected(false);
-                // item.Outline();
-                // item.Tooltip();
-                // item.Lift(false);
                 item.HoverExit() ; 
                 item = null;
             }
@@ -55,7 +47,6 @@ public class MouseSelecting : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && item != null)
         {
-            Debug.Log("Click!") ; 
             item.Interact();
         }
     }
