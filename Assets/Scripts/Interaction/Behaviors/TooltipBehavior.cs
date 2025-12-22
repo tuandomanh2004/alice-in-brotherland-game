@@ -1,39 +1,32 @@
 using NUnit.Framework;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class TooltipBehavior : MonoBehaviour
+[RequireComponent(typeof(InteractiveItem))]
+public class TooltipBehavior : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject tooltipPanel;
-    [SerializeField] private TextMeshProUGUI itemNameText;
-    [SerializeField] private TextMeshProUGUI itemDescriptionText;
+    // [SerializeField] private PanelSettings tooltipPanel;
+    // [SerializeField] private TextMeshProUGUI itemNameText;
+    // [SerializeField] private TextMeshProUGUI itemDescriptionText;
+    [SerializeField] private InteractiveItem item;
+    [SerializeField] private TooltipUIController tooltipUI;
     [SerializeField] private Vector3 offset;
-    void Start()
+    public void Awake()
     {
+        item = GetComponent<InteractiveItem>();
+    } 
+    public void HoverEnter()
+    {
+        tooltipUI.SetUIData(item.GetItemName(), item.GetItemDescription());
+        tooltipUI.SetUIPanelPosition(transform.position,offset);
+        tooltipUI.Show();
     }
 
-    void Update()
+    public void HoverExit()
     {
-
-    }
-    public void SetTooltip(bool isShow, string itemName, string itemDescription,Vector3 itemPosition)
-    {
-        if (isShow)
-        {
-            itemNameText.text = itemName;
-            itemDescriptionText.text = itemDescription;
-            SetPanelPosition(itemPosition);
-        }
-        tooltipPanel.SetActive(isShow);
-    }
-    public void SetPanelPosition(Vector3 itemPosition)
-    {
-        if (gameObject.activeSelf)
-        {
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(itemPosition) + offset ;
-            tooltipPanel.transform.position = screenPos;
-        }
-
+        tooltipUI.Hide();
     }
 }

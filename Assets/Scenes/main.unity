@@ -1518,11 +1518,11 @@ Transform:
   m_GameObject: {fileID: 94170589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7609173, z: -0.64884883, w: 0}
-  m_LocalPosition: {x: -1.2240798, y: 1.6491449, z: -0.22131205}
+  m_LocalPosition: {x: -0.6751361, y: -1.3954313, z: -0.6930785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 111436152}
+  m_Father: {fileID: 1358152161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99599919
 GameObject:
@@ -1740,7 +1740,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99635816}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &111436151
+--- !u!1 &107506394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1748,32 +1748,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 111436152}
+  - component: {fileID: 107506395}
+  - component: {fileID: 107506396}
   m_Layer: 0
-  m_Name: CM Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &111436152
+--- !u!4 &107506395
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111436151}
+  m_GameObject: {fileID: 107506394}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8460798, y: 0.34885505, z: -4.518688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 226534389}
-  - {fileID: 94170593}
-  - {fileID: 504637324}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 1414307793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107506396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107506394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e06393341dacc64e83b44f882861855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
 --- !u!1 &119015283
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,11 +4029,11 @@ Transform:
   m_GameObject: {fileID: 226534382}
   serializedVersion: 2
   m_LocalRotation: {x: -0.002632835, y: 0.9915605, z: 0.12800372, w: 0.020394843}
-  m_LocalPosition: {x: -1.256516, y: 0.6074114, z: 6.8681207}
+  m_LocalPosition: {x: -0.7075722, y: -2.4371648, z: 6.396354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 111436152}
+  m_Father: {fileID: 1358152161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228741310
 GameObject:
@@ -4725,10 +4736,7 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 0
-  item: {fileID: 0}
   it: {fileID: 0}
-  camSw: {fileID: 1358152160}
-  cursorSU: {fileID: 1883907367}
   distance: 10
 --- !u!1 &274563885
 GameObject:
@@ -7864,11 +7872,11 @@ Transform:
   m_GameObject: {fileID: 504637323}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000016933978, y: 6.273064e-10, z: -0.000000013756427, w: 1}
-  m_LocalPosition: {x: -1.212, y: 3.668, z: 1.83}
+  m_LocalPosition: {x: -0.66305614, y: 0.62342405, z: 1.3582335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 111436152}
+  m_Father: {fileID: 1358152161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &504637327
 MonoBehaviour:
@@ -9644,6 +9652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 'Interact with table [E]'
+  itemName: 
+  itemDescription: 
   isDetected: 0
   isFocus: 0
 --- !u!1 &621706596
@@ -10095,6 +10105,7 @@ GameObject:
   - component: {fileID: 656738091}
   - component: {fileID: 656738093}
   - component: {fileID: 656738092}
+  - component: {fileID: 656738094}
   m_Layer: 9
   m_Name: Card_club
   m_TagString: Untagged
@@ -10294,8 +10305,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  itemName: Club Card
+  itemDescription: Path Of Alliance
   isDetected: 0
   isFocus: 0
+--- !u!114 &656738094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656738078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  tooltipUI: {fileID: 863827940}
+  offset: {x: 0, y: 150, z: 0}
 --- !u!1 &661435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -12845,13 +12873,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 863827936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
+  m_Script: {fileID: 11500000, guid: 4159f5f874fee7143b3325a72b4aa1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPanel: {fileID: 863827936}
-  itemNameText: {fileID: 1372571896}
-  itemDescriptionText: {fileID: 701407224}
-  offset: {x: 0, y: 150, z: 0}
+  panelUI: {fileID: 863827936}
+  titleUI: {fileID: 1372571896}
+  descriptionUI: {fileID: 701407224}
 --- !u!1 &872152359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,12 +14004,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967335157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5142313, y: 3.4606895, z: -16.333523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7098851, y: 15.329418, z: 3.3078575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1414307793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &976301223
 GameObject:
@@ -18884,12 +18911,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358152159}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.297136, y: 3.3934312, z: -4.0469217}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1014822, y: 15.262159, z: 15.594459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 226534389}
+  - {fileID: 94170593}
+  - {fileID: 504637324}
+  m_Father: {fileID: 1414307793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358293135
 GameObject:
@@ -19891,6 +19921,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412062393}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1414307792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414307793}
+  m_Layer: 0
+  m_Name: MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414307793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414307792}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.195654, y: -11.868729, z: -19.64138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 107506395}
+  - {fileID: 967335158}
+  - {fileID: 1883907366}
+  - {fileID: 1358152161}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421375783
 GameObject:
   m_ObjectHideFlags: 0
@@ -23065,6 +23130,7 @@ GameObject:
   - component: {fileID: 1595051390}
   - component: {fileID: 1595051392}
   - component: {fileID: 1595051393}
+  - component: {fileID: 1595051395}
   m_Layer: 9
   m_Name: Card_diamond
   m_TagString: Untagged
@@ -23225,6 +23291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  itemName: Diamond Card
+  itemDescription: Path Of Mind
   isDetected: 0
   isFocus: 0
 --- !u!114 &1595051394
@@ -23266,6 +23334,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1595051395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595051379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  tooltipUI: {fileID: 863827940}
+  offset: {x: 0, y: 150, z: 0}
 --- !u!1 &1596477408
 GameObject:
   m_ObjectHideFlags: 0
@@ -28030,7 +28113,7 @@ GameObject:
   - component: {fileID: 1883907367}
   - component: {fileID: 1883907368}
   m_Layer: 0
-  m_Name: Cursor
+  m_Name: Cursor Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28044,12 +28127,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883907365}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.291397, y: 2.732025, z: -3.3343158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.09574318, y: 14.600754, z: 16.307064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1414307793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1883907367
 MonoBehaviour:
@@ -28855,6 +28938,7 @@ GameObject:
   - component: {fileID: 1948826601}
   - component: {fileID: 1948826603}
   - component: {fileID: 1948826602}
+  - component: {fileID: 1948826604}
   m_Layer: 9
   m_Name: Card_heart
   m_TagString: Untagged
@@ -29015,6 +29099,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  itemName: Heart Card
+  itemDescription: Path Of Will
   isDetected: 0
   isFocus: 0
 --- !u!114 &1948826603
@@ -29056,6 +29142,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1948826604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948826588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  tooltipUI: {fileID: 863827940}
+  offset: {x: 0, y: 150, z: 0}
 --- !u!1 &1953864839
 GameObject:
   m_ObjectHideFlags: 0
@@ -32158,6 +32259,7 @@ GameObject:
   - component: {fileID: 2125768803}
   - component: {fileID: 2125768802}
   - component: {fileID: 2125768798}
+  - component: {fileID: 2125768804}
   m_Layer: 9
   m_Name: Card_spade
   m_TagString: Untagged
@@ -32284,10 +32386,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  itemName: 
+  itemDescription: 
   isDetected: 0
   isFocus: 0
   outline: {fileID: 0}
-  tooltip: {fileID: 863827940}
+  tooltip: {fileID: 0}
   liftHover: {fileID: 0}
   handleSelection: {fileID: 2125768801}
   cardDescription: Strength
@@ -32338,6 +32442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  itemName: Spade Card
+  itemDescription: Path Of Strength
   isDetected: 0
   isFocus: 0
 --- !u!114 &2125768803
@@ -32379,6 +32485,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2125768804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125768788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  tooltipUI: {fileID: 863827940}
+  offset: {x: 0, y: 150, z: 0}
 --- !u!1 &2127034104
 GameObject:
   m_ObjectHideFlags: 0
@@ -32751,10 +32872,7 @@ SceneRoots:
   - {fileID: 885916644}
   - {fileID: 446305760}
   - {fileID: 273862152}
-  - {fileID: 1358152161}
   - {fileID: 481915894}
   - {fileID: 859434038}
   - {fileID: 1519441064}
-  - {fileID: 1883907366}
-  - {fileID: 111436152}
-  - {fileID: 967335158}
+  - {fileID: 1414307793}

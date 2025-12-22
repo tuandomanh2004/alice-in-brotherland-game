@@ -3,7 +3,7 @@ using System.Collections;
 using NUnit.Framework.Internal;
 using UnityEngine;
 
-public class SetDissolveBehavior : MonoBehaviour
+public class SetDissolveBehavior : MonoBehaviour 
 {
     [SerializeField] private Material dissolveMaterial;
     [SerializeField] private float dissolveStrength;

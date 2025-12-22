@@ -41,7 +41,7 @@ public class InteractionManager : InteractiveItem
     }
     public void Tooltip()
     {
-        tooltip?.SetTooltip(this.isDetected, this.name, this.GetItemDescription(), this.transform.position);
+        //tooltip?.SetTooltip(this.isDetected, this.name, this.GetItemDescription(), this.transform.position);
     }
     public void Lift(bool isHover)
     {
