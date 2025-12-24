@@ -10104,7 +10104,6 @@ GameObject:
   - component: {fileID: 656738085}
   - component: {fileID: 656738089}
   - component: {fileID: 656738091}
-  - component: {fileID: 656738093}
   - component: {fileID: 656738092}
   - component: {fileID: 656738094}
   m_Layer: 9
@@ -10293,23 +10292,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &656738093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656738078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  itemName: Club Card
-  itemDescription: Path Of Alliance
-  isDetected: 0
-  isFocus: 0
 --- !u!114 &656738094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10322,7 +10304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 64126e97c4445324cb86940ee3482bd0, type: 2}
   tooltipUI: {fileID: 863827940}
   offset: {x: 0, y: 150, z: 0}
 --- !u!1 &661435414
@@ -23084,7 +23066,6 @@ GameObject:
   - component: {fileID: 1595051386}
   - component: {fileID: 1595051390}
   - component: {fileID: 1595051392}
-  - component: {fileID: 1595051393}
   - component: {fileID: 1595051395}
   m_Layer: 9
   m_Name: Card_diamond
@@ -23233,23 +23214,6 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1304401596}
---- !u!114 &1595051393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595051379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  itemName: Diamond Card
-  itemDescription: Path Of Mind
-  isDetected: 0
-  isFocus: 0
 --- !u!114 &1595051394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23301,7 +23265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: fd3561ac69787b2499fce7febfd9b60a, type: 2}
   tooltipUI: {fileID: 863827940}
   offset: {x: 0, y: 150, z: 0}
 --- !u!1 &1596477408
@@ -28892,7 +28856,6 @@ GameObject:
   - component: {fileID: 1948826599}
   - component: {fileID: 1948826601}
   - component: {fileID: 1948826603}
-  - component: {fileID: 1948826602}
   - component: {fileID: 1948826604}
   m_Layer: 9
   m_Name: Card_heart
@@ -29041,23 +29004,6 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1528729098}
---- !u!114 &1948826602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948826588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  itemName: Heart Card
-  itemDescription: Path Of Will
-  isDetected: 0
-  isFocus: 0
 --- !u!114 &1948826603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29109,7 +29055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 897a548b8fbca0d4eac613f9829650e5, type: 2}
   tooltipUI: {fileID: 863827940}
   offset: {x: 0, y: 150, z: 0}
 --- !u!1 &1953864839
@@ -32212,8 +32158,6 @@ GameObject:
   - component: {fileID: 2125768799}
   - component: {fileID: 2125768801}
   - component: {fileID: 2125768803}
-  - component: {fileID: 2125768802}
-  - component: {fileID: 2125768798}
   - component: {fileID: 2125768804}
   m_Layer: 9
   m_Name: Card_spade
@@ -32328,28 +32272,6 @@ MonoBehaviour:
   - {fileID: 2125768791}
   outlineIntensity: 1.05
   OutlineMat: {fileID: 2100000, guid: 2084c3113eb18d2429cb6c95d7b3e109, type: 2}
---- !u!114 &2125768798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125768788}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089e263f693aa54ea70970bd1bbe36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  itemName: 
-  itemDescription: 
-  isDetected: 0
-  isFocus: 0
-  outline: {fileID: 0}
-  tooltip: {fileID: 0}
-  liftHover: {fileID: 0}
-  handleSelection: {fileID: 2125768801}
-  cardDescription: Strength
 --- !u!114 &2125768799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32384,23 +32306,6 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   camPos: {fileID: 1138583096}
---- !u!114 &2125768802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125768788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: 
-  itemName: Spade Card
-  itemDescription: Path Of Strength
-  isDetected: 0
-  isFocus: 0
 --- !u!114 &2125768803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32452,7 +32357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeac0af035443b49b4de47e0350ce79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 08e0f4514d672d14ba2a3b2a3bf4ad3f, type: 2}
   tooltipUI: {fileID: 863827940}
   offset: {x: 0, y: 150, z: 0}
 --- !u!1 &2127034104

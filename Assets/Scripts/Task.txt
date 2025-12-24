@@ -78,7 +78,15 @@ outline card whenever cursor point in - DONE
 - Turn card selections to Enum
 - Trigger zone for teleport
 
-22/12/2025
-- Tooltip for hovered card
-- Clean scripts
+=====
 
+22/12/2025
+- Tooltip for hovered card - DONE
+- Clean scripts - DONE
+
+=====
+
+23/12/2025
+- Observer pattern
+- State Machine
+- Scriptable Object

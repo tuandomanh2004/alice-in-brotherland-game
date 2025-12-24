@@ -5,15 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-[RequireComponent(typeof(InteractiveItem))]
+
 public class TooltipBehavior : MonoBehaviour, IInteractable
 {
-    [SerializeField] private InteractiveItem item;
+    [SerializeField] private ItemData item;
     [SerializeField] private TooltipUIController tooltipUI;
     [SerializeField] private Vector3 offset;
     public void Awake()
     {
-        item = GetComponent<InteractiveItem>();
+       // item = GetComponent<InteractiveItem>();
     } 
     public void HoverEnter()
     {
