@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using NUnit.Framework.Internal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SetDissolveBehavior : MonoBehaviour 
 {
@@ -42,6 +43,13 @@ public class SetDissolveBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             dissolveMaterial.SetFloat("_DissolveStrength", startValue);
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("ClubGame" , LoadSceneMode.Single) ; 
         }
     }
 }

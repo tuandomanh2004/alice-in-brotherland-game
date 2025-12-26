@@ -3310,6 +3310,7 @@ GameObject:
   - component: {fileID: 212196189}
   - component: {fileID: 212196188}
   - component: {fileID: 212196191}
+  - component: {fileID: 212196192}
   m_Layer: 7
   m_Name: Spade_Wall
   m_TagString: Untagged
@@ -3425,6 +3426,19 @@ MonoBehaviour:
   delay: 1
   startValue: 0
   endValue: 1
+--- !u!114 &212196192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212196186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b25806ea301b147b7a9052992ce1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectBox: {fileID: 0}
 --- !u!1 &217259714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,6 +5339,7 @@ GameObject:
   - component: {fileID: 333548658}
   - component: {fileID: 333548657}
   - component: {fileID: 333548660}
+  - component: {fileID: 333548661}
   m_Layer: 7
   m_Name: Heart_Wall
   m_TagString: Untagged
@@ -5440,6 +5455,19 @@ MonoBehaviour:
   delay: 1
   startValue: 0
   endValue: 1
+--- !u!114 &333548661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333548655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b25806ea301b147b7a9052992ce1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectBox: {fileID: 0}
 --- !u!1 &340593634
 GameObject:
   m_ObjectHideFlags: 0
@@ -10292,6 +10320,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 723631035}
+        m_TargetAssemblyTypeName: TeleportBehavior, Assembly-CSharp
+        m_MethodName: OpenTeleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &656738094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10888,6 +10928,7 @@ GameObject:
   - component: {fileID: 723631032}
   - component: {fileID: 723631031}
   - component: {fileID: 723631034}
+  - component: {fileID: 723631035}
   m_Layer: 7
   m_Name: Club_Wall
   m_TagString: Untagged
@@ -11003,6 +11044,19 @@ MonoBehaviour:
   delay: 1
   startValue: 0
   endValue: 1
+--- !u!114 &723631035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723631029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b25806ea301b147b7a9052992ce1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectBox: {fileID: 0}
 --- !u!1 &736845220
 GameObject:
   m_ObjectHideFlags: 0
@@ -12796,6 +12850,7 @@ GameObject:
   - component: {fileID: 872152362}
   - component: {fileID: 872152361}
   - component: {fileID: 872152364}
+  - component: {fileID: 872152365}
   m_Layer: 7
   m_Name: Diamond_Wall
   m_TagString: Untagged
@@ -12911,6 +12966,19 @@ MonoBehaviour:
   delay: 1
   startValue: 0
   endValue: 1
+--- !u!114 &872152365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872152359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b25806ea301b147b7a9052992ce1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectBox: {fileID: 0}
 --- !u!1 &878620920
 GameObject:
   m_ObjectHideFlags: 0
@@ -23253,6 +23321,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 872152365}
+        m_TargetAssemblyTypeName: TeleportBehavior, Assembly-CSharp
+        m_MethodName: OpenTeleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1595051395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29043,6 +29123,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 333548661}
+        m_TargetAssemblyTypeName: TeleportBehavior, Assembly-CSharp
+        m_MethodName: OpenTeleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1948826604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32336,6 +32428,18 @@ MonoBehaviour:
       - m_Target: {fileID: 212196191}
         m_TargetAssemblyTypeName: SetDissolveBehavior, Assembly-CSharp
         m_MethodName: ApplyDissolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 212196192}
+        m_TargetAssemblyTypeName: TeleportBehavior, Assembly-CSharp
+        m_MethodName: OpenTeleport
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
