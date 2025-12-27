@@ -12,8 +12,8 @@ public class HandleSelectionBehavior : MonoBehaviour
     }
     private void SetUpCameraFocus()
     {
-        CameraSwitcher.Instance.wallFocusCamera.LookAt = wall.TrackingTarget ; 
-        CameraSwitcher.Instance.wallFocusCamera.transform.position = camPos.position ; 
-        CameraSwitcher.Instance.SwitchCamera(CameraSwitcher.Instance.GetWallCamera());
+        MANAGER.Instance.camManager.wallFocusCamera.LookAt = wall.TrackingTarget; 
+        MANAGER.Instance.camManager.wallFocusCamera.transform.position = camPos.position; 
+        MANAGER.Instance.camManager.SwitchCamera(MANAGER.Instance.camManager.GetWallCamera());
     }
 }

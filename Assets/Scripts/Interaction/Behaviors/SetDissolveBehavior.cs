@@ -45,11 +45,4 @@ public class SetDissolveBehavior : MonoBehaviour
             dissolveMaterial.SetFloat("_DissolveStrength", startValue);
         }
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene("ClubGame" , LoadSceneMode.Single) ; 
-        }
-    }
 }

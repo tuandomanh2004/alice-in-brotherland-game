@@ -13,15 +13,15 @@ public class CameraSwitcher : MonoBehaviour
     [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 , DEFAULT_VAL = 1 ;
     void Awake()
     {
-        if(Instance != null && Instance != this)
-        {
-            Destroy(gameObject) ; 
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject) ; 
-        }   
+        // if(Instance != null && Instance != this)
+        // {
+        //     Destroy(gameObject) ; 
+        // }
+        // else
+        // {
+        //     Instance = this;
+        //     DontDestroyOnLoad(gameObject) ; 
+        // }   
     }
     void Start()
     {

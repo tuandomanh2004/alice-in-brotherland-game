@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject) ; 
     }
     void Start()
     {

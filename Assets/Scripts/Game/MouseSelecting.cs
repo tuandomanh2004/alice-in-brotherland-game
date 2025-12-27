@@ -11,9 +11,12 @@ public class MouseSelecting : MonoBehaviour
     [SerializeField] private float distance = 3.0f;
     [SerializeField] private LayerMask layer;
     [SerializeField] private Interactions item; 
-    void Start()
+    void Awake()
     {
-        focusItemCamera = Camera.main;
+        if(focusItemCamera == null)
+        {
+            focusItemCamera = Camera.main;
+        }
     }
 
     void Update()
