@@ -21,10 +21,11 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        InitializeComponent();
     }
     void Start()
     {
-        InitializeComponent();
+        
     }
 
     void Update()

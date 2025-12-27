@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2129312361579338260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18299997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.063
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.020564077
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9997885
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 177.643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484128538761520324, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5649921
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484128538761520324, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.006613
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 36894cccbfea8254a81a258776839eb0, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329182963561751618}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7042367123528194207}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4082170537937448027}
+  m_SourcePrefab: {fileID: 100100000, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+--- !u!1 &1246863358448494405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+  m_PrefabInstance: {fileID: 2129312361579338260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &329182963561751618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246863358448494405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1aa77c2980bfe49a88ee27f18a957b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  anim: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
+  playerSpeed: 2
+  verticalInput: 0
+  horizontalInput: 0
+  rotateSpeed: 10
+  cam: {fileID: 0}
+--- !u!143 &7042367123528194207
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246863358448494405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2.12
+  m_Radius: 0.6
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.01
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.07, z: 0}
+--- !u!114 &4082170537937448027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246863358448494405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755af66440a79da48be2373b01bd44bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusCam: {fileID: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  it: {fileID: 0}
+  distance: 10

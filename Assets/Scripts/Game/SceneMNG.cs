@@ -5,7 +5,7 @@ public class SceneMNG : MonoBehaviour
 {
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -15,6 +15,19 @@ public class SceneMNG : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneName , LoadSceneMode.Single);
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded ; 
+    }
+    void OnSceneLoaded(Scene sceneName, LoadSceneMode loadMode)
+    {
+        MANAGER.Instance.spawnManager.SpawnPlayer(sceneName.name) ; 
+        MANAGER.Instance.camManager.InitializeCameras() ; 
     }
 }

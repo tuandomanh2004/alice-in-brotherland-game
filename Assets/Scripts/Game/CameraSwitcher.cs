@@ -1,6 +1,7 @@
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraSwitcher : MonoBehaviour
 {
@@ -13,18 +14,11 @@ public class CameraSwitcher : MonoBehaviour
     [SaveDuringPlay] private const int HIGHEST_PRIORITY = 10 , DEFAULT_VAL = 1 ;
     void Awake()
     {
-        // if(Instance != null && Instance != this)
-        // {
-        //     Destroy(gameObject) ; 
-        // }
-        // else
-        // {
-        //     Instance = this;
-        //     DontDestroyOnLoad(gameObject) ; 
-        // }   
+        
     }
     void Start()
     {
+       // InitializeCameras() ; 
     }
 
     void Update()
@@ -94,5 +88,10 @@ public class CameraSwitcher : MonoBehaviour
             itemFocusCamera.Priority= DEFAULT_VAL ;
             playerCamera.Priority = DEFAULT_VAL + 1 ;
         }
+    }
+    public void InitializeCameras()
+    {
+        ResetCamera() ;
+        playerCamera.Follow = GameObject.FindGameObjectWithTag("Player").transform ;
     }
 }

@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(menuName = "ItemData", order = 1)]
+[CreateAssetMenu(menuName = "ScriptableObjects", order = 1)]
 public class ItemData : ScriptableObject
 {
     [SerializeField] private string interactionPrompt;
