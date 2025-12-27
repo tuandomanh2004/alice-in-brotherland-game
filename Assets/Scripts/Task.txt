@@ -89,4 +89,19 @@ outline card whenever cursor point in - DONE
 23/12/2025
 - Observer pattern
 - State Machine
-- Scriptable Object
+- Scriptable Object - DONE
+======
+
+26/12/2025
+- Trigger teleport between scene - DONE
+
+======
+
+27/12/2025
+- Set up spawn manager and load scene with persistent data - DONE
+
+======
+
+28/12/2025
+- Dissolve teleport effect player
+- Portal Effect teleport
