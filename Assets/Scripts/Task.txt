@@ -103,5 +103,5 @@ outline card whenever cursor point in - DONE
 ======
 
 28/12/2025
-- Dissolve teleport effect player
+- Loading Screen 
 - Portal Effect teleport
