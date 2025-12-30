@@ -103,5 +103,10 @@ outline card whenever cursor point in - DONE
 ======
 
 28/12/2025
-- Loading Screen 
-- Portal Effect teleport
+- Loading Screen - DONE
+- Portal Effect teleport - DONE
+
+======
+31/12/2025
+- Player Spawning Effect 
+- Level Design 
