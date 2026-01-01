@@ -110,3 +110,13 @@ outline card whenever cursor point in - DONE
 31/12/2025
 - Player Spawning Effect 
 - Level Design 
+
+======
+1/1/2025
+- Fade in/out scene transition - DONE
+
+======
+
+2/1/2025
+- Game state loading
+- Player Spawning effect 

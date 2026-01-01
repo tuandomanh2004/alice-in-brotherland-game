@@ -20883,7 +20883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingSlider: {fileID: 2085185738}
   spinner: {fileID: 508290778}
-  spinnerImage: {fileID: 0}
   rotationSpeed: 360
 --- !u!1 &1421375783
 GameObject:
@@ -27807,6 +27806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bdaa41a1517b24695933245ed7870b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: {fileID: 434704003}
+  fadeDuration: 1
 --- !u!1 &1795717790
 GameObject:
   m_ObjectHideFlags: 0
