@@ -8,7 +8,6 @@ public class LoadingScreenUI : MonoBehaviour
 {
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Image spinner;
-    [SerializeField] private Image spinnerImage;
     [SerializeField] private float rotationSpeed ; 
     void Start()
     {

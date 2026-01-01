@@ -44,7 +44,6 @@ public class TeleportBehavior : MonoBehaviour
     public void CloseTeleport()
     {
         objectBox.isTrigger = false;
-        teleport.SetActive(false);
     }
     IEnumerator Lerp(float delay)
     {

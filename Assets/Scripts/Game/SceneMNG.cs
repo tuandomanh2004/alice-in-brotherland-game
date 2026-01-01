@@ -20,11 +20,13 @@ public class SceneMNG : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        loadingScreenUI.SetUpUI(true) ; 
+        sceneTransition.SetUpTransitionUI(true) ;
         StartCoroutine(LoadSceneAsync(sceneName, loadingScreenUI));
     }
     IEnumerator LoadSceneAsync(string sceneName, LoadingScreenUI screenUI)
-    {
+    { 
+        yield return StartCoroutine(sceneTransition.Fade(true)) ; // Fade out 
+        loadingScreenUI.SetUpUI(true) ; //  Bật Loading screen
         AsyncOperation sceneOperation = SceneManager.LoadSceneAsync(sceneName);
         sceneOperation.allowSceneActivation = false;
         while (sceneOperation.progress < 0.9f)
@@ -37,7 +39,8 @@ public class SceneMNG : MonoBehaviour
         screenUI.UpdateSlider(1f); // full-fill progress bar
         yield return new WaitForSeconds(delayBetweenScenes);
         sceneOperation.allowSceneActivation = true;
-        loadingScreenUI.SetUpUI(false) ; 
+        loadingScreenUI.SetUpUI(false) ;
+        StartCoroutine(sceneTransition.Fade(false)) ;  
     }
     void OnEnable()
     {
