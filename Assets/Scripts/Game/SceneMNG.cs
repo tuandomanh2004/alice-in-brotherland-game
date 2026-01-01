@@ -1,10 +1,12 @@
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneMNG : MonoBehaviour
 {
-    [SerializeField] private GameObject loadingScreenUI;
+    [SerializeField] private LoadingScreenUI loadingScreenUI;
+    [SerializeField] private SceneTransition sceneTransition ; 
     [SerializeField] private float delayBetweenScenes;
     void Start()
     {
@@ -18,9 +20,8 @@ public class SceneMNG : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        var uiController = loadingScreenUI.GetComponent<LoadingScreenUI>();
-        loadingScreenUI.SetActive(true);
-        StartCoroutine(LoadSceneAsync(sceneName, uiController));
+        loadingScreenUI.SetUpUI(true) ; 
+        StartCoroutine(LoadSceneAsync(sceneName, loadingScreenUI));
     }
     IEnumerator LoadSceneAsync(string sceneName, LoadingScreenUI screenUI)
     {
@@ -36,7 +37,7 @@ public class SceneMNG : MonoBehaviour
         screenUI.UpdateSlider(1f); // full-fill progress bar
         yield return new WaitForSeconds(delayBetweenScenes);
         sceneOperation.allowSceneActivation = true;
-        loadingScreenUI.SetActive(false);
+        loadingScreenUI.SetUpUI(false) ; 
     }
     void OnEnable()
     {
