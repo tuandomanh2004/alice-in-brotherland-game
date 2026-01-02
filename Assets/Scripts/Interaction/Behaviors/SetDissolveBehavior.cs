@@ -14,6 +14,7 @@ public class SetDissolveBehavior : MonoBehaviour
     }
     void Start()
     {
+        SetUpWall() ; 
     }
     void Update()
     {
@@ -42,7 +43,11 @@ public class SetDissolveBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            dissolveMaterial.SetFloat("_DissolveStrength", startValue);
+            SetUpWall() ; 
         }
+    }
+    void SetUpWall()
+    {
+        dissolveMaterial.SetFloat("_DissolveStrength", startValue);
     }
 }
