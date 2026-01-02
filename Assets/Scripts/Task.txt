@@ -121,4 +121,4 @@ outline card whenever cursor point in - DONE
 - Game state loading
 - Player Spawning effect 
 - Particle effect for portal teleport
-- Full wall whenever scene loaded
+- Full wall whenever scene loaded - DONE 

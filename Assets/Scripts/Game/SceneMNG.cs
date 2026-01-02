@@ -25,10 +25,15 @@ public class SceneMNG : MonoBehaviour
     }
     IEnumerator LoadSceneAsync(string sceneName, LoadingScreenUI screenUI)
     { 
-        yield return StartCoroutine(sceneTransition.Fade(true)) ; // Fade out 
-        loadingScreenUI.SetUpUI(true) ; //  Bật Loading screen
+        // Bắt đầu fade out
+        yield return StartCoroutine(sceneTransition.Fade(true)) ;
+
+        // Set up Loading screen
+        loadingScreenUI.SetUpUI(true) ; 
         AsyncOperation sceneOperation = SceneManager.LoadSceneAsync(sceneName);
         sceneOperation.allowSceneActivation = false;
+
+        // Chạy loading và update thanh tiến trình 
         while (sceneOperation.progress < 0.9f)
         {
             //Debug.Log($" Loading Progress : {sceneOperation.progress * 100}%");
@@ -36,11 +41,12 @@ public class SceneMNG : MonoBehaviour
             screenUI.UpdateSlider(lerpProgress);
             yield return null;
         }
-        screenUI.UpdateSlider(1f); // full-fill progress bar
+        // Load data thành công và thực hiện chuyển scene
+        screenUI.UpdateSlider(1f); 
         yield return new WaitForSeconds(delayBetweenScenes);
         sceneOperation.allowSceneActivation = true;
         loadingScreenUI.SetUpUI(false) ;
-        StartCoroutine(sceneTransition.Fade(false)) ;  
+        StartCoroutine(sceneTransition.Fade(false)) ; // Fade in sau khi load scene mới
     }
     void OnEnable()
     {

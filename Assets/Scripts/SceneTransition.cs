@@ -21,7 +21,6 @@ public class SceneTransition : MonoBehaviour
     }
     public IEnumerator Fade(bool isFadeOut)
     { 
-        gameObject.SetActive(true);
         float timer = 0f , fadeAlpha ;
             while(timer < fadeDuration)
             {
