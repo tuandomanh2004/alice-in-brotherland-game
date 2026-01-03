@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -37,6 +39,8 @@ public class TeleportBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            var controller = other.gameObject.GetComponent<PlayerController>();
+            controller.SetState(PlayerController.PlayerState.Locked);
             CloseTeleport();
             MANAGER.Instance.sceneManager.LoadScene(mapName);
         }

@@ -1,6 +1,7 @@
 using System;
 using System.IO.Compression;
 using System.Numerics;
+using NUnit.Framework;
 using NUnit.Framework.Internal;
 using TMPro;
 using Unity.Cinemachine;
@@ -13,6 +14,13 @@ using UnityEngine.Scripting.APIUpdating;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    public enum PlayerState
+    {
+        Locked,
+        Free,
+        None
+    }
+    public PlayerState playerState;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Animator anim;
     [SerializeField] private UnityEngine.Vector3 moveDir;
@@ -25,13 +33,24 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     void Update()
     {
+        if (playerState == PlayerState.Locked) return;
         Move();
         UpdateAnimation();
+
+    }
+    public void SetState(PlayerState newState)
+    {
+        playerState = newState;
+        if (playerState == PlayerState.Locked)
+        {
+            moveDir = UnityEngine.Vector3.zero;
+            UpdateAnimation() ; 
+        }
     }
     private void Move()
     {
@@ -39,14 +58,15 @@ public class PlayerController : MonoBehaviour
         moveDir = HandleMovementInput();
         if (moveDir != UnityEngine.Vector3.zero) // Nếu player chuyển động thì xoay theo vector di chuyển
         {
-            MakeRotation() ; 
-        }
-        controller.Move(moveDir * playerSpeed * Time.deltaTime); // di chuyển theo vector
+            MakeRotation();
+            controller.Move(moveDir * playerSpeed * Time.deltaTime); // di chuyển theo vector
+        }    
     }
     private void UpdateAnimation()
     {
-        float moveAmount = Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput); // Check input di chuyển của player
-        bool isMoving = moveAmount > 0;
+        //     float moveAmount = Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput); // Check input di chuyển của player
+        //     bool isMoving = moveAmount > 0;
+        bool isMoving = moveDir != UnityEngine.Vector3.zero;
         anim.SetBool("isMoving", isMoving);
         anim.SetFloat("verticalMove", verticalInput);
         anim.SetFloat("horizontalMove", horizontalInput);
@@ -56,6 +76,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
+        playerState = PlayerState.Free;
     }
     private void GetMovementInput()
     {

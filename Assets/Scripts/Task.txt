@@ -122,3 +122,8 @@ outline card whenever cursor point in - DONE
 - Player Spawning effect 
 - Particle effect for portal teleport
 - Full wall whenever scene loaded - DONE 
+
+======
+
+3/1/2025
+- Procedural maze generator algorithm 
