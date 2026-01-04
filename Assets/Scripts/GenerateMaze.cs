@@ -39,33 +39,39 @@ public class GenerateMaze : MonoBehaviour
     }
     private IEnumerator GenMaze()
     {
-        int startX = Random.Range(0 , mazeWidth) ; 
-        int startZ = Random.Range(0 , mazeLength) ; 
+        // Chọn 1 node bẩt kì và tiến bắt đầu gen
+        int startX = Random.Range(0, mazeWidth);
+        int startZ = Random.Range(0, mazeLength);
         var startCell = maze[startZ, startX];
         Stack<MazeCell> stack = new Stack<MazeCell>();
         stack.Push(startCell);
-        startCell.isVisited = true ; 
+        startCell.isVisited = true;
+
         while (stack.Count > 0)
         {
             var currentCell = stack.Peek();
             currentCell.Visited();
-            List<int> directions = AvailablePath(currentCell);
-            if (directions.Count > 0) // Check nếu còn đường đi ở node hiện tại
+            List<int> currentDirections = AvailablePath(currentCell); 
+
+            if (currentDirections.Count > 0) // Check nếu còn đường đi ở node hiện tại
             {
-                Debug.Log($"current cell : {currentCell.GetZCoordinate()},{currentCell.GetXCoordinate()}") ; 
-                int randomIndex = Random.Range(0, directions.Count); // Chọn random 1 node để rẽ nhánh đi tiếp 
-                Debug.Log($"random index : {randomIndex}") ; 
-                int x = currentCell.GetXCoordinate() + directionX[directions[randomIndex]];
-                int z = currentCell.GetZCoordinate() + directionZ[directions[randomIndex]];
-                Debug.Log($"directionX : {directionX[randomIndex]} , directionZ = {directionZ[randomIndex]}") ;
+
+                // Chọn random 1 hướng để rẽ nhánh đi tiếp dựa trên các đường đi hợp lệ của node hiện tại
+                int randomIndex = Random.Range(0, currentDirections.Count); 
+                int dir = currentDirections[randomIndex];
+                int x = currentCell.GetXCoordinate() + directionX[dir];
+                int z = currentCell.GetZCoordinate() + directionZ[dir];
+
+                // Thêm node vào stack và tiếp tục đào sâu theo nhánh của node này
                 var adjacentCell = maze[z, x];
                 adjacentCell.isVisited = true;
+                BreakWall(currentCell , adjacentCell) ; 
                 stack.Push(adjacentCell);
 
             }
             else
             {
-                stack.Pop();
+                stack.Pop(); // Node đã bí đường , loại khỏi stack và tiến hành backtracking
             }
             yield return null;
         }
@@ -83,6 +89,28 @@ public class GenerateMaze : MonoBehaviour
             if (!adjacentCell.isVisited) path.Add(i);
         }
         return path;
+    }
+    private void BreakWall(MazeCell currentCell, MazeCell adjacentCell)
+    {
+        int zCurrent = currentCell.GetZCoordinate();
+        int zAdjacent = adjacentCell.GetZCoordinate();
+        int xCurrent = currentCell.GetXCoordinate();
+        int xAdjacent = adjacentCell.GetXCoordinate() ; 
+        bool isVertical = xCurrent == xAdjacent;  // Check if 2 wall là ngang hay dọc nhau
+
+        // Nếu 2 tường dọc nhau thì xét phá trên dưới
+        if (isVertical) 
+        {  
+            currentCell.BreakWall(zAdjacent > zCurrent ? MazeCell.Wall.Front : MazeCell.Wall.Back);
+            adjacentCell.BreakWall(zAdjacent > zCurrent ? MazeCell.Wall.Back : MazeCell.Wall.Front);
+        }
+
+        // Nếu 2 tường ngang nhau thì xét phá trái phải 
+        else
+        {
+            currentCell.BreakWall(xCurrent > xAdjacent ? MazeCell.Wall.Left : MazeCell.Wall.Right);
+            adjacentCell.BreakWall(xCurrent > xAdjacent ?MazeCell.Wall.Right : MazeCell.Wall.Left ) ; 
+        }
     }
 
 }

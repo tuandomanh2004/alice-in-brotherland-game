@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,8 +6,15 @@ public class MazeCell : MonoBehaviour
 {
     public struct Coordinate
     {
-        public int xCoordinate  ; 
+        public int xCoordinate;
         public int zCoordinate;
+    }
+    public enum Wall
+    {
+        Back,
+        Front,
+        Left,
+        Right
     }
     [SerializeField] private Coordinate cellCoordinates;
     [SerializeField] private GameObject leftWall;
@@ -35,6 +43,28 @@ public class MazeCell : MonoBehaviour
         cellCoordinates.zCoordinate = z;
         cellCoordinates.xCoordinate = x;
     }
+    public void BreakLeft() => leftWall.SetActive(false);
+    public void BreakRight() => rightWall.SetActive(false);
+    public void BreakFront() => frontWall.SetActive(false);
+    public void BreakBack() => backWall.SetActive(false);
+    public void BreakWall(Wall wall)
+    {
+        switch (wall)
+        {
+            case Wall.Front:
+                BreakFront();
+                break;
+            case Wall.Back:
+                BreakBack();
+                break;
+            case Wall.Left:
+                BreakLeft();
+                break;
+            case Wall.Right:
+                BreakRight();
+                break;
+        }
+    }
     public int GetXCoordinate() => cellCoordinates.xCoordinate;
-    public int GetZCoordinate() => cellCoordinates.zCoordinate ; 
+    public int GetZCoordinate() => cellCoordinates.zCoordinate;
 }
