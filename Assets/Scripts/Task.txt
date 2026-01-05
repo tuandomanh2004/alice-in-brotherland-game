@@ -126,4 +126,9 @@ outline card whenever cursor point in - DONE
 ======
 
 3/1/2025
-- Procedural maze generator algorithm 
+- Procedural maze generator algorithm - DONE 
+
+======
+
+6/1/2025
+- Design level 

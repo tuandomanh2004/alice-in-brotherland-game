@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class GenerateMaze : MonoBehaviour
 {
+    [SerializeField] private GameObject grid;
     [SerializeField] private MazeCell mazeCell;
     [SerializeField] private MazeCell[,] maze;
     [SerializeField] private int mazeLength, mazeWidth;
@@ -23,11 +24,11 @@ public class GenerateMaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        RandomMaze();
     }
     private void InitializeGrid()
     {
-        GameObject grid = new GameObject("Grid");
+        grid = GameObject.FindGameObjectWithTag("Maze");
         maze = new MazeCell[mazeLength, mazeWidth];
         for (int z = 0; z < mazeLength; z++)
         {
@@ -35,7 +36,7 @@ public class GenerateMaze : MonoBehaviour
             {
                 maze[z, x] = Instantiate(mazeCell, new UnityEngine.Vector3(x, 0, z), UnityEngine.Quaternion.identity);
                 maze[z, x].SetCoordinate(z, x);
-                maze[z,x].transform.SetParent(grid.transform,true );
+                maze[z, x].transform.SetParent(grid.transform, false);
             }
         }
     }
@@ -44,7 +45,7 @@ public class GenerateMaze : MonoBehaviour
         // Chọn 1 node bẩt kì và tiến bắt đầu gen
         int startX = Random.Range(0, mazeWidth);
         int startZ = Random.Range(0, mazeLength);
-        var startCell = maze[startX,startZ];
+        var startCell = maze[startX, startZ];
         Stack<MazeCell> stack = new Stack<MazeCell>();
         stack.Push(startCell);
         startCell.isVisited = true;
@@ -53,13 +54,13 @@ public class GenerateMaze : MonoBehaviour
         {
             var currentCell = stack.Peek();
             currentCell.Visited();
-            List<int> currentDirections = AvailablePath(currentCell); 
+            List<int> currentDirections = AvailablePath(currentCell);
 
             if (currentDirections.Count > 0) // Check nếu còn đường đi ở node hiện tại
             {
 
                 // Chọn random 1 hướng để rẽ nhánh đi tiếp dựa trên các đường đi hợp lệ của node hiện tại
-                int randomIndex = Random.Range(0, currentDirections.Count); 
+                int randomIndex = Random.Range(0, currentDirections.Count);
                 int dir = currentDirections[randomIndex];
                 int x = currentCell.GetXCoordinate() + directionX[dir];
                 int z = currentCell.GetZCoordinate() + directionZ[dir];
@@ -67,7 +68,7 @@ public class GenerateMaze : MonoBehaviour
                 // Thêm node vào stack và tiếp tục đào sâu theo nhánh của node này
                 var adjacentCell = maze[z, x];
                 adjacentCell.isVisited = true;
-                BreakWall(currentCell , adjacentCell) ; 
+                BreakWall(currentCell, adjacentCell);
                 stack.Push(adjacentCell);
 
             }
@@ -97,12 +98,12 @@ public class GenerateMaze : MonoBehaviour
         int zCurrent = currentCell.GetZCoordinate();
         int zAdjacent = adjacentCell.GetZCoordinate();
         int xCurrent = currentCell.GetXCoordinate();
-        int xAdjacent = adjacentCell.GetXCoordinate() ; 
+        int xAdjacent = adjacentCell.GetXCoordinate();
         bool isVertical = xCurrent == xAdjacent;  // Check if 2 wall là ngang hay dọc nhau
 
         // Nếu 2 tường dọc nhau thì xét phá trên dưới
-        if (isVertical) 
-        {  
+        if (isVertical)
+        {
             currentCell.BreakWall(zAdjacent > zCurrent ? MazeCell.Wall.Front : MazeCell.Wall.Back);
             adjacentCell.BreakWall(zAdjacent > zCurrent ? MazeCell.Wall.Back : MazeCell.Wall.Front);
         }
@@ -111,8 +112,23 @@ public class GenerateMaze : MonoBehaviour
         else
         {
             currentCell.BreakWall(xCurrent > xAdjacent ? MazeCell.Wall.Left : MazeCell.Wall.Right);
-            adjacentCell.BreakWall(xCurrent > xAdjacent ?MazeCell.Wall.Right : MazeCell.Wall.Left ) ; 
+            adjacentCell.BreakWall(xCurrent > xAdjacent ? MazeCell.Wall.Right : MazeCell.Wall.Left);
         }
     }
-
+    private void ResetMaze()
+    {
+        foreach (Transform child in grid.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    private void RandomMaze()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetMaze() ; 
+            InitializeGrid();
+            StartCoroutine(GenMaze());
+        }
+    }
 }
