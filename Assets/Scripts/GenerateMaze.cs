@@ -27,6 +27,7 @@ public class GenerateMaze : MonoBehaviour
     }
     private void InitializeGrid()
     {
+        GameObject grid = new GameObject("Grid");
         maze = new MazeCell[mazeLength, mazeWidth];
         for (int z = 0; z < mazeLength; z++)
         {
@@ -34,6 +35,7 @@ public class GenerateMaze : MonoBehaviour
             {
                 maze[z, x] = Instantiate(mazeCell, new UnityEngine.Vector3(x, 0, z), UnityEngine.Quaternion.identity);
                 maze[z, x].SetCoordinate(z, x);
+                maze[z,x].transform.SetParent(grid.transform,true );
             }
         }
     }
@@ -42,7 +44,7 @@ public class GenerateMaze : MonoBehaviour
         // Chọn 1 node bẩt kì và tiến bắt đầu gen
         int startX = Random.Range(0, mazeWidth);
         int startZ = Random.Range(0, mazeLength);
-        var startCell = maze[startZ, startX];
+        var startCell = maze[startX,startZ];
         Stack<MazeCell> stack = new Stack<MazeCell>();
         stack.Push(startCell);
         startCell.isVisited = true;
