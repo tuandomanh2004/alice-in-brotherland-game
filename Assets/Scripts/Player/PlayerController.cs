@@ -21,13 +21,19 @@ public class PlayerController : MonoBehaviour
         None
     }
     public PlayerState playerState;
-    [SerializeField] private CharacterController controller;
-    [SerializeField] private Animator anim;
-    [SerializeField] private UnityEngine.Vector3 moveDir;
-    [SerializeField] private float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
-    [SerializeField] private Transform cam;
 
-    void Awake()
+    [Header("-----ANIMATION AND CONTROLLER-----")]
+    [SerializeField] protected CharacterController controller;
+    [SerializeField] protected Animator anim;
+
+    [Header("-----MOVEMENT PROPERTIES-----")]
+    [SerializeField] protected UnityEngine.Vector3 moveDir;
+    [SerializeField] protected float playerSpeed = 2.0f, verticalInput, horizontalInput, rotateSpeed = 5.0f;
+
+    [Header("-----PLAYER CAMERA-----")]
+    [SerializeField] protected Transform cam;
+
+    protected virtual void Awake()
     {
         InitializeComponent();
     }
@@ -36,14 +42,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (playerState == PlayerState.Locked) return;
         Move();
         UpdateAnimation();
 
     }
-    public void SetState(PlayerState newState)
+    public virtual void SetState(PlayerState newState)
     {
         playerState = newState;
         if (playerState == PlayerState.Locked)
@@ -52,17 +58,16 @@ public class PlayerController : MonoBehaviour
             UpdateAnimation() ; 
         }
     }
-    private void Move()
+    protected virtual void Move()
     {
         GetMovementInput();
         moveDir = HandleMovementInput();
         if (moveDir != UnityEngine.Vector3.zero) // Nếu player chuyển động thì xoay theo vector di chuyển
         {
-            MakeRotation();
             controller.Move(moveDir * playerSpeed * Time.deltaTime); // di chuyển theo vector
         }    
     }
-    private void UpdateAnimation()
+    protected virtual void UpdateAnimation()
     {
         //     float moveAmount = Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput); // Check input di chuyển của player
         //     bool isMoving = moveAmount > 0;
@@ -71,27 +76,22 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("verticalMove", verticalInput);
         anim.SetFloat("horizontalMove", horizontalInput);
     }
-    private void InitializeComponent()
+    protected virtual void InitializeComponent()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
         playerState = PlayerState.Free;
     }
-    private void GetMovementInput()
+    protected virtual void GetMovementInput()
     {
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
     }
-    private UnityEngine.Vector3 HandleMovementInput()
+    protected virtual UnityEngine.Vector3 HandleMovementInput()
     {
         UnityEngine.Vector3 moveInput = (cam.forward * verticalInput) + (cam.right * horizontalInput); // Tạo vector di chuyển theo hướng cam và input
         moveInput.y = 0f;
         return moveInput.normalized; // Chuẩn hóa vector thành độ lớn = 1 để nhất quán tốc độ di chuyển  
-    }
-    private void MakeRotation()
-    {
-        UnityEngine.Quaternion desiredRotation = UnityEngine.Quaternion.LookRotation(moveDir, UnityEngine.Vector3.up); // tạo góc quay
-        transform.rotation = UnityEngine.Quaternion.Lerp(transform.rotation, desiredRotation, rotateSpeed * Time.deltaTime);  // tạo chuyển động quay
     }
 }

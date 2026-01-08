@@ -82,39 +82,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 329182963561751618}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7042367123528194207}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4082170537937448027}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2872350850277246005}
   m_SourcePrefab: {fileID: 100100000, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
 --- !u!1 &1246863358448494405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
   m_PrefabInstance: {fileID: 2129312361579338260}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &329182963561751618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246863358448494405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1aa77c2980bfe49a88ee27f18a957b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  anim: {fileID: 0}
-  moveDir: {x: 0, y: 0, z: 0}
-  playerSpeed: 2
-  verticalInput: 0
-  horizontalInput: 0
-  rotateSpeed: 10
-  cam: {fileID: 0}
 --- !u!143 &7042367123528194207
 CharacterController:
   m_ObjectHideFlags: 0
@@ -158,3 +138,24 @@ MonoBehaviour:
     m_Bits: 0
   it: {fileID: 0}
   distance: 10
+--- !u!114 &2872350850277246005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246863358448494405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f49a0b450b006f478d6d5e991f37aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerState: 0
+  controller: {fileID: 0}
+  anim: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
+  playerSpeed: 2
+  verticalInput: 0
+  horizontalInput: 0
+  rotateSpeed: 5
+  cam: {fileID: 0}
