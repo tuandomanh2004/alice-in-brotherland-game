@@ -12,7 +12,7 @@ public class FirstPersonCameraController : MonoBehaviour
     [SerializeField] private Transform player ; 
     void Start()
     {
-
+        
     }
     void Update()
     {
@@ -24,8 +24,8 @@ public class FirstPersonCameraController : MonoBehaviour
         float mouseYInput = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         Debug.Log($"mouseX : {mouseXInput} , mouseY : {mouseYInput}") ; 
         verticalRotation -= mouseYInput ;  // Di chuyển dọc lên xuống theo chuột
-        verticalRotation = Mathf.Clamp(verticalRotation , minAngle, maxAngle) ;
-        transform.localRotation =  Quaternion.Euler(verticalRotation,0f , 0f) ; 
-        player.Rotate(mouseXInput*Vector3.up) ; 
+        verticalRotation = Mathf.Clamp(verticalRotation , minAngle, maxAngle) ; // Giới hạn vùng quay trong [-90 , 90]
+        transform.localRotation =  Quaternion.Euler(verticalRotation,0f , 0f) ; // Rotate dọc
+        player.Rotate(mouseXInput*Vector3.up) ; // Rotate ngang
     }
 }

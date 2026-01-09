@@ -58,7 +58,8 @@ public class SceneMNG : MonoBehaviour
     }
     void OnSceneLoaded(Scene sceneName, LoadSceneMode loadMode)
     {
-        MANAGER.Instance.spawnManager.SpawnPlayer(sceneName.name);
-        MANAGER.Instance.camManager.InitializeCameras();
+        MANAGER.Instance.playerManager.SpawnPlayer(sceneName.name);
+        MANAGER.Instance.camManager.InitializeCameras(sceneName.name) ;
+        MANAGER.Instance.playerManager.SetControllerMode() ; 
     }
 }

@@ -6,7 +6,7 @@ public class MANAGER : MonoBehaviour
     public CursorManager cursorManager;
     public CameraSwitcher camManager;
     public SceneMNG sceneManager ;  
-    public SpawnManager spawnManager;
+    public PlayerManager playerManager ;
     public static MANAGER Instance { get; private set; }
     void Awake()
     {

@@ -8,17 +8,17 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private SpawnBasedScene[] spawnDataContainer ;  
-    [SerializeField] private Dictionary<string,SpawnObjectData> spawner ;    
+    [SerializeField] private SpawnBasedScene[] spawnDataContainer;
+    [SerializeField] private Dictionary<string, SpawnObjectData> spawner;
     public static SpawnManager Instance { get; private set; }
     void Awake()
     {
-        spawner = new Dictionary<string,SpawnObjectData>();
-        InitializeDictionary() ; 
+        spawner = new Dictionary<string, SpawnObjectData>();
+        InitializeDictionary();
     }
     void OnEnable()
     {
-        
+
     }
     void Start()
     {
@@ -30,15 +30,19 @@ public class SpawnManager : MonoBehaviour
     }
     private void InitializeDictionary()
     {
-        foreach(var spawnData in spawnDataContainer)
+        foreach (var spawnData in spawnDataContainer)
         {
-            Debug.Log(spawnData.sceneName) ;
-            Debug.Log(spawnData.objectData)  ; 
-            spawner.Add(spawnData.sceneName , spawnData.objectData) ; 
+            Debug.Log(spawnData.sceneName);
+            Debug.Log(spawnData.objectData);
+            spawner.Add(spawnData.sceneName, spawnData.objectData);
         }
     }
     public void SpawnPlayer(string sceneName)
     {
-        Instantiate(playerPrefab, spawner[sceneName].spawnPos, transform.rotation);
+        if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            Instantiate(playerPrefab, spawner[sceneName].spawnPos, transform.rotation);
+        }
+
     }
 }

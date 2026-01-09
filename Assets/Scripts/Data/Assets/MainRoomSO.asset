@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c577887e4d9cff141a754f828a9a53a4, type: 3}
   m_Name: MainRoomSO
   m_EditorClassIdentifier: 
-  spawnPos: {x: 2.73, y: 0.18299997, z: -1.063}
+  spawnPos: {x: 3, y: 0.2, z: -1}
