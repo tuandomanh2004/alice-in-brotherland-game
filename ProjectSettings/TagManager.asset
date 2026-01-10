@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Maze
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -5,12 +5,14 @@ using System.Xml.Schema;
 using Mono.Cecil.Cil;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class GenerateMaze : MonoBehaviour
 {
-    [SerializeField] private GameObject grid;
+    [SerializeField] private GameObject grid , ground;
     [SerializeField] private MazeCell mazeCell;
+    [SerializeField] private GameObject floor;
     [SerializeField] private MazeCell[,] maze;
     [SerializeField] private int mazeLength, mazeWidth;
     [SerializeField] private int[] directionX = { -1, 1, 0, 0 };
@@ -29,14 +31,22 @@ public class GenerateMaze : MonoBehaviour
     private void InitializeGrid()
     {
         grid = GameObject.FindGameObjectWithTag("Maze");
+        ground = GameObject.FindGameObjectWithTag("Ground");
         maze = new MazeCell[mazeLength, mazeWidth];
         for (int z = 0; z < mazeLength; z++)
         {
             for (int x = 0; x < mazeWidth; x++)
             {
-                maze[z, x] = Instantiate(mazeCell, new UnityEngine.Vector3(x, 0, z), UnityEngine.Quaternion.identity);
+                var positionSpawn = new UnityEngine.Vector3(x, 0, z) ; 
+                var rotationSpawn = UnityEngine.Quaternion.identity ; 
+                // Generate grid maze
+                maze[z, x] = Instantiate(mazeCell,positionSpawn,rotationSpawn) ;
                 maze[z, x].SetCoordinate(z, x);
                 maze[z, x].transform.SetParent(grid.transform, false);
+
+                // Generate ground
+                var floorCell = Instantiate(floor , positionSpawn , floor.transform.rotation ) ;  
+                floorCell.transform.SetParent(ground.transform, false) ; 
             }
         }
     }
