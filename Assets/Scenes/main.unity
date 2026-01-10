@@ -9234,19 +9234,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.020564077
+      value: 0.17364825
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9997885
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9254,7 +9254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 177.643
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -11728,7 +11728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b25806ea301b147b7a9052992ce1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapName: Test
+  mapName: Club Card
   effectSpeed: 0.2
   effectScale: 0
   delay: 3
