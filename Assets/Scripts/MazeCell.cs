@@ -16,14 +16,26 @@ public class MazeCell : MonoBehaviour
         Left,
         Right
     }
+    public enum CellRule
+    {
+        None,
+        Item, 
+        Enemy,
+        Spawn,
+    }
     [SerializeField] private Coordinate cellCoordinates;
+    [SerializeField] private CellRule cellRule;
     [SerializeField] private GameObject leftWall;
     [SerializeField] private GameObject rightWall;
     [SerializeField] private GameObject frontWall;
     [SerializeField] private GameObject backWall;
   //  [SerializeField] private GameObject floor;
-    [SerializeField] private GameObject visited;
+    [SerializeField] public  GameObject visited;
     public bool isVisited = false;
+    void Awake()
+    {
+        cellRule = CellRule.None ; 
+    }
 
     void Start()
     {
@@ -37,7 +49,7 @@ public class MazeCell : MonoBehaviour
     }
     public void Visited()
     {
-        visited.SetActive(false);
+       // visited.SetActive(false);
     }
     public void SetCoordinate(int z, int x)
     {

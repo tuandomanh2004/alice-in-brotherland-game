@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c577887e4d9cff141a754f828a9a53a4, type: 3}
   m_Name: ClubGameSO
   m_EditorClassIdentifier: 
-  spawnPos: {x: 0, y: 0, z: 0}
-  camType: 1
+  spawnPos: {x: 15.45, y: 6.85, z: 14.73}

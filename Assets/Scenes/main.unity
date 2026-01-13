@@ -9220,6 +9220,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509505306185632188, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
+      propertyPath: playerSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3941813267668320536, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.73
@@ -9267,6 +9283,10 @@ PrefabInstance:
     - target: {fileID: 4390205660867193263, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390205660867193263, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
+      propertyPath: playerSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4467556420148698018, guid: 5461979c919982f47ac9f5e6e5a5d8f7, type: 3}
       propertyPath: m_Name
@@ -14477,7 +14497,7 @@ MonoBehaviour:
   spawnDataContainer:
   - sceneName: main
     objectData: {fileID: 11400000, guid: 357fc83c2e81fa042954227888e79353, type: 2}
-  - sceneName: ClubGame
+  - sceneName: Club Card
     objectData: {fileID: 11400000, guid: 36587fb1251dcfd4aba47d14205aee81, type: 2}
 --- !u!114 &915211386
 MonoBehaviour:
@@ -15459,7 +15479,7 @@ GameObject:
   - component: {fileID: 1012261494}
   - component: {fileID: 1012261493}
   m_Layer: 0
-  m_Name: White Tile(Clone)
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

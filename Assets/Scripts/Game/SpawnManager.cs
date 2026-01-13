@@ -39,10 +39,16 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnPlayer(string sceneName)
     {
-        if (GameObject.FindGameObjectWithTag("Player") == null)
+        var player = GameObject.FindGameObjectWithTag("Player") ; 
+        // Nếu player không tồn tại spawn mới
+        if (player == null)
         {
             Instantiate(playerPrefab, spawner[sceneName].spawnPos, transform.rotation);
         }
-
+        // Đã tồn tại thì dịch player đến địa chỉ spawn
+        else
+        {
+            player.transform.position = spawner[sceneName].spawnPos;
+        }
     }
-}
+}   

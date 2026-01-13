@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Maze
   - Ground
+  - Ceiling
   layers:
   - Default
   - TransparentFX
