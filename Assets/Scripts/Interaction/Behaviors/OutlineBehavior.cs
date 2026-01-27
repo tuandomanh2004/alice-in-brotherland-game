@@ -1,17 +1,21 @@
+using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 
-public class OutlineBehavior : MonoBehaviour , IInteractable
+public class OutlineBehavior : MonoBehaviour, IInteractable
 {
-    [SerializeField]public Material[][] mats;
-    [SerializeField] private Renderer[] rend;
+    [SerializeField] public Material[][] mats;
+    [SerializeField] private List<Renderer>  rend;
     [SerializeField] private float outlineIntensity;
-    [SerializeField] private Material OutlineMat ; 
+    [SerializeField] private int outlineIndex = 1;
     void Start()
     {
-        mats = new Material[rend.Length][] ; 
+        InitializeRend() ; 
+        mats = new Material[rend.Count][];
         InitializeMats();
+       // SetOutline(true);
     }
 
     void Update()
@@ -22,42 +26,46 @@ public class OutlineBehavior : MonoBehaviour , IInteractable
     {
         if (isOutline)
         {
-            TurnOnOutline() ; 
+            TurnOnOutline();
         }
         else
         {
-            TurnOffOutline() ; 
+            TurnOffOutline();
         }
+    }
+    private void InitializeRend()
+    {
+        rend = GetComponentsInChildren<Renderer>().ToList() ;
     }
     private void InitializeMats()
     {
-        for (int i = 0; i < rend.Length; i++)
+        for (int i = 0; i < rend.Count; i++)
         {
             mats[i] = rend[i].materials;
         }
     }
     private void TurnOnOutline()
     {
-        for (int i = 0; i < rend.Length; i++)
+        for (int i = 0; i < rend.Count; i++)
         {
-            mats[i][1].SetFloat("_OutlineScale" , outlineIntensity) ; 
+            mats[i][outlineIndex].SetFloat("_OutlineScale", outlineIntensity);
         }
     }
-    private void TurnOffOutline() 
+    private void TurnOffOutline()
     {
-        for (int i = 0; i < rend.Length; i++)
+        for (int i = 0; i < rend.Count; i++)
         {
-            mats[i][1].SetFloat("_OutlineScale" ,0f) ; 
+            mats[i][outlineIndex].SetFloat("_OutlineScale", 0f);
         }
-        }
+    }
 
     public void HoverEnter()
     {
-        TurnOnOutline() ; 
+        TurnOnOutline();
     }
 
     public void HoverExit()
     {
-        TurnOffOutline() ; 
+        TurnOffOutline();
     }
-} 
+}
