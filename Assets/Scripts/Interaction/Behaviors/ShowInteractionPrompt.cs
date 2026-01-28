@@ -37,7 +37,7 @@ public class ShowInteractionPrompt : MonoBehaviour , IInteractable
     }
     public void ShowInteractionText()
     {
-        interactionText.text = item.GetInteractionPrompt();
+        interactionText.text = item.GetItemData().interactionPrompt ; 
         interactionText.enabled = true ;  
     }
     public void HideInteractionText()

@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class InteractiveItem : MonoBehaviour
 {
-    [SerializeField]private string interactionPrompt;
-    [SerializeField] private string itemName;
-    [SerializeField] private string itemDescription;
-    [SerializeField] protected bool isDetected = false;
+    [SerializeField] private ItemData itemData; 
     [SerializeField] private bool  isFocus = false;
     void Start()
     {
@@ -15,10 +12,8 @@ public class InteractiveItem : MonoBehaviour
     {
 
     }
-    public string GetInteractionPrompt() => interactionPrompt;
-    public string GetItemName() => itemName;
-    public string GetItemDescription() => itemDescription ;     
     public bool IsFocus() => isFocus;
+    public ItemData GetItemData() => itemData;
     public void Focus()
     {
         isFocus = !isFocus ; 

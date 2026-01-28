@@ -17,7 +17,7 @@ public class TooltipBehavior : MonoBehaviour, IInteractable
     } 
     public void HoverEnter()
     {
-        tooltipUI.SetUIData(item.GetItemName(), item.GetItemDescription());
+        tooltipUI.SetUIData(item.itemName, item.itemDescription);
         tooltipUI.SetUIPanelPosition(transform.position,offset);
         tooltipUI.Show();
     }

@@ -23905,18 +23905,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1387794374}
     m_Modifications:
-    - target: {fileID: 1953382730099431418, guid: 447768e98a9c0d64fb98c9e273dc5eb9, type: 3}
-      propertyPath: m_Color.b
-      value: 0.3878034
-      objectReference: {fileID: 0}
-    - target: {fileID: 1953382730099431418, guid: 447768e98a9c0d64fb98c9e273dc5eb9, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6010181
-      objectReference: {fileID: 0}
-    - target: {fileID: 1953382730099431418, guid: 447768e98a9c0d64fb98c9e273dc5eb9, type: 3}
-      propertyPath: m_Color.r
-      value: 0.81886786
-      objectReference: {fileID: 0}
     - target: {fileID: 2282810536860546565, guid: 447768e98a9c0d64fb98c9e273dc5eb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.602
@@ -46595,10 +46583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: 'Pick Up [E]'
-  itemName: 
-  itemDescription: 
-  isDetected: 0
+  itemData: {fileID: 0}
   isFocus: 0
 --- !u!4 &1589722322 stripped
 Transform:

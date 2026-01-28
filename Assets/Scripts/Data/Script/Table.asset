@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c577887e4d9cff141a754f828a9a53a4, type: 3}
-  m_Name: New Spawn Object Data
+  m_Script: {fileID: 11500000, guid: 4b1f9b69d87337747a197dec0e138141, type: 3}
+  m_Name: Table
   m_EditorClassIdentifier: 
-  spawnPos: {x: 0, y: 0, z: 0}
+  interactionPrompt: 'Interact [E]'
+  itemName: Table
+  itemDescription: 

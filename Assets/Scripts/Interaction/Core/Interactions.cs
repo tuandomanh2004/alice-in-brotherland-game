@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Interactions : MonoBehaviour
 {
     [SerializeField] private List<IInteractable> interactableList ;
+    [SerializeField] private IPickupable pickupableItem ; 
     [SerializeField] private UnityEvent OnInteract ;
     void Awake()
     {
@@ -40,3 +41,5 @@ public class Interactions : MonoBehaviour
         OnInteract?.Invoke() ; 
     }
 }
+
+// Press E -> Get item data -> Destroy object -> Add item into inventory -> Show UI

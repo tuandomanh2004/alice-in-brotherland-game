@@ -10293,10 +10293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda57fe9ddbba0345abe6df790e2921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: 'Interact with table [E]'
-  itemName: 
-  itemDescription: 
-  isDetected: 0
+  itemData: {fileID: 11400000, guid: c7e40b37d7cc4394580c5252eca2854a, type: 2}
   isFocus: 0
 --- !u!1 &621706596
 GameObject:
