@@ -18,35 +18,37 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DetectItem(); 
-        InteractWithItem() ;
+        DetectItem();
+        InteractWithItem();
     }
-     private void DetectItem()
+    private void DetectItem()
     {
         Ray ray = new Ray(focusCam.position, focusCam.forward); // tạo tia  
         if (Physics.Raycast(ray, out RaycastHit hit, distance, detectionLayer)) // check tia bắn trúng obj 
         {
+
             if (hit.collider.TryGetComponent(out Interactions obj))
-            { 
-                it = obj ; 
-                it.HoverEnter() ; 
+            {
+                Debug.Log($"hit {hit.collider.gameObject.name}");
+                it = obj;
+                it.HoverEnter();
             }
         }
         else // Không quét vào object nữa thì tắt outline,UI của object hiện tại và trả null
         {
-            if(it != null)
+            if (it != null)
             {
-                it.HoverExit() ; 
-                it = null ;
+                it.HoverExit();
+                it = null;
             }
-            
+
         }
     }
     private void InteractWithItem() // Xử lí input tương tác từ player
     {
-        if (Input.GetKeyDown(KeyCode.E) && it != null )
+        if (Input.GetKeyDown(KeyCode.E) && it != null)
         {
-            it.Interact() ; 
+            it.Interact();
         }
     }
 }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(InteractiveItem))] 
 public class ShowInteractionPrompt : MonoBehaviour , IInteractable
@@ -8,8 +9,15 @@ public class ShowInteractionPrompt : MonoBehaviour , IInteractable
     [SerializeField] private TextMeshProUGUI interactionText ;
     void Start()
     {
-        item = GetComponent<InteractiveItem>();
-        Debug.Log(item) ; 
+        if(item == null)
+        {
+            item = GetComponent<InteractiveItem>();
+        }
+        if(interactionText == null)
+        {
+            interactionText = GameObject.Find("InteractionText").GetComponent<TextMeshProUGUI>() ; 
+        }
+      //  Debug.Log(item) ; 
     }
     public void HoverEnter()
     {

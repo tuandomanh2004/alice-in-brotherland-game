@@ -49,7 +49,7 @@ Material:
     - _DissolveIntensity: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 4.2182484
+    - _Scale: 5
     - _Speed: 0.2
     - _TwirlStrength: 20
     m_Colors:
