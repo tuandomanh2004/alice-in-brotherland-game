@@ -11,6 +11,7 @@ public class Interactions : MonoBehaviour
     void Awake()
     {
         interactableList = GetComponents<IInteractable>().ToList() ;
+        pickupableItem = GetComponent<IPickupable>() ;
     }
     void Start()
     {
@@ -38,6 +39,13 @@ public class Interactions : MonoBehaviour
     }
     public void Interact()
     {
+        // Ưu tiên pick up 
+        if(pickupableItem != null)
+        {
+            pickupableItem.OnPickUp() ; 
+            HoverExit() ; 
+            return ; 
+        }
         OnInteract?.Invoke() ; 
     }
 }

@@ -135,3 +135,7 @@ outline card whenever cursor point in - DONE
 - Make 1st person camera - DONE
 
 ======
+
+29/1/2025
+- Generate item icons from prefabs
+- Finish Inventory System 

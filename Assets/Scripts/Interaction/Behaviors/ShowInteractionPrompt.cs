@@ -2,47 +2,46 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(InteractiveItem))] 
-public class ShowInteractionPrompt : MonoBehaviour , IInteractable
+[RequireComponent(typeof(InteractiveItem))]
+public class ShowInteractionPrompt : MonoBehaviour, IInteractable
 {
-    [SerializeField] private InteractiveItem item ;
-    [SerializeField] private TextMeshProUGUI interactionText ;
+    [SerializeField] private InteractiveItem item;
+    [SerializeField] private TextMeshProUGUI interactionText;
     void Start()
     {
-        if(item == null)
+        if (item == null)
         {
             item = GetComponent<InteractiveItem>();
         }
-        if(interactionText == null)
+        if (interactionText == null)
         {
-            interactionText = GameObject.Find("InteractionText").GetComponent<TextMeshProUGUI>() ; 
+            interactionText = GameObject.Find("InteractionText").GetComponent<TextMeshProUGUI>();
         }
-      //  Debug.Log(item) ; 
     }
     public void HoverEnter()
     {
-        if (!item.IsFocus())
+        if (item != null && !item.IsFocus())
         {
-            ShowInteractionText() ;
+            ShowInteractionText();
         }
         else
         {
-            HideInteractionText() ; 
-        }   
+            HideInteractionText();
+        }
     }
 
     public void HoverExit()
     {
-        HideInteractionText() ; 
+        HideInteractionText();
     }
     public void ShowInteractionText()
     {
-        interactionText.text = item.GetItemData().interactionPrompt ; 
-        interactionText.enabled = true ;  
+        interactionText.text = item.GetItemData().interactionPrompt;
+        interactionText.enabled = true;
     }
     public void HideInteractionText()
     {
-        interactionText.text = "" ; 
-        interactionText.enabled = false ; 
+        interactionText.text = "";
+        interactionText.enabled = false;
     }
 }

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b1f9b69d87337747a197dec0e138141, type: 3}
-  m_Name: Table
+  m_Name: BookSO
   m_EditorClassIdentifier: 
-  interactionPrompt: 'Interact [E]'
-  itemName: Table
+  interactionPrompt: 'Pick Up [E]'
+  itemName: Book
   itemDescription: 
+  itemIcon: {fileID: 21300000, guid: 7c2e1ccb318d85549953c6a17784b0f7, type: 3}
