@@ -21,6 +21,9 @@ public class FirstPersonCameraController : MonoBehaviour
     [SerializeField] private float bobbingSpeed;
     [SerializeField] private float bobbingAmount;
 
+    public float swayAmount = 0.05f ; 
+    public float swaySpeed = 4f ; 
+
     void Start()
     {
         basePoint = transform.localPosition.y;
@@ -29,6 +32,7 @@ public class FirstPersonCameraController : MonoBehaviour
     {
         HandleRotate();
         HandleHeadBobbing();
+       // HandleCameraSway() ; 
     }
     void HandleRotate()
     {
