@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class GenerateMaze : MonoBehaviour
 {
-    [SerializeField] private GameObject grid , ground , ceiling;
+    [SerializeField] private GameObject grid, ground, ceiling;
     [SerializeField] private MazeCell mazeCell;
     [SerializeField] private GameObject floor;
     [SerializeField] private MazeCell[,] maze;
@@ -34,24 +34,24 @@ public class GenerateMaze : MonoBehaviour
         ground = GameObject.FindGameObjectWithTag("Ground");
         ceiling = GameObject.FindGameObjectWithTag("Ceiling");
         maze = new MazeCell[mazeLength, mazeWidth];
-        for (int z = 0; z < mazeLength; z++)    
+        for (int z = 0; z < mazeLength; z++)
         {
             for (int x = 0; x < mazeWidth; x++)
             {
-                var positionSpawn = new UnityEngine.Vector3(x, 0, z) ; 
-                var rotationSpawn = UnityEngine.Quaternion.identity ; 
+                var positionSpawn = new UnityEngine.Vector3(x, 0, z);
+                var rotationSpawn = UnityEngine.Quaternion.identity;
                 // Generate grid maze
-                maze[z, x] = Instantiate(mazeCell,positionSpawn,rotationSpawn) ;
+                maze[z, x] = Instantiate(mazeCell, positionSpawn, rotationSpawn);
                 maze[z, x].SetCoordinate(z, x);
                 maze[z, x].transform.SetParent(grid.transform, false);
 
                 // Generate ground
-                var floorCell = Instantiate(floor , positionSpawn , floor.transform.rotation ) ;  
-                floorCell.transform.SetParent(ground.transform, false) ; 
+                var floorCell = Instantiate(floor, positionSpawn, floor.transform.rotation);
+                floorCell.transform.SetParent(ground.transform, false);
 
                 // Ceiling
-                var cellCeiling = maze[z,x].visited ; 
-                cellCeiling.transform.SetParent(ceiling.transform , true) ; 
+                var cellCeiling = maze[z, x].visited;
+                cellCeiling.transform.SetParent(ceiling.transform, true);
             }
         }
     }
@@ -68,7 +68,7 @@ public class GenerateMaze : MonoBehaviour
         while (stack.Count > 0)
         {
             var currentCell = stack.Peek();
-           // currentCell.Visited();
+            // currentCell.Visited();
             List<int> currentDirections = AvailablePath(currentCell);
 
             if (currentDirections.Count > 0) // Check nếu còn đường đi ở node hiện tại
@@ -141,7 +141,7 @@ public class GenerateMaze : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ResetMaze() ; 
+            ResetMaze();
             InitializeGrid();
             StartCoroutine(GenMaze());
         }

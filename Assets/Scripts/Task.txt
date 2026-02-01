@@ -137,5 +137,11 @@ outline card whenever cursor point in - DONE
 ======
 
 29/1/2025
-- Generate item icons from prefabs
-- Finish Inventory System 
+- Generate item icons from prefabs - DONE
+- Finish Inventory System - DONE
+
+======
+
+1/2/2025
+- Item selection
+- Design the main room
