@@ -36,32 +36,28 @@ public class InventoryManager : MonoBehaviour
         {
             if (Input.GetKeyDown(slotKeyCodes[index]))
             {
-                if (!itemSlots[index].IsFull()) return;
-
-                // bấm cùng 1 ô item thì đổi ngược trạng thái hiện tại
-                if(currentIndex == index)
-                {
-                    itemSlots[index].SetSelectedUI() ; 
-                }
-
-                // bấm ô khác thì tắt ô này bật ô kia
-                else
-                {
-                    itemSlots[index].SetSelectedUI(false);
-                    currentIndex = index ; 
-                    itemSlots[currentIndex].SetSelectedUI(true) ; 
-                }
-                // itemHolder.DisplayItem(itemSlots[currentIndex]) ; 
+                SetSelectedItemUI(itemSlots[index] , index) ; 
+                itemHolder.DisplayItem(itemSlots[currentIndex]);
             }
         }
 
     }
-    void DeSelectAllSlots()
+    void SetSelectedItemUI(ItemSlot itemSlot, int index)
     {
-        foreach (var slot in itemSlots)
+        if (!itemSlot.IsFull()) return;
+
+        // bấm cùng 1 ô item thì đổi ngược trạng thái hiện tại
+        if (currentIndex == index)
         {
-            slot.SetSelectedUI(false);
+            itemSlot.SetSelectedUI();
+        }
+
+        // bấm ô khác thì tắt ô này bật ô kia
+        else
+        {
+            itemSlot.SetSelectedUI(false);
+            currentIndex = index;
+            itemSlot.SetSelectedUI(true);
         }
     }
-
 }

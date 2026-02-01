@@ -5,6 +5,7 @@ using UnityEngine;
 public class HoldItem : MonoBehaviour
 {
     [SerializeField] private List<InteractiveItem> items ; 
+    [SerializeField] private GameObject currentItem ; 
     [SerializeField] private int currentIndex ; 
     void Start()
     { 
@@ -12,31 +13,44 @@ public class HoldItem : MonoBehaviour
         HideItem() ; 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void DisplayItem(ItemSlot slot)
     {
-        var slotData = slot.GetItemData() ; 
-        if(currentIndex != slot.GetIndex())
+        var slotData = slot.GetItemData();
+        int slotIndex = slot.GetIndex();
+        
+        foreach (InteractiveItem item in items)
         {
-            currentIndex = slot.GetIndex() ; 
-            foreach(var item in items)
+            if (item.GetItemData().itemName == slotData.itemName)
             {
-                var itemData = item.GetItemData() ; 
-                if(itemData.itemName == slotData.itemName)
-                {
-                    HideItem() ; 
-                    item.gameObject.SetActive(true);  
-                }
+                SelectItem(item.gameObject, slotIndex);
+                return;
             }
-
         }
+    }
+
+    private void SelectItem(GameObject item, int slotIndex)
+    {
+        // Item hiện tại rỗng thì gán và out
+        if (currentItem == null)
+        {
+            currentItem = item;
+            currentIndex = slotIndex;
+            currentItem.SetActive(true) ; 
+        }
+
+        // Chọn 1 cùng item slot thì đảo trạng thái hiển thị
+        else if (currentIndex == slotIndex)
+        {
+            currentItem.SetActive(!currentItem.activeSelf);
+        }
+
+        // Chọn item khác với slot hiện tại thì tắt này bật kia
         else
         {
-            HideItem();     
+            currentItem.SetActive(false);
+            currentItem = item;
+            currentIndex = slotIndex;
+            currentItem.SetActive(true);
         }
     }
     public void HideItem()
