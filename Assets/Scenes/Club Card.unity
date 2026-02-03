@@ -9429,10 +9429,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8147a6d12f96cd94a9995e3ccc8a51fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onItemSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60230459}
+        m_TargetAssemblyTypeName: HoldItem, Assembly-CSharp
+        m_MethodName: DisplayItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemSlots: []
   slotKeyCodes: 31000000320000003300000034000000
   currentIndex: -1
-  itemHolder: {fileID: 60230459}
 --- !u!1001 &281099994
 PrefabInstance:
   m_ObjectHideFlags: 0

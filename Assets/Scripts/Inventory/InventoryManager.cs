@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,10 +7,10 @@ using UnityEngine.PlayerLoop;
 
 public class InventoryManager : MonoBehaviour
 {
+    [SerializeField] private UnityEvent<ItemSlot> onItemSelected;
     [SerializeField] private List<ItemSlot> itemSlots;
     [SerializeField] private List<KeyCode> slotKeyCodes;
     [SerializeField] private int currentIndex;
-    [SerializeField] private HoldItem itemHolder;
     void Start()
     {
         itemSlots = GetComponentsInChildren<ItemSlot>().ToList();
@@ -36,28 +37,28 @@ public class InventoryManager : MonoBehaviour
         {
             if (Input.GetKeyDown(slotKeyCodes[index]))
             {
-                SetSelectedItemUI(itemSlots[index] , index) ; 
-                itemHolder.DisplayItem(itemSlots[currentIndex]);
+                SetSelectedItemUI(itemSlots[index], index);
+                onItemSelected.Invoke(itemSlots[currentIndex]);
+                return;
             }
         }
-
     }
-    void SetSelectedItemUI(ItemSlot itemSlot, int index)
+    void SetSelectedItemUI(ItemSlot itemSlotAtIndex, int index)
     {
-        if (!itemSlot.IsFull()) return;
+        if (!itemSlotAtIndex.IsFull()) return;
 
         // bấm cùng 1 ô item thì đổi ngược trạng thái hiện tại
         if (currentIndex == index)
         {
-            itemSlot.SetSelectedUI();
+            itemSlotAtIndex.SetSelectedUI();
         }
 
         // bấm ô khác thì tắt ô này bật ô kia
         else
         {
-            itemSlot.SetSelectedUI(false);
+            itemSlotAtIndex.SetSelectedUI(false);
             currentIndex = index;
-            itemSlot.SetSelectedUI(true);
+            itemSlotAtIndex.SetSelectedUI(true);
         }
     }
 }

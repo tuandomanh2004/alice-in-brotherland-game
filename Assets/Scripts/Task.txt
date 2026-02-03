@@ -143,5 +143,15 @@ outline card whenever cursor point in - DONE
 ======
 
 1/2/2025
-- Item selection
-- Design the main room
+- Item selection - DONE
+- Design the main room - DONE
+
+======
+
+3/2/2025
+- Fix the UnityEvent<T> not working. It was my bad that I used the static function call instead of
+dynamic one so my event invoke() cant pass the argument to the targeted function properly
+- What I learned today :
++ UnityEvent<T0,T1,T2,T3> can work with up to 4 argument (by default bind to void function)
++ wanna use argument => dynamic call ( for anything varying its value during runtime)
++ static call => for fixed value or specific thing set in inspector (no change at runtime) 
