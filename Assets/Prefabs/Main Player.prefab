@@ -99,6 +99,8 @@ MonoBehaviour:
   resetSpeed: 5
   bobbingSpeed: 9
   bobbingAmount: 0.04
+  swayAmount: 0.05
+  swaySpeed: 4
 --- !u!1001 &3548444209305855731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       propertyPath: m_Name
-      value: Player 1
+      value: Main Player
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       propertyPath: m_TagString
@@ -203,9 +205,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4390205660867193263}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6882799661469175172}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fdd786b5cd1a87478f10e8ee75adfcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 509505306185632188}
@@ -284,18 +283,6 @@ MonoBehaviour:
   horizontalInput: 0
   rotateSpeed: 5
   cam: {fileID: 0}
---- !u!114 &6882799661469175172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4467556420148698018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea45a8c5fc0e824dad77559cc73f169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &509505306185632188
 MonoBehaviour:
   m_ObjectHideFlags: 0

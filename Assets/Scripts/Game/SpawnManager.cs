@@ -48,6 +48,7 @@ public class SpawnManager : MonoBehaviour
         // Đã tồn tại thì dịch player đến địa chỉ spawn
         else
         {
+            Debug.Log($"scene {sceneName} , player exist") ; 
             player.transform.position = spawner[sceneName].spawnPos;
         }
     }

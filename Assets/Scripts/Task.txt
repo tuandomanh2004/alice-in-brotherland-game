@@ -155,3 +155,13 @@ dynamic one so my event invoke() cant pass the argument to the targeted function
 + UnityEvent<T0,T1,T2,T3> can work with up to 4 argument (by default bind to void function)
 + wanna use argument => dynamic call ( for anything varying its value during runtime)
 + static call => for fixed value or specific thing set in inspector (no change at runtime) 
+
+=====
+
+4/2/2025
+- Make tutorial for dungeon level - DONE
+- Fix player spawn manager in specific scene. I used playerDDOL to make player persistent over scenes
+but I found it so hard to keep 1 general player for many scenes so I decided to make player preabs for
+each scene and removed DDOL script.
+- I made a bookUI for level tutorial so whenever player hold the book and click right button , it will
+show the tutorial

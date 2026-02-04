@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-   [SerializeField] private SpawnManager playerSpawner;
+    [SerializeField] private SpawnManager playerSpawner;
     [SerializeField] private PlayerControllerManager playerControllerManager;
     void Awake()
     {

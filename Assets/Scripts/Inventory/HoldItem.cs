@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class HoldItem : MonoBehaviour
 {
-    [SerializeField] private List<InteractiveItem> items ; 
-    [SerializeField] private GameObject currentItem ; 
-    [SerializeField] private int currentIndex ; 
+    [SerializeField] private List<InteractiveItem> items;
+    [SerializeField] private GameObject currentItem;
+    [SerializeField] private IUsable currentUsing;
+    [SerializeField] private int currentIndex;
     void Start()
-    { 
+    {
         items = GetComponentsInChildren<InteractiveItem>().ToList();
-        HideItem() ; 
+        HideItem();
+    }
+    void Update()
+    {
+        UseItem();
     }
 
     public void DisplayItem(ItemSlot slot)
     {
         var slotData = slot.GetItemData();
         int slotIndex = slot.GetIndex();
-        
+
         foreach (InteractiveItem item in items)
         {
             if (item.GetItemData().itemName == slotData.itemName)
@@ -35,7 +40,7 @@ public class HoldItem : MonoBehaviour
         {
             currentItem = item;
             currentIndex = slotIndex;
-            currentItem.SetActive(true) ; 
+            currentItem.SetActive(true);
         }
 
         // Chọn 1 cùng item slot thì đảo trạng thái hiển thị
@@ -52,12 +57,22 @@ public class HoldItem : MonoBehaviour
             currentIndex = slotIndex;
             currentItem.SetActive(true);
         }
+        currentUsing = currentItem.GetComponent<IUsable>();
     }
     public void HideItem()
     {
-        foreach(var item in items)
+        foreach (var item in items)
         {
-            item.gameObject.SetActive(false) ; 
-        }  
-    } 
+            item.gameObject.SetActive(false);
+        }
+    }
+    public void UseItem()
+    {
+        if (currentItem == null) return;
+        if (Input.GetMouseButtonDown(1) && currentUsing != null)
+        {
+            currentUsing.Use();
+            return;
+        }
+    }
 }

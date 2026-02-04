@@ -69,8 +69,6 @@ public class PlayerController : MonoBehaviour
     }
     protected virtual void UpdateAnimation()
     {
-        //     float moveAmount = Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput); // Check input di chuyển của player
-        //     bool isMoving = moveAmount > 0;
         bool isMoving = moveDir != UnityEngine.Vector3.zero;
         anim.SetBool("isMoving", isMoving);
         anim.SetFloat("verticalMove", verticalInput);
